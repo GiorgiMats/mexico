@@ -1,0 +1,9 @@
+.inpt-warning {
+    border-color: rgba(234, 51, 34, 0.6) !important;
+    background: rgba(234, 51, 34, 0.3) !important;
+}
+
+.inpt-success {
+    border-color: rgba(55, 210, 0, 0.6) !important;
+    background: rgba(55, 210, 0, 0.3) !important;
+}
