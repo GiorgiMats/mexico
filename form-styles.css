@@ -1,0 +1,608 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+#regForm {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+  border-radius: 12px;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 16px;
+  width: 100%;
+  font-size: 16px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  color: rgba(28, 31, 36, 0.80);
+
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+
+}
+
+
+
+
+input::placeholder {
+  color: rgba(28, 31, 36, 0.50);
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #FFF;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  /* light red background */
+}
+
+.invalid {
+  border-color: red !important;
+  background-color: rgba(255, 0, 0, 0.1) !important;
+  /* light red background */
+}
+
+/* phone input */
+
+.phone-input-container {
+  position: relative;
+}
+
+.country-code {
+  position: absolute;
+  margin-left: 16px;
+  /* Adjust as needed */
+  margin-top: 17.4px;
+  /* Adjust to align with the text in your input */
+  color: rgba(28, 31, 36, 0.80);
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.tel-padding {
+  padding-left: 48px;
+  /* Make room for the country code */
+}
+
+/*  */
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+
+
+
+#nextBtn {
+  background-color: #00ADEF;
+  color: #FFF;
+  padding: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+#nextBtn:hover {
+  background-color: #009CD7;
+}
+
+#prevBtn {
+
+  display: flex;
+  justify-self: start;
+  align-self: flex-start;
+  border-radius: 400px;
+  transition: all 0.3s;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  
+}
+
+
+.back-p {
+  color: #009CD7;
+
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.arrow-final {
+  border-radius: 50px;
+}
+
+#prevBtn:hover {}
+
+.arrow-final {
+  fill: #0063f8;
+}
+
+.arrow-last {
+  height: 16px;
+}
+
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 8px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: rgba(121, 124, 126, 0.20);
+  border: none;
+
+  display: inline-block;
+  transform: skew(-30deg);
+}
+
+.step.active {}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: rgba(102, 202, 188, 0.80);
+  ;
+}
+
+#nextBtn {
+  margin-top: 32px;
+}
+
+.step-flex {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.money-value-new {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #1C1F24;
+
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+}
+
+.form-heading-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+/* range */
+
+
+#range-flex {
+
+
+  border: 1px solid #ccc;
+  color: #1C1F24;
+  max-width: 92px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 8px 0px 8px 22px;
+  align-self: flex-end;
+  justify-self: end;
+  background-image: url(img/dollar-icon.svg);
+  background-repeat: no-repeat;
+  border-radius: 8px;
+
+  background-position: 10px center;
+  /* Adjust position as needed */
+
+
+}
+
+
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.form-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+.range-input {
+  -webkit-appearance: none;
+  width: 100% !important;
+  height: 8px;
+  /* Adjust height as needed */
+  /* background: #ddd; */
+  outline: none;
+  background: none;
+
+  padding: 0 !important;
+  margin: 32px 0 0 0;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00ADEF;
+  cursor: pointer;
+  margin-top: -6px;
+  /* Adjust this to center thumb over the track */
+}
+
+.range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00ADEF;
+  cursor: pointer;
+}
+
+.range-input::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: #ddd;
+}
+
+/* Special styles for Webkit/Blink browsers */
+.range-input {
+  -webkit-appearance: none;
+  width: calc();
+  /* Reduced width to account for the thumb size */
+  height: 8px;
+  /* background: #ddd; */
+  outline: none;
+  position: relative;
+  /* Added to properly position the ::before pseudo-element */
+  z-index: 0;
+  border-radius: 8px;
+}
+
+/* Remove the ::before styles if they are not necessary */
+
+/* Filled part of the slider (left of thumb) for Webkit browsers */
+.range-input::-webkit-slider-runnable-track {
+  height: 8px;
+
+  background: linear-gradient(to right, #00ADEF var(--width, 0%), #ddd 0%);
+}
+
+/* Filled part of the slider (left of thumb) for Mozilla Firefox */
+.range-input::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #00ADEF var(--width, 0%), #ddd 0%);
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  /* To align with the track */
+}
+
+.range-input::-moz-range-thumb {
+  /* Styles for Firefox thumb here */
+}
+
+
+
+/* range */
+
+/* select */
+
+
+.custom-select {
+  position: relative;
+  color: rgba(28, 31, 36, 0.95);
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.select-selected {
+  border-radius: 4px;
+}
+
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #1C1F24 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #1C1F24;
+  top: 14px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #1c1f24;
+  padding: 16px 16px;
+  border: 1px solid transparent;
+  border: 1px solid rgba(28, 31, 36, 0.10);
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #ffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+
+.select-one {
+  color: rgba(28, 31, 36, 0.50);
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #00ADEF;
+  color: #fff;
+}
+
+/* select */
+
+
+
+
+
+/* old form */
+
+
+
+.cont-backround {
+  background-color: rgb(37, 138, 70);
+
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.field2,
+.field3 input {
+  border: 1px solid rgba(28, 31, 36, 0.1);
+  padding: 16px;
+
+  color: rgba(28, 31, 36, 0.95);
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s;
+  max-width: 472px;
+}
+
+.form-input {
+  border-radius: 4px !important;
+}
+
+.form-input::placeholder,
+input::placeholder {
+  color: rgba(28, 31, 36, 0.4);
+  background-color: transparent;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-input:focus,
+input:focus {
+  outline: none !important;
+  border: 1px solid #0063f8 !important;
+}
+
+.back img {
+  background: #00ADEF;
+  padding: 4px 7.5px;
+}
+
+.field2 .field3 .field4 .field5 .field6 .field7 {
+  margin-top: 0 !important;
+}
+
+.surname:focus {
+  outline: none !important;
+  border: 1px solid #0063f8;
+  border-radius: 0;
+}
+
+.male-btn {
+  margin-top: 0px !important;
+}
+
+.back-button {
+  cursor: pointer;
+}
+
+
+
+
+
+.surname-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+
+/* old form
+   */
+
+/* gender burrons */
+
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.forms-new {
+  display: flex;
+  justify-items: end;
+  align-items: end;
+  flex-direction: column;
+}
+
+
+.radio-toolbar label {
+  display: inline-block;
+  background-color: #00ADEF;
+  color: #FFF;
+  padding: 20px;
+  font-family: Roboto;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  border: none;
+}
+
+
+.radio-toolbar input[type="radio"]:focus+label {
+  border: none;
+}
+
+.radio-toolbar label:hover {
+  background: #009CD7;
+}
+
+.ridio-1 {
+  margin-top: 24px;
+}
+
+
+.relative-tab {
+  position: relative;
+}
+
+.absolute-div {
+  position: absolute;
+  background-color: #fff;
+  padding: 40px 0;
+  width: 100%;
+  z-index: 2;
+
+}
+
+/*  */
+
+/* date */
+.date-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+
+.date-select {}
+
+/*  */

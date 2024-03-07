@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="credit-media.css">
+    <title>Credit</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+          <a href="#">
+            <img src="img/logo-black.svg" alt="" class="logo">
+          </a>
+  
+        
+        </div>
+      </header>
+
+      
+
+    <div class="progress-section">
+
+        <div class="container container-border">
+            <h2 class="progress-h2">El proceso de tu solicitud ha empezado</h2>
+            <div class="progress-h3">Estamos ultimando tus cotizaciones...</div>
+
+            <div class="progress"></div>
+            <div class="center-box">
+            <div class="progress-box">
+                <div class="progress-info" id="progressinfo1">
+                    <img src="img/green check.svg" alt="">
+                    <p class="progress check">Buscando las mejores ofertas desde tu aplicación</p>
+                </div>
+                <div class="progress-info" id="progressinfo2">
+                    <img src="img/green check.svg" alt="">
+                    <p class="progress check">Comparación de cotizaciones de ofertas</p>
+                </div>
+                <div class="progress-info" id="progressinfo3">
+                    <img src="img/green check.svg" alt="">
+                    <p class="progress check">Comprobando las mejores opciones para ti</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        /* 
+         * (class)Progress<nowValue, minValue, maxValue>
+         */
+
+        //helper function-> return <DOMelement>
+        function elt(type, prop, ...childrens) {
+            let elem = document.createElement(type);
+            if (prop) Object.assign(elem, prop);
+            for (let child of childrens) {
+                if (typeof child == "string") elem.appendChild(document.createTextNode(child));
+                else elem.appendChild(elem);
+            }
+            return elem;
+        }
+
+        //Progress class
+        class Progress {
+            constructor(now, min, max, options) {
+                this.dom = elt("div", {
+                    className: "progress-bar"
+                });
+                this.min = min;
+                this.max = max;
+                this.intervalCode = 0;
+                this.now = now;
+                this.syncState();
+                if (options.parent) {
+                    document.querySelector(options.parent).appendChild(this.dom);
+                }
+                else document.body.appendChild(this.dom)
+            }
+
+            syncState() {
+                this.dom.style.width = this.now + "%";
+            }
+
+            startTo(step, time) {
+                if (this.intervalCode !== 0) return;
+                this.intervalCode = setInterval(() => {
+                    console.log("sss")
+                    if (this.now + step > this.max) {
+                        this.now = this.max;
+                        this.syncState();
+                        clearInterval(this.interval);
+                        this.intervalCode = 0;
+                        return;
+                    }
+                    this.now += step;
+                    this.syncState()
+                }, time)
+            }
+            end() {
+                this.now = this.max;
+                clearInterval(this.intervalCode);
+                this.intervalCode = 0;
+                this.syncState();
+            }
+        }
+
+
+        let pb = new Progress(15, 0, 100, { parent: ".progress" });
+
+        //arg1 -> step length
+        //arg2 -> time(ms)
+        pb.startTo(5, 70);
+
+        //end to progress after 5s
+        setTimeout(() => {
+            pb.end()
+        }, 5000)
+
+
+    </script>
+</body>
+
+</html>

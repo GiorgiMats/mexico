@@ -1,188 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <form id="customers-form" action="send_customer.php" method="post">
-    <label for="first_name">Nombre</label>
-        <input type="text" name="first_name" id="first_name" required maxlength="255" onfocusout="validateInput('first_name')">
-        <label for="last_name">Apellido</label>
-        <input type="text" name="last_name" id="last_name" onfocusout="validateInput('last_name')" required>
-        <label for="second_last_name">Segundo apellido</label>
-        <input type="text" name="second_last_name" id="second_last_name" onfocusout="validateInput('second_last_name')" required maxlength="255">
 
-        <label for="birth_date">birth_date</label>
-        <div class="date-flex">
-            <p>
-              <select class="form-input date-select" onclick="checkForInput('dateDay')" id="dateDay"
-                name="birth_day" required>
-                <option value="" disabled selected>Día</option>
-              </select>
-            </p>
-            <p>
-              <select class="form-input date-select" id="dateMonth" onclick="checkForInput('dateMonth')"
-                name="birth_month" required>
-                <option value="" disabled selected>Mes</option>
-              </select>
-            </p>
-            <p>
-              <select class="form-input date-select" id="dateYear" onclick="checkForInput('dateYear')"
-                name="birth_year" required>
-                <option value="" disabled selected>Año</option>
-              </select>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="credit-media.css" />
+  <link rel="icon" href="img/web-icon.svg" sizes="16x16">
+
+  <link rel="stylesheet" href="form-styles.css">
+  <!-- <link rel="stylesheet" href="java.js" /> -->
+  <title>Credito-MX</title>
+
+
+
+
+
+
+
+
+<!-- tagmanager -->
+<script type="text/javascript">
+  (function(w, c, t, u) {
+      w._wct = w._wct || {}; w._wct = u;
+      var s = c.createElement(t);
+      s.type = 'text/javascript'; s.async = true; s.src = 'https://wct-2.com/wct.js?type=session';
+      var r = c.getElementsByTagName(t)[0];
+      r.parentNode.insertBefore(s, r);
+  }(window, document, 'script', {
+      'uid' : 'hwANyg',
+      'page_mutations' : true,
+      'proxy' : 'https://wct-2.com',
+      'auto_tagging' : true
+  }));
+  </script>
+
+<link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
+  <!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="header">
+    <div class="header-container">
+      <a href="#">
+        <img src="img/main-logo.svg" alt="" class="logo">
+      </a>
+
+      <div class="hamburger-menu">
+        <img src="img/menu-logo.svg" alt="" class="menu-icon">
+      </div>
+
+      <ul class="nav">
+        <li><a href="#" class="nav-focus">Principal</a></li>
+        <li><a href="/about-us.html" class="nav-link">Sobre nosotros</a></li>
+        <li><a href="#faqs" class="nav-link">Preguntas frecuentes</a></li>
+      </ul>
+
+      <div class="close">
+        <img src="img/close-icon.svg" alt="" class="close-icon">
+      </div>
+    </div>
+  </header>
+
+  <div class="container-4">
+    <div class="container-responsive" id="appear">
+      <div class="loans-box">
+        <h1 class="h1-responsive">Solicita tu crédito ahora</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-section">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="h1-left">Solicita tu crédito ahora</h1>
+        <div class="hero-info">
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">
+              Hasta $30.000 en un click
             </p>
           </div>
-
-        <div class="gender-div">
-            <span>Genero</span>
-            <label for="male">Male:</label>
-            <input type="radio" id="male" name="gender" value="MALE">
-            <br>
-            <label for="female">Female:</label>
-            <input type="radio" id="female" name="gender" value="FEMALE">
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Más de 30 ofertas de diferentes empresas</p>
+          </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Los mejores préstamos rápidos sin papeleos</p>
+          </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Los primeros clientes pueden obtener un préstamo al 0%</p>
+          </div>
         </div>
-        <label for="personal_id">personal id</label>
-        <input type="text" onfocusout="validateInput('personal_id')" name="personal_id" id="personal_id" pattern="^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$">
-        
-        <label for="tax_id_number">tax id number</label>
-        <input type="text" name="tax_id_number" id="tax_id_number" onfocusout="validateInput('tax_id_number')" required pattern="^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$">
+      </div>
+      <div class="forms-new">
+        <div class="hero-right">
+          <form id="regForm"
+            action="https://cp.selzy.com/en/subscribe?hash=6m4eoe48wabis55e9jwwqyigoufiy3a1u6p3pp3k7fkojeu4bucry&list_ids=3&"
+            method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+            <h1>Aplica ahora</h1>
+            <!-- One "tab" for each step in the form: -->
 
-        <label for="marital_status">marital status</label>
-        <select name="marital_status" id="marital_status">
-            <option value="disabled">select ones</option>
-            <option value="SINGLE">SINGLE</option>
-            <option value="MARRIED">MARRIED</option>
-            <option value="DIVORCED">DIVORCED</option>
-            <option value="WITH_PARTNER">WITH_PARTNER</option>
-            <option value="WIDOW">WIDOW</option>
-        </select>
 
-        <label for="bank_account">bank account</label>
-        <input type="number" name="bank_account" id="bank_account" onfocusout="validateInput('bank_account')" minlength="18" maxlength="18">
+            <button type="button" id="prevBtn" class="back-button" onclick="nextPrev(-1)">
+              <img src="/img/arrow-last.png" alt="" class="arrow-last">
+              <p class="back-p">anterior
+              </p>
+            </button>
+            <div class="tab">
+              <div class="credit-p">Envíe el formulario para obtener las mejores opciones de préstamo
+              </div>
+              <h2 class="credit-h3">¿Cuánto dinero necesitas?</h2>
+              <div class="form-heading-wrapper">
+                <p class="credit-p2">Quiero recibir:</p>
+                <div class="money-value-new">
 
-        <label for="nationality">nationality</label>
-        <select name="nationality" id="nationality">
-            <option value="ES">ES</option>
-            <option value="MX">MX</option>
-            <option value="AL">AL</option>
-            <option value="AR">AR</option>
-            <option value="BR">BR</option>
-            <option value="BU">BU</option>
-            <option value="RU">RU</option>
-        </select>
+                  <input type="number" id="range-flex" class="number-input" value="1000" min="1000" max="300000"
+                    step="1000" maxlength="7" name="moneycount">
 
-        <label for="dependant_count">dependant count</label>
-        <select name="dependant_count" id="dependant_count">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
+                </div>
+              </div>
+              <p><input class="range-input" type="range" min="1000" max="30000" value="6000" step="1000"
+                  name="moneycount" /></p>
+            </div>
+            <div class="tab">
+              <h2 class="credit-h3">¿Cuál es el propósito de tu préstamo ?
+              </h2>
+              <div class="custom-select">
+                <select id="mySelect" name="reason" required>
+                  <option onclick="removeSelectRed('select-selected')" value="Seleccione uno" class="select-one">
+                    Seleccione uno</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Pay credit card debt"
+                    class="option-hover">Pagar deudas de tarjeta de
+                    crédito</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Consolidate existing loans"
+                    class="option-hover">Consolidar prestamos existentes
+                  </option>
+                  <option onclick="removeSelectRed('select-selected')" value="Medical expenses" class="option-hover">
+                    Gastos médicos</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Repair the car" class="option-hover">
+                    Reparar el coche</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Rent payment" class="option-hover">
+                    Pago de alquiler</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Repair the home" class="option-hover">
+                    Reparar el hogar</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Travel, vacation" class="option-hover">
+                    Viajes ,vacaciones</option>
+                  <option onclick="removeSelectRed('mySelect')" value="Other" class="option-hover">Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="tab">
+              <h2 class="credit-h3">Por favor indícanos tu número de contacto</h2>
+              <div class="phone-input-container">
+                <span class="country-code">+52</span>
+                <input type="tel" class="form-input tel-padding" onclick="checkForInput('phone')" id="phone"
+                  name="phone" placeholder="(999) 999 9999" maxlength="13" required />
+              </div>
+            </div>
+            <div class="tab">
+              <h2 class="credit-h3">Por favor indícanos tu dirección de email</h2>
+              <p><input type="email" class="form-input" onclick="checkForInput('mail')" id="mail" name="email"
+                  placeholder="ejemplo@egmail.com" maxlength="40" required /></p>
+            </div>
+            <div class="tab">
+              <h2 class="credit-h3">Nombre completo</h2>
+              <div class="surname-flex">
+                <p><input placeholder="Nombre" id="fname" onclick="checkForInput('fname')" maxlength="20"
+                    oninput="this.className = ''" name="Name" class="form-input"></p>
+                <p><input placeholder="Primer apellido" id="lname" onclick="checkForInput('lname')" maxlength="20"
+                    oninput="this.className = ''" name="last_name" class="form-input"></p>
+              </div>
+            </div>
+            <div class="tab relative-tab">
+              <h2 class="credit-h3">Por favor selecciona tu género</h2>
+              <div class="radio-toolbar">
+                <label for="radio-man">Masculino</label>
+                <p><input type="radio" value="man" id="radio-man" name="gender" class="" onclick="nextPrev(1)"></p>
+                <label for="radio-woman" class="ridio-1">Femenino</label>
+                <p><input type="radio" value="woman" id="radio-woman" name="gender" onclick="nextPrev(1)"></p>
+              </div>
+              <div class="absolute-div">
+                <p>Seleccione uno por favor</p>
+              </div>
+            </div>
+            <div class="tab">
+              <h2 class="credit-h3">Fecha de nacimiento</h2>
+              <div class="date-flex">
+                <p>
+                  <select class="form-input date-select" onclick="checkForInput('dateDay')" id="dateDay"
+                    name="birth_day" required>
+                    <option value="" disabled selected>Día</option>
+                  </select>
+                </p>
+                <p>
+                  <select class="form-input date-select" id="dateMonth" onclick="checkForInput('dateMonth')"
+                    name="birth_month" required>
+                    <option value="" disabled selected>Mes</option>
+                  </select>
+                </p>
+                <p>
+                  <select class="form-input date-select" id="dateYear" onclick="checkForInput('dateYear')"
+                    name="birth_year" required>
+                    <option value="" disabled selected>Año</option>
+                  </select>
+                </p>
+              </div>
+            </div>
+            <div class="tab lastTab">
+              <h2 class="credit-h3">Haz click en</h2>
+              <p>Obtener ofertas para recibir el dinero, dando click en este apartado, aceptas <a href="/politicas.html" class="policy-span">los términos</a> del
+                procesamiento de datos personales</p>
+              <label class="container-radio">
+                <p id="agreecheckbox-p">Quiero recibir correos electrónicos de MX Crédito.</p>
+                <input type="checkbox" checked="checked" id="agreecheckbox" required>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div>
+              <div>
 
-        <label for="email">email</label>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+              </div>
+            </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <div class="step-flex">
+              <p class="step-p">8 paso</p>
+              <div>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+            </div>
+            <h3 class="documents-h3">Solicitudes realizadas hoy: 4714</h3>
+            <p class="terms">
+              Al hacer clic en el botón "Siguiente", acepta <a href="/normas.html" class="policy-span"> los términos</a> de procesamiento de datos personales.
+            </p>
+          </form>
+        </div>
 
-        <input type="email" class="form-input" onfocusout="validateInput('email')" id="email" name="email"
-                  maxlength="40" required />
+        <!-- select -->
 
-        <label for="phone">phone</label>
-        <input type="tel" class="form-input tel-padding" id="phone" name="phone" maxlength="13" required />
 
-        <label for="phone_plan">phone plan</label>
-        <select name="phone_plan" id="phone_plan">
-           <option value=" PREPAID">PREPAID</option>
-           <option value=" CONTRACT">CONTRACT</option> 
-        </select>
-        <div class="adress-div">
-        <h2>adress</h2>
-        <label for="postal_code">postal_code</label>
-        <input type="text" name="postal_code" onfocusout="validateInput('postal_code')" id="postal_code" pattern="^[0-9]{5}$" required maxlength="45">
-        <label for="city">city</label>
-        <input type="text" name="city" onfocusout="validateInput('city')" id="city" maxlength="45">
-        <label for="street">street</label>
-        <input type="text" name="street" onfocusout="validateInput('street')" id="street" maxlength="45">
-        <label for="house_number">house_number</label>
-        <input type="text" name="house_number" onfocusout="validateInput('house_number')" id="house_number" maxlength="45">
-        <label for="region">region</label>
-        <input type="text" name="region" id="region" maxlength="45">
-        <label for="county">city</label>
-        <input type="text" name="county" id="county" maxlength="45">
-        <label for="district">district</label>
-        <input type="text" name="district" id="district" maxlength="45">
+
+
+
+        <!-- select -->
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <main>
+    <div class="container-1">
+      <h2 class="h22">¿Cómo conseguir tu préstamo ?</h2>
+
+      <div class="how">
+        <div class="how-box">
+          <img src="img/how-11.svg" alt="" class="how-img" />
+          <p class="how-p1">Completa el formulario</p>
+          <p class="how-p2">
+            Todo lo que necesitas es Copia de DNI, pasaporte o NIE. Estado de cuenta bancario con ingresos y gastos
+            mensuales
+          </p>
+        </div>
+        <div class="how-box">
+          <img src="img/how-22.svg" alt="" class="how-img" />
+          <p class="how-p1">Escoge la mejor oferta</p>
+          <p class="how-p2">
+            Nuestro servicio seleccionará las mejores opciones de obtención de fondos para tu préstamo , enviaremos tu
+            solicitud a las entidades con el mayor porcentaje de aprobación
+          </p>
+        </div>
+        <div class="how-box">
+          <img src="img/how-33.svg" alt="" class="how-img" />
+          <p class="how-p1">Recibe tu dinero</p>
+          <p class="how-p2">
+            Haznos saber la forma más cómoda para la recepción de tu préstamo, a tu tarjeta bancaria , cuenta o en
+            efectivo
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-1">
+      <h2 class="h22">Ventajas de usar nuestro servicio</h2>
+
+      <div class="benefits">
+        <div class="benefits-box1 blue-box">
+          <p class="benefits-p1 ">Simplifica tus solicitudes</p>
+          <p class="benefits-p2 ">
+            Porque entendemos que puedes tener un gasto inesperado y necesitar tu dinero de inmediato. Garantizamos que
+            recibirás tu préstamo personal aprobado en menos de 15 minutos.
+          </p>
+        </div>
+        <div class="benefits-box2-1img"></div>
+        <div class="benefits-box1 yellow-box">
+          <p class="benefits-p1">Ahorra tiempo con Crédito MX</p>
+          <p class="benefits-p2">
+            No queremos que pierdas tu valioso tiempo en largas solicitudes. Por esta razón, solicitar un préstamo
+            personal en Credito MX es 100% online y muy fácil.
+          </p>
+        </div>
+        <div class="benefits-box2-2img"></div>
+        <div class="benefits-box2-3img"></div>
+        <div class="benefits-box1 green-box">
+          <p class="benefits-p1">Opciones financiamiento personalizadas</p>
+          <p class="benefits-p2">
+            Valoramos las entidades que realmente se preocupan por tu situación financiera. En Crédito MX estudiamos
+            cada aplicación y te ofrecemos un producto totalmente individualizado.
+          </p>
+        </div>
+        <div class="benefits-box2-4img"></div>
+        <div class="benefits-box1 pink-box">
+          <p class="benefits-p1">¡Gratuito y sin obligación!</p>
+          <p class="benefits-p2">
+            ¡Gratuito y sin obligación!
+            Nuestro servicio es gratuito. No hay nada que te obligue a continuar con la oferta de financiamiento.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-1 container-flex">
+      <h2 class="h22">Asistencia para tu préstamo</h2>
+
+      <p class="receive-p">
+        ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
+      </p>
+      <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
+    </div>
+
+    <div class="container-1">
+      <div class="conditions-box">
+        <div class="benefits-box1 pink-box">
+          <p class="benefits-p1">Términos del préstamo:</p>
+          <div class="condition-info">
+            <div class="benefit-info">
+              <img src="img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                El periodo mínimo de liquidación de la deuda es de 61 días , el periodo máximo de liquidación de 120
+                días.
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                La tasa de interés Efectiva Anual es de hasta 28,98% + IVA.
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Los intereses varían según el prestamista, el interés propuesto dependerá de tus circunstancias e
+                historial crediticio.
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Si se llegase a presentar un incumplimiento de los pagos prolongados , la información del beneficiario
+                del préstamo será enviada a la oficina de historial de crédito.
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Especifique los términos y condiciones finales al comunicarse con la entidad expendedora.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="conditions-img1"></div>
+        <div class="benefits-box1 blue-box">
+          <p class="benefits-p1">Requisitos del solicitante:</p>
+          <div class="condition-info">
+            <div class="benefit-info">
+              <img src="/img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Identificación oficial vigente , ya sea INE,IFE o pasaporte
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="/img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Número de teléfono nacional valido
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="/img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Correo electrónico (para la creación de una cuenta en nuestra plataforma)
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="/img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Cuenta bancaria propia en México
+              </p>
+            </div>
+            <div class="benefit-info">
+              <img src="/img/black-check.svg" alt="" />
+              <p class="benefits-p2">
+                Estado de cuenta , con ingresos y gastos mensuales
+              </p>
+            </div>
+            <div class="benefit-info">
+              <p class="benefits-p2">
+                * los términos finales del préstamo estarán vinculados con los términos de la entidad financiera
+                asociada.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="conditions-box2">
+        <div class="benefits-box1 border-box">
+          <p class="benefits-p1">Sobre el servicio</p>
+          <p class="benefits-p2">
+            Credito-mx es tu mejor asistente en la obtención de préstamos , trabajamos con más de 100 entidades
+            bancarias y
+            organizaciones financieras con las mejores ofertas de préstamo , ya no necesitas buscar un prestamista .
+            ¡Haremos todo por ti! Ayudamos a las personas a resolver sus problemas financieros todos los días , sin
+            hacer colas , sin el estrés de la búsqueda y la tramitación para obtener uno.
+          </p>
+        </div>
+
+        <div class="benefits-box1 green-box">
+          <p class="benefits-p1">¿Qué pasa si no pagas por la obtención de préstamos?</p>
+          <p class="benefits-p2">
+            En el caso de que se produzca una demora o impago en tu préstamo, la entidad financiera lo registrará en el
+            Buró de Crédito donde obtendrás un reporte negativo por mal comportamiento financiero y un mal historial.
+          </p>
+        </div>
+
+        <div class="conditions-img2"></div>
+      </div>
+    </div>
+
+    <div class="container-1">
+      <h2 class="h22">¿Por qué nosotros?</h2>
+
+      <div class="how">
+        <div class="how-box">
+          <img src="img/why-11.svg" alt="" class="how-img" />
+          <p class="how-p1">Tu eres nuestra prioridad
+          </p>
+          <p class="how-p2">
+            Buscamos, comparamos y negociamos para ofrecerte sólo lo mejor que nuestros colaboradores en México tienen
+            para ti. Sólo ganamos si tu ganas.
+          </p>
+        </div>
+        <div class="how-box">
+          <img src="img/why-22.svg" alt="" class="how-img" />
+          <p class="how-p1">Tus datos están protegidos</p>
+          <p class="how-p2">
+            Tenemos la misma seguridad que los más avanzados. sistemas bancarios (256 bits), así como un equipo de
+            seguridad para protegerte en cada paso. Siempre cuidamos de ti.
+          </p>
+        </div>
+        <div class="how-box">
+          <img src="img/why-33.svg" alt="" class="how-img" />
+          <p class="how-p1">Ahorra tiempo</p>
+          <p class="how-p2">
+            Cuando tienes que pasar por un largo proceso de solicitud, en realidad estás perdiendo dinero. Nuestro
+            rápido proceso le brinda la tranquilidad de que esto no va a suceder nunca más.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-1 container-flex">
+      <h2 class="h22">Asistencia para tu préstamo</h2>
+
+      <p class="receive-p">
+        ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
+      </p>
+      <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
+    </div>
+
+    <div class="container-1">
+      <h2 class="h22">Reseñas</h2>
+      <div class="testmonials">
+        <div class="testmonial-box">
+          <div class="stars">
+            <img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img
+              src="img/stars.png" alt="" /><img src="img/stars.png" alt="" />
+          </div>
+
+          <div class="testmonial-bottom">
+            <p class="testmonial-p">
+              De momento satisfecha con el resultado. Todo ha sido como yo esperaba y como había comprobado por los
+              comentarios de internet. Es fácil y rápido.
+            </p>
+
+            <div class="author">
+              <img src="img/testmonial-img-3.png" alt="" />
+              <p class="author-p">Manuel</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="testmonial-box">
+          <div class="stars">
+            <img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img
+              src="img/stars.png" alt="" /><img src="img/stars.png" alt="" />
+          </div>
+
+          <div class="testmonial-bottom">
+            <p class="testmonial-p">
+              Muy buena atención y asistencia, así como agilidad para todo el trámite realizado. Si tuviera que
+              calificar de 0 a 10, sería un 12. Muchísimas gracias por el trato, atención y rapidez.
+            </p>
+
+            <div class="author">
+              <img src="img/testmonial-img-1.png" alt="" />
+              <p class="author-p">Margarita</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="testmonial-box">
+          <div class="stars">
+            <img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img src="img/stars.png" alt="" /><img
+              src="img/stars.png" alt="" /><img src="img/stars.png" alt="" />
+          </div>
+
+          <div class="testmonial-bottom">
+            <p class="testmonial-p">
+              La experiencia de subir tu información bancaria es muy sencilla! Y gracias a tener una visión real de mi
+              solvencia me han dado un 5,99%! No es el 2,99% que anuncian pero sigue siendo mejor que otros!
+            </p>
+
+            <div class="author">
+              <img src="img/testmonial-img-2.png" alt="" />
+              <p class="author-p">José Luis</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-1" id="faqs">
+      <div class="container-max-width">
+        <h2 class="h22">Agente de crédito: cuál es la función de dicho especialista</h2>
+
+        <div class="before-div">
+          <p class="receive-p">
+            Para obtener un préstamo en condiciones favorables , puede comunicarse con un agente de crédito que
+            facilitará
+            significativamente este procedimiento , el mismo hace de mediador entre una entidad bancaria y un
+            solicitante
+            , lo cual garantiza una interacción de ambas partes durante todo el procedimiento , dicho especialista
+            trabaja
+            tanto con personas físicas como con jurídicas
+          </p>
+        </div>
+        <div class="faq-border"></div>
+
+        <button type="button" class="collapsible">
+          <p class="faq-btn-p">¿Con quién se llega a un acuerdo para el préstamo?</p>
+        </button>
+
+        <div class="content">
+          <p class="faq-p">
+            credito-mx permite comparar ofertas de bancos y proveedores de préstamos, pero no ofrece préstamos ni
+            asistencia financiera. Por lo tanto, no se puede llegar a un acuerdo de préstamo con credito-mx, únicamente
+            con los bancos o los proveedores de préstamos que aparecen en la lista de credito-mx.
+          </p>
+        </div>
+        <div class="faq-border"></div>
+        <button type="button" class="collapsible">
+          <p class="faq-btn-p">¿Cuánto dinero puedo solicitar?</p>
+        </button>
+
+        <div class="content">
+          <p class="faq-p">
+            La cantidad de dinero que se puede solicitar dependerá de cada una de las ofertas de préstamos y de los
+            términos y condiciones del acuerdo. Puedes encontrar el préstamo que se adapte mejor a tus necesidades con
+            la búsqueda y el uso de los filtros en la lista de préstamos de Credito-mx.
+          </p>
+        </div>
+        <div class="faq-border"></div>
+        <button type="button" class="collapsible">
+          <p class="faq-btn-p">¿Cómo será la tasa de interés de mi préstamo?</p>
+        </button>
+        <div class="content">
+          <p class="faq-p">
+            Las tasas de interés de los préstamos en línea son un poco más elevadas que la de los préstamos
+            tradicionales bancarios y dependerán de la oferta de préstamo que se hayas elegido. Podrás encontrar la
+            opción que se adapte mejor a tus necesidades al buscar/filtrar la lista de préstamos de Credito-mx.
+          </p>
+        </div>
+        <div class="faq-border"></div>
+        <button type="button" class="collapsible">
+          <p class="faq-btn-p">
+            ¿Por qué ha sido rechazada mi solicitud?
+          </p>
+        </button>
+
+        <div class="content">
+          <p class="faq-p">
+            Cada uno de los proveedores de préstamos establece los términos y condiciones para cada oferta. Credito-mx
+            no tiene ningún tipo de influencia a la hora de aprobar o rechazar las solicitudes. Si tienes dudas con
+            respecto a tu solicitud, por favor, contacta al proveedor de préstamos directamente.
+          </p>
+        </div>
+        <div class="faq-border"></div>
+        <button type="button" class="collapsible">
+          <p class="faq-btn-p">¿Puedo recibir el monto del préstamo inmediatamente?</p>
+        </button>
+        <div class="content">
+          <p class="faq-p">
+            Cuando se ha establecido un acuerdo con la entidad prestamista, generalmente, se puede obtener el monto el
+            mismo día o el día después del acuerdo. Esto dependerá del horario de trabajo de la entidad.
+          </p>
+        </div>
+        <div class="faq-border"></div>
+      </div>
+    </div>
+
+    <div class="container-1 container-max-width">
+      <h2 class="h22">Ejemplo práctico
+      </h2>
+
+      <div class="before-div">
+        <p class="receive-p">
+          El periodo mínimo de liquidación de la deuda es de 61 días , el periodo máximo de liquidación de 120 días. La
+          tasa de interés Efectiva Anual es de hasta 28,98% + IVA. El monto del préstamo es aproximadamente de 2,000 MXN
+          con un plazo de 84 días, y se pagará en cuatro pagos semanales. Para calcular cada cuota, dividimos el monto
+          del préstamo por el número de cuotas: 2,000 MXN / 4 = 500 MXN por cuota. La tasa de interés es del 0.01% por
+          día, lo que resulta en un costo total del préstamo de aproximadamente 2,014.24 MXN, con una comisión adicional
+          de aproximadamente 3.85 MXN. Por lo tanto, el monto total a pagar es de aproximadamente 2,018.09 MXN, y la
+          tasa de interés anual es de aproximadamente el 3.65% en términos de Peso Mexicano. Los intereses varían según
+          el prestamista, el interés propuesto dependerá de tus circunstancias e historial crediticio. La página actual
+          no es una entidad financiera, un banco o un prestamista.
+        </p>
+      </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-menu">
+        <div class="footer-box">
+          <p class="footer-p">Compañía</p>
+          <div class="pages">
+            <p class="pages-p"><a href="/about-us.html">Sobre nosotras</a></p>
+            <p class="pages-p"><a href="/politicas.html">Políticas</a></p>
+            <p class="pages-p"><a href="/normas.html">Normas</a></p>
+            <p class="pages-p"><a href="/acuerdos.html">Acuerdos</a></p>
+          </div>
+        </div>
+
+        <div class="footer-box">
+          <p class="footer-p">Información</p>
+          <div class="pages">
+            <p class="pages-p pages-p2">
+              credito-mx.com - es un servicio online gratuito dedicado a conectarte con las mejores opciones de préstamo
+              en el mercado. El servicio credito-mx escoge
+              préstamos para clientes haciendo de intermediario entre los clientes que quieren recibir un préstamo y las
+              instituciones financieras licenciadas. El servicio no se hace responsable de los acuerdos crediticios. La
+              página actual no cobra por el servicio ni tampoco se hace responsable de las acciones, incumplimientos o
+              tasas de interés de cualquier prestamista. No estás obligado a usar los servicios de credito-mx ni
+              contactar o solicitar un préstamo a los prestamistas que aparecen en esta página.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="copyright-p">
+        credito-mx.com ©2024 - todos los derechos registrados.
+      </p>
     </div>
 
 
-    <label for="housing_type">housing type</label>
-    <select name="housing_type" id="housing_type">
-        <option value="disabled">disabled</option>
-        <option value="RENTED_ROOM">RENTED_ROOM</option>
-        <option value="RENTED_APARTMENT_OR_HOUSE">APARTMENT_OR_HOUSE</option>
-        <option value="OWN_HOUSE_OR_APARTMENT">OWN_HOUSE_OR_APARTMENT</option>
-        <option value="WITH_PARENTS">WITH_PARENTS</option>
-    </select>
+  </footer>
 
-    <label for="occupation">occupation</label>
-    <select name="occupation" id="occupation">
-        <option value="disabled">disabled</option>
-        <option value="EMPLOYED_INDEFINITE_PERIOD">EMPLOYED_INDEFINITE_PERIOD</option>
-        <option value="SELF_EMPLOYED">SELF_EMPLOYED</option>
-        <option value="PENSIONER1">PENSIONER1</option>
-        <option value="STUDENT">STUDENT</option>
-        <option value="UNEMPLOYED">UNEMPLOYED</option>
-        <option value="FREELANCER">FREELANCER</option>
-        <option value="OWN_BUSINESS">OWN_BUSINESS</option>
-        <option value="MATERNITY_LEAVE">MATERNITY_LEAVE</option>
-    </select>
 
-      <label for="neto_income">neto_income</label>
-      <input type="text" name="neto_income" id="neto_income">
-    <label for="remuneration_deadline">remuneration deadline</label>
-      <input type="text" id="remuneration_deadline" onfocusout="validateInput('remuneration_deadline')" name="remuneration_deadline" pattern="^([12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$">
-    <label for=""></label>
+  <script>
 
-    <label for="credit_score">credit score</label>
-    <select name="credit_score" id="credit_score">
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-        <option value="EXCELLENT_700_TO_850">EXCELLENT_700_TO_850</option>
-        <option value="GOOD_650_TO_700">GOOD_650_TO_700</option>
-        <option value="STABLE_550_TO_650">STABLE_550_TO_650</option>
-        <option value="LOW_300_TO_550">LOW_300_TO_550</option>
-        <option value="DONT_KNOW">DONT_KNOW</option>
-        <option value="NO_CREDIT_HISTORY">NO_CREDIT_HISTORY</option>
-    </select>
-
-    <label for="has_loan">has loan</label>
-        <select name="has_loan" id="has_loan">
-            <option value="yes">yes</option>
-            <option value="no">no</option>
-        </select>
-    </select>
-
-    <label for="car">car</label>
-    <select name="car" id="car">
-        <option value="yes">yes</option>
-        <option value="no">no</option>
-    </select>
-</select>
-    <label for="policy">policy</label>
-    <input type="checkbox" name="policy" id="policy">
-    <label for="terms">terms</label>
-    <input type="checkbox" name="terms" id="terms">
-
-        <button type="button" onclick="validateForm('customers-form')">Submit</button>
-    </form>
-
-    <script src="./scripts.js"></script>
-    <script src="./dates.js"></script>
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("arrow-top");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
+<script src="stepper.js"></script>
+
+</script>
+
+
+<script src="scripts.js"></script>
+
 </html>

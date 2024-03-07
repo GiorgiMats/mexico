@@ -1,0 +1,950 @@
+@media only screen and (max-width: 1650px) {
+    .hero-section {
+        background-position: 82%;
+    }
+}
+
+
+@media only screen and (max-width: 1650px){
+
+.link-h2 {
+    font-size: 24px;
+}
+
+
+
+
+.progress-section {
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+.container {
+    padding: 64px 72px;
+}
+
+.progress-bar {
+    height: 40px;
+}
+    
+}
+
+@media only screen and (max-width: 1570px){
+
+    .h1-new {
+        font-size: 52px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+    .testmonial-bottom {
+        gap: 16px;
+    }
+
+    .h1-new {
+        font-size: 40px !important;
+    }
+
+
+   
+
+    header {
+        padding: 32px 40px 32px 40px;
+    }
+
+    .hero-section {
+        padding: 0 40px;
+    }
+
+    .links-container{
+        gap: 24px;
+    }
+
+
+    .h1-about {
+        margin-bottom: 24px;
+      }
+
+
+    .h1-links {
+        
+        font-size: 18px;
+    }
+
+    .hero-container {
+        padding: 40px 0 48px 0;
+        gap: 32px;
+
+    }
+
+    .link-h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    
+    .links-flex {
+        
+        padding: 24px 32px;
+    }
+
+
+    .recomended {
+        display: flex;
+        gap: 12px;
+        
+        padding: 24px 24px;
+    }
+
+    .bank-p {
+        font-size: 16px;
+    }
+
+    .bank-p2 {
+        font-size: 16px;
+    }
+
+
+    .nav {
+        gap: 16px;
+    }
+
+    .hero-left {
+        gap: 40px;
+    }
+
+    main {
+        padding: 0 40px;
+    }
+
+    .how {
+        gap: 32px;
+    }
+
+    .h22 {
+        margin-bottom: 32px;
+        font-size: 32px;
+    }
+
+    .receive-p {
+
+        margin-bottom: 24px;
+    }
+
+    footer {
+        padding: 40px 40px 32px 32px;
+        margin-top: 52px;
+    }
+
+    .footer-menu {
+        gap: 32px;
+    }
+
+    .footer-box {
+        gap: 20px;
+    }
+
+    .container-1 {
+        margin: 52px auto 0 auto;
+    }
+
+    .hero-left-p {
+        font-size: 16px;
+    }
+
+    .h1-left {
+        font-size: 48px;
+    }
+
+    .how-p1 {
+        font-size: 20px;
+    }
+
+    .how-p2 {
+        font-size: 14px;
+    }
+
+    .benefits-p1 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .benefits-p2 {
+
+        font-size: 14px;
+    }
+
+    .condition-info {
+        gap: 12px;
+    }
+
+    .benefits-box1 {
+        padding: 32px 20px 32px 32px;
+    }
+
+    .footer-container {
+        gap: 32px;
+    }
+
+  
+    .nav-link , .nav-focus .terms .credit-p{
+        font-size: 14px;
+    }
+
+    .nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: rgba(28, 31, 36, 0.6);
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+
+
+    .testmonial-box {
+        padding: 20px;
+    }
+
+    .testmonial-box {
+        margin: 24px 0 32px 0;
+        font-size: 14px;
+    }
+
+    .author {
+        gap: 20px;
+    }
+
+    .pages-p {
+        font-size: 14px;
+    }
+
+
+
+    .footer-p {
+        font-size: 20px;
+    }
+
+
+    .link-h2 {
+        font-size: 20px;
+    }
+    
+   
+
+    .bank-p {
+        font-size: 16px;
+    }
+
+    .bank-p2 {
+        font-size: 16px;
+    }
+
+    .faq-p{
+        font-size: 14px;
+    }
+
+    .progress-h2  {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    .progress-h3 {
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+
+    .hero-right {
+        min-height: 600px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1450px){
+    .links-section {
+        max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 32px;
+      }
+}
+
+@media only screen and (max-width: 1080px){
+    .links-flex {
+        flex-direction: column;
+       
+    }
+
+    .container-border {
+        padding: 24px;
+        background: transparent;
+    }
+
+   
+
+    .links-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+    .how-p1 {
+        margin: 12px 0;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .progress-bar {
+        height: 28px;
+    }
+    
+
+    .logo {
+        height: 20px;
+    }
+
+    .nav-focus:link,
+.nav-focus:visited {
+        font-size: 14px;
+    }
+
+    .btn{
+        font-size: 14px;
+        padding: 20px;
+    }
+   
+
+    .hero-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-link {
+        align-self: center;
+    }
+    .bank-value {
+        max-width: 1000px;
+    }
+
+    .btn-link {
+        padding: 24px 72px;
+        max-height: 67px;
+        
+    }
+
+    .bank-info {
+        max-width: 472px;
+    }
+
+    .links-flex {
+        display: flex;
+        gap: 24px;
+        padding: 24px 24px;
+        min-height: auto;
+
+}
+
+.btn-link {
+    padding: 20px 24px;
+    width: 320px;
+}
+
+.progress-section {
+    padding: 0 24px;
+    margin-top: 32px;
+}
+
+.container {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+
+    
+}
+
+
+.progress-box {
+    margin-top: 24px;
+    gap: 12px;
+}
+
+.progress-info img{
+  height: 16px;
+}
+
+.h1-links {
+    
+    margin-bottom: 0;
+  }
+
+
+  .progress-info {
+    gap: 16px;
+  }
+
+  .hero-left {
+    margin-top: 50px;
+  }
+
+}
+
+
+@media only screen and (max-width: 950px) {
+
+    .date-flex {
+        gap: 16px;
+        justify-content: space-between;
+    }
+
+    .hero-section-new {
+        display: none;
+    }
+
+
+.conditions-box2{
+    border: none;
+}
+
+.border-box {
+    border-right: 1px solid rgba(25, 25, 31, 0.20);
+}
+
+    .testmonial-bottom {
+        height: auto;
+    }
+
+    #regForm {
+        padding: 0 !important;
+    }
+    
+
+
+
+    .credit-box {
+        padding: 0;
+        justify-content: center;
+    }
+
+    #appear {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding: 32px 40px;
+        
+        max-width: 552px;
+    margin: 0 auto;
+        
+      }
+
+
+      .field {
+        margin: 32px 0 44px 0;
+     
+    }
+    
+
+      .container-4 {
+        background-color: #00587A;
+      }
+
+
+      .field3 {
+        margin-top: 0px !important;
+      }
+
+.loans-box {
+    
+    display: flex;
+    align-items: start !important;
+    justify-content: start !important;
+    
+}
+
+.h1-responsive {
+    text-align: start !important;
+    justify-self: start !important;
+    color: #fff;
+    align-self: flex-start;
+}
+      
+
+.hero-container {
+    margin-bottom: 80px;
+}
+
+
+.steps {
+    margin-bottom: 32px;
+}
+
+    .hero-left {
+        display: none;
+    }
+
+    .hero-section {
+        align-items: center;
+        justify-content: center;
+        background-size: 0%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        background-position: 1%;
+        padding: 40px 0 12px 0;
+    }
+
+    .hero-right {
+        justify-self: center;
+        min-height: auto;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .conditions-box {
+        grid-template-columns: 1fr;
+    }
+
+    .conditions-box2 {
+        grid-template-columns: 1fr;
+    }
+
+    .testmonials {
+        grid-template-columns: 1fr;
+    }
+
+    .testmonial-box {
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+    .link-box:hover {
+    background: rgba(249, 218, 107, 0.10);
+    
+}
+
+    .footer-menu {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 20px 24px 20px 24px;
+    }
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 40px;
+        
+    }
+
+    .collapsible {
+        font-size: 20px;
+    
+    }
+
+    .faq-btn-p {
+        font-size: 20px;
+        max-width: 300px;
+
+    }
+
+    .date-select {
+       font-size: 14px; 
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 750px){
+    .hamburger-menu {
+        display: block;
+      }
+    
+      .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        z-index: 1;
+      }
+    
+      .nav.active {
+        display: flex;
+        gap: 44px;
+      }
+    
+      .nav.active + .close {
+        display: block; /* Show close button when nav is active */
+      }
+
+
+
+
+
+
+    
+      /* Other styles for nav links */
+    }
+
+
+
+@media only screen and (max-width: 650px) {
+
+    .info-logo {
+        max-width: 24px;
+    }
+
+    .h1-links {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .h1-div {
+        padding: 12px;
+        gap: 6px;
+        align-items: start;
+    }
+
+    #appear {
+     
+        padding: 24px 40px !important;
+        justify-content: center;
+        
+     
+        
+      }
+
+
+
+    .how {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .h1-left {
+        font-size: 32px;
+    }
+    .h1-responsive {
+        font-size: 32px;
+    }
+
+
+    .hero-container {
+        margin-bottom: 60px;
+    }
+
+
+    #appear {
+       
+        padding: 32px 24px;
+        
+     
+        
+      }
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 24px;
+        
+    }
+
+    .collapsible {
+        padding: 16px 0;
+    }
+    
+    .faq-btn-p {
+        font-size: 16px;
+    }
+    
+
+    .h1-right {
+        font-size: 32px;
+    }
+
+    .range-input {
+        justify-self: end;
+    }
+
+
+
+    .hero-section {
+        padding: 0 24px;
+    }
+
+    .hero-container {
+        padding: 24px 0 24px 0;
+        gap: 20px;
+
+    }
+
+    .hero-left {
+        gap: 24px;
+    }
+
+    main {
+        padding: 0 24px;
+    }
+
+    .how {
+        gap: 28px;
+    }
+
+    .h22 {
+        margin-bottom: 28px;
+        font-size: 24px;
+    }
+
+    .range-btn {
+        
+    }
+
+    .receive-p {
+
+        margin-bottom: 24px;
+        text-align: start;
+    }
+
+    footer {
+        padding: 20px 20px 20px 20px;
+        margin-top: 48px;
+    }
+
+    .documents-h3 {
+        margin-bottom: 32px;
+    }
+    
+
+    .footer-menu {
+        gap: 24px;
+    }
+    p {
+        font-size: 14px;
+    } 
+
+    .rects img{
+        max-width: 32px;
+    }
+
+    .container-1 {
+        margin: 48px auto 0 auto;
+    }
+
+    .testmonial-box {
+        margin: 0;
+    }
+
+    .testmonials {
+        gap: 28px;
+    }
+
+    .range .field input {
+        max-width: 472px;
+    }
+
+    
+
+    .h1-right {
+        max-width: 300px;
+    }
+
+    .how-img {
+        max-height: 90px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 650px) {
+    .credit-p {
+        margin: 24px 0 20px 0;
+    }
+
+
+    .date-select {
+        min-width: 130px;
+        padding: 12px;
+    }
+
+    #link-main {
+        padding: 0;
+    }
+
+    .links-section {
+      padding: 0 24px;
+          
+      }
+
+      .h1-links {
+        
+        margin-bottom: 0;
+        max-width: 450px;
+      }
+
+      .credit-h3 {
+        margin-bottom: 24px;
+      }
+
+      
+
+    
+}
+
+
+@media only screen and (max-width: 500px) {
+    .date-select {
+        min-width: 100px;
+        padding: 12px;
+    }
+
+    .step {
+       height: auto; 
+        width: 24px !important;
+    }
+
+    .h1-div {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        
+    }
+
+    .date-flex {
+        gap: 16px;
+        justify-content: space-between;
+    }
+
+    .h1-responsive {
+        font-size: 20px !important;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 400px){
+
+
+    .progress-h2 {
+        font-size: 24px;
+    }
+
+
+    .date-select {
+        min-width: 70px;
+        padding: 12px;
+    }
+
+    .faq-btn-p {
+        font-size: 16px;
+        max-width: 240  px;
+        
+
+    }
+
+    .h1-responsive {
+        font-size: 28px;
+    }
+
+    .progress-check {
+        font-size: 14px;
+    }
+
+    .progress-h3 {
+        font-size: 16px;
+    }
+    
+    .bank-value {
+        gap: 16px;
+    }
+
+
+    .bank-p2 {
+        font-size: 14px;
+    }
+
+
+
+    .rects img {
+        max-width: 20px;
+    }
+
+    .steps {
+        gap: 8px;
+    }
+
+.h1-right {
+    font-size: 24px;
+}
+
+.credit-h3 {
+    font-size: 20px;
+}
+
+.bank-list {
+    gap: 12px;
+}
+
+
+.faq-btn-p {
+    
+    max-width: 230px;
+}
+
+
+.date-select {
+    min-width: 10px;
+}
+
+.bank-p {
+    font-size: 12px;
+}
+
+.btn-link {
+    padding: 20px 24px;
+    width: 100%;
+}
+
+.link-h2 {
+    font-size: 16px;
+}
+
+.step {
+    height: 6px !important; 
+     width: 18px !important;
+ }
+
+ .date-select {
+    max-width: 100px;
+ }
+
+
+}
+
+

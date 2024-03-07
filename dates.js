@@ -22,7 +22,7 @@ function populateMonths() {
     for (var i = 1; i <= 12; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
-        option.textContent = months[i];
+        option.textContent = months[i-1];
         monthSelect.appendChild(option);
     }
 }
