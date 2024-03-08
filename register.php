@@ -26,7 +26,7 @@
     <div class="form-container">
         <form id="customers-form" action="send_customer.php" method="post">
             <!-- first-step -->
-            <div class="steps-div" id="first-one">
+            <div class="steps-div" id="stepsdiv1">
                 <h1 class="register-h1">First step 1/3</h1>
                 <h2 class="register-h2">Personal information</h2>
                 <div class="first-step">
@@ -56,24 +56,24 @@
                     <div class="margin-div">
 
 
-                        <label for="birth_date">birth_date</label>
+                        <label for="birth_date">Birth Date</label>
                         <div class="date-flex">
                             <p>
-                                <select class="form-input date-select" onclick="checkForInput('dateDay')" id="dateDay"
-                                    name="birth_day" required>
-                                    <option value="" disabled selected>Día</option>
+                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
+                                    id="dateDay" name="birth_day" required>
+                                    <option class="select-one" value="" disabled selected>Día</option>
                                 </select>
                             </p>
                             <p>
                                 <select class="form-input date-select" id="dateMonth"
-                                    onclick="checkForInput('dateMonth')" name="birth_month" required>
-                                    <option value="" disabled selected>Mes</option>
+                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
+                                    <option class="select-one" value="" disabled selected>Mes</option>
                                 </select>
                             </p>
                             <p>
-                                <select class="form-input date-select" id="dateYear" onclick="checkForInput('dateYear')"
-                                    name="birth_year" required>
-                                    <option value="" disabled selected>Año</option>
+                                <select class="form-input date-select" id="dateYear"
+                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
+                                    <option class="select-one" value="" disabled selected>Año</option>
                                 </select>
                             </p>
                         </div>
@@ -87,12 +87,12 @@
                         <div class="gender-div">
                             <div class="male-div">
                                 <input type="radio" id="male" name="gender" value="MALE">
-                                <label for="male">Male</label>
+                                <label for="male" onclick="selectRadio()">Male</label>
                             </div>
 
                             <div class="female-div">
                                 <input type="radio" id="female" name="gender" value="FEMALE">
-                                <label for="female">Female</label>
+                                <label for="female" onclick="selectRadio()">Female</label>
                             </div>
                         </div>
                     </div>
@@ -123,22 +123,22 @@
                         <label for="marital_status">marital status</label>
 
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="marital_status-div" onclick="checkSelect('marital_status-div')">
                             <select id="marital_status" name="rmarital_status" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
-                                    class="select-one" id="select-one">
+                                <option value="Seleccione uno" class="select-one" id="select-one"
+                                    onclick="checkSelect('marital_status-div')">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="SINGLE"
-                                    class="option-hover">single</option>
-                                <option onclick="removeSelectRed('select-selected')" value="MARRIED"
+                                <option onclick="checkSelect('marital_status-div')" value="SINGLE" class="option-hover">
+                                    single</option>
+                                <option onclick="checkSelect('marital_status-div')" value="MARRIED"
                                     class="option-hover">Consolidar prestamos existentes
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="DIVORCED">
+                                <option onclick="checkSelect('marital_status-div')" value="DIVORCED">
                                     single</option>
-                                <option onclick="removeSelectRed('select-selected')" value="WITH_PARTNER"
+                                <option onclick="checkSelect('marital_status-div')" value="WITH_PARTNER"
                                     class="option-hover">
                                     Reparar el coche</option>
-                                <option onclick="removeSelectRed('select-selected')" value="WIDOW" class="option-hover">
+                                <option onclick="checkSelect('marital_status-div')" value="WIDOW" class="option-hover">
                                     Pago de alquiler</option>
 
                             </select>
@@ -161,24 +161,23 @@
 
                         <label for="nationality">nationality</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="nationality-div" onclick="checkSelect('nationality-div')">
                             <select id="nationality" name="nationality" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
-                                    class="select-one" id="select-one">
+                                <option value="Seleccione uno" class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="MX" class="option-hover">MX
+                                <option onclick="checkSelect('nationality-div')" value="MX" class="option-hover">MX
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="ES" class="option-hover">ES
+                                <option onclick="checkSelect('nationality-div')" value="ES" class="option-hover">ES
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="AL">
+                                <option onclick="checkSelect('nationality-div')" value="AL">
                                     AL</option>
-                                <option onclick="removeSelectRed('select-selected')" value="AR" class="option-hover">
+                                <option onclick="checkSelect('nationality-div')" value="AR" class="option-hover">
                                     AR</option>
-                                <option onclick="removeSelectRed('select-selected')" value="BR" class="option-hover">
+                                <option onclick="checkSelect('nationality-div')" value="BR" class="option-hover">
                                     BR</option>
-                                <option onclick="removeSelectRed('select-selected')" value="BU" class="option-hover">
+                                <option onclick="checkSelect('nationality-div')" value="BU" class="option-hover">
                                     BU</option>
-                                <option onclick="removeSelectRed('select-selected')" value="RU" class="option-hover">
+                                <option onclick="checkSelect('nationality-div')" value="RU" class="option-hover">
                                     RU</option>
 
                             </select>
@@ -189,30 +188,31 @@
 
                         <label for="dependant_count">dependant count</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="dependant_count-div"
+                            onclick="checkSelect('dependant_count-div')">
                             <select id="dependant_count" name="dependant_count" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                                <option onclick="checkSelect('dependant_count-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="1" class="option-hover">1
+                                <option onclick="checkSelect('dependant_count-div')" value="1" class="option-hover">1
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="2" class="option-hover">2
+                                <option onclick="checkSelect('dependant_count-div')" value="2" class="option-hover">2
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="3">
+                                <option onclick="checkSelect('dependant_count-div')" value="3">
                                     3</option>
-                                <option onclick="removeSelectRed('select-selected')" value="4" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="4" class="option-hover">
                                     4</option>
-                                <option onclick="removeSelectRed('select-selected')" value="5" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="5" class="option-hover">
                                     5</option>
-                                <option onclick="removeSelectRed('select-selected')" value="6" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="6" class="option-hover">
                                     6</option>
-                                <option onclick="removeSelectRed('select-selected')" value="7" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="7" class="option-hover">
                                     7</option>
-                                <option onclick="removeSelectRed('select-selected')" value="8" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="8" class="option-hover">
                                     8</option>
-                                <option onclick="removeSelectRed('select-selected')" value="9" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="9" class="option-hover">
                                     9</option>
-                                <option onclick="removeSelectRed('select-selected')" value="10" class="option-hover">
+                                <option onclick="checkSelect('dependant_count-div')" value="10" class="option-hover">
                                     10</option>
 
                             </select>
@@ -231,7 +231,7 @@
 
                     <div class="margin-div">
                         <label for="phone">phone</label>
-                        <input type="tel" class="form-input tel-padding" id="phone" name="phone" maxlength="13"
+                        <input type="tel" class="form-input tel-padding" id="phone" name="phone" maxlength="16"
                             required />
                     </div>
 
@@ -240,15 +240,15 @@
 
 
 
-                        <div class="custom-select">
-                            <select id="dependant_count" name="dependant_count" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                        <div class="custom-select" id="phone_plan-div" onclick="checkSelect('phone_plan-div')">
+                            <select id="phone_plan" name="phone_plan" required>
+                                <option onclick="checkSelect('phone_plan-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="PREPAID"
-                                    class="option-hover">PREPAID</option>
-                                <option onclick="removeSelectRed('select-selected')" value="CONTRACT"
-                                    class="option-hover">CONTRACT
+                                <option onclick="checkSelect('phone_plan-div')" value="PREPAID" class="option-hover">
+                                    PREPAID</option>
+                                <option onclick="checkSelect('phone_plan-div')" value="CONTRACT" class="option-hover">
+                                    CONTRACT
                                 </option>
 
 
@@ -258,10 +258,10 @@
                 </div>
 
             </div>
+            <!-- end -->
 
             <!-- second step -->
-
-            <div class="steps-div" id="second-one">
+            <div class="steps-div displaynone" id="stepsdiv2">
                 <h1 class="register-h1">Second step 2/3</h1>
                 <h2 class="register-h2">Adress</h2>
 
@@ -291,11 +291,13 @@
                     </div>
                     <div class="margin-div">
                         <label for="region">region</label>
-                        <input type="text" name="region" id="region" maxlength="45">
+                        <input type="text" name="region" id="region" maxlength="45"
+                            onfocusout="validateInput('region')">
                     </div>
                     <div class="margin-div">
                         <label for="county">city</label>
-                        <input type="text" name="county" id="county" maxlength="45">
+                        <input type="text" name="county" id="county" maxlength="45"
+                            onfocusout="validateInput('county')">
                     </div>
                 </div>
 
@@ -307,19 +309,19 @@
                     <div class="margin-div">
                         <label for="housing_type">housing type</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="housing_type-div" onclick="checkSelect('housing_type-div')">
                             <select id="housing_type" name="housing_type" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                                <option onclick="checkSelect('housing_type-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="RENTED_ROOM"
+                                <option onclick="checkSelect('housing_type-div')" value="RENTED_ROOM"
                                     class="option-hover">RENTED_ROOM</option>
-                                <option onclick="removeSelectRed('select-selected')" value="RENTED_APARTMENT_OR_HOUSE"
+                                <option onclick="checkSelect('housing_type-div')" value="RENTED_APARTMENT_OR_HOUSE"
                                     class="option-hover">RENTED_APARTMENT_OR_HOUSE
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="OWN_HOUSE_OR_APARTMENT">
+                                <option onclick="checkSelect('housing_type-div')" value="OWN_HOUSE_OR_APARTMENT">
                                     OWN_HOUSE_OR_APARTMENT</option>
-                                <option onclick="removeSelectRed('select-selected')" value="WITH_PARENTS"
+                                <option onclick="checkSelect('housing_type-div')" value="WITH_PARENTS"
                                     class="option-hover">
                                     WITH_PARENTS</option>
 
@@ -329,21 +331,11 @@
                     </div>
                 </div>
 
-
-                <div class="button-div">
-                    <button class="register-next">
-                        <p>Next </p><img src="img/arrow-register.svg" alt="">
-                    </button>
-                </div>
-
             </div>
             <!-- end -->
 
-
             <!-- third step -->
-
-
-            <div class="steps-div" id="third-step">
+            <div class="steps-div displaynone" id="stepsdiv3">
                 <h1 class="register-h1">Third step 3/3</h1>
                 <h2 class="register-h2">Adress</h2>
                 <div class="first-step">
@@ -351,31 +343,28 @@
                         <label for="occupation">occupation</label>
 
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="occupation-div" onclick="checkSelect('occupation-div')">
                             <select id="occupation" name="occupation" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                                <option onclick="checkSelect('occupation-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="EMPLOYED_INDEFINITE_PERIOD"
+                                <option onclick="checkSelect('occupation-div')" value="EMPLOYED_INDEFINITE_PERIOD"
                                     class="option-hover">EMPLOYED_INDEFINITE_PERIOD</option>
-                                <option onclick="removeSelectRed('select-selected')" value="SELF_EMPLOYED"
+                                <option onclick="checkSelect('occupation-div')" value="SELF_EMPLOYED"
                                     class="option-hover">SELF_EMPLOYED
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="PENSIONER1">
+                                <option onclick="checkSelect('occupation-div')" value="PENSIONER1">
                                     PENSIONER1</option>
-                                <option onclick="removeSelectRed('select-selected')" value="STUDENT"
-                                    class="option-hover">
+                                <option onclick="checkSelect('occupation-div')" value="STUDENT" class="option-hover">
                                     STUDENT</option>
-                                <option onclick="removeSelectRed('select-selected')" value="UNEMPLOYED"
-                                    class="option-hover">
+                                <option onclick="checkSelect('occupation-div')" value="UNEMPLOYED" class="option-hover">
                                     UNEMPLOYED</option>
-                                <option onclick="removeSelectRed('select-selected')" value="FREELANCER"
-                                    class="option-hover">
+                                <option onclick="checkSelect('occupation-div')" value="FREELANCER" class="option-hover">
                                     FREELANCER</option>
-                                <option onclick="removeSelectRed('select-selected')" value="OWN_BUSINESS"
+                                <option onclick="checkSelect('occupation-div')" value="OWN_BUSINESS"
                                     class="option-hover">
                                     OWN_BUSINESS</option>
-                                <option onclick="removeSelectRed('select-selected')" value="MATERNITY_LEAVE"
+                                <option onclick="checkSelect('occupation-div')" value="MATERNITY_LEAVE"
                                     class="option-hover">
                                     MATERNITY_LEAVE</option>
 
@@ -386,7 +375,8 @@
                     </div>
                     <div class="margin-div">
                         <label for="neto_income">neto_income</label>
-                        <input type="text" name="neto_income" id="neto_income">
+                        <input type="text" name="neto_income" id="neto_income"
+                            onfocusout="validateInput('house_number')">
                     </div>
                     <div class="margin-div">
                         <label for="remuneration_deadline">remuneration deadline</label>
@@ -399,11 +389,12 @@
                 <div class="first-step" id="dissapeare">
                     <div class="margin-div">
                         <label for="employed_since">Emplyoed since</label>
-                    <input type="text" name="employed_since" id="employed_since">
+                        <input type="text" name="employed_since" id="employed_since"
+                            onfocusout="validateInput('house_number')">
                     </div>
                     <div class="margin-div">
-                        <label for="employed_since">Employed</label>
-                    <input type="text" name="employer" id="employer">
+                        <label for="employed_since">Employer</label>
+                        <input type="text" name="employer" id="employer" onfocusout="validateInput('employer')">
                     </div>
                 </div>
 
@@ -411,25 +402,25 @@
                     <div class="margin-div">
                         <label for="credit_score">credit score</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="credit_score-div" onclick="checkSelect('credit_score-div')">
                             <select id="credit_score" name="credit_score" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                                <option onclick="checkSelect('credit_score-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="REXCELLENT_700_TO_850"
+                                <option onclick="checkSelect('credit_score-div')" value="EXCELLENT_700_TO_850"
                                     class="option-hover">EXCELLENT_700_TO_850</option>
-                                <option onclick="removeSelectRed('select-selected')" value="STABLE_550_TO_650"
+                                <option onclick="checkSelect('credit_score-div')" value="STABLE_550_TO_650"
                                     class="option-hover">STABLE_550_TO_650
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="STABLE_550_TO_650">
+                                <option onclick="checkSelect('credit_score-div')" value="STABLE_550_TO_650">
                                     STABLE_550_TO_650</option>
-                                <option onclick="removeSelectRed('select-selected')" value="LOW_300_TO_550"
+                                <option onclick="checkSelect('credit_score-div')" value="LOW_300_TO_550"
                                     class="option-hover">
                                     LOW_300_TO_550</option>
-                                <option onclick="removeSelectRed('select-selected')" value="WITH_PARENTS"
+                                <option onclick="checkSelect('credit_score-div')" value="WITH_PARENTS"
                                     class="option-hover">
                                     DONT_KNOW</option>
-                                <option onclick="removeSelectRed('select-selected')" value="WITH_PARENTS"
+                                <option onclick="checkSelect('credit_score-div')" value="WITH_PARENTS"
                                     class="option-hover">
                                     NO_CREDIT_HISTORY</option>
 
@@ -443,14 +434,14 @@
                     <div class="margin-div">
                         <label for="has_loan">has loan</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="has_loan-div" onclick="checkSelect('has_loan-div')">
                             <select id="has_loan" name="has_loan" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
-                                    class="select-one" id="select-one">
+                                <option onclick="checkSelect('has_loan-div')" value="Seleccione uno" class="select-one"
+                                    id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="no" class="option-hover">No
+                                <option onclick="checkSelect('has_loan-div')" value="0" class="option-hover">No
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="yes" class="option-hover">
+                                <option onclick="checkSelect('has_loan-div')" value="1" class="option-hover">
                                     Yes
                                 </option>
 
@@ -461,14 +452,14 @@
                     <div class="margin-div">
                         <label for="car">car</label>
 
-                        <div class="custom-select">
+                        <div class="custom-select" id="car-div" onclick="checkSelect('car-div')">
                             <select id="car" name="car" required>
-                                <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
-                                    class="select-one" id="select-one">
+                                <option onclick="checkSelect('car-div')" value="Seleccione uno" class="select-one"
+                                    id="select-one">
                                     Seleccione uno</option>
-                                <option onclick="removeSelectRed('select-selected')" value="no" class="option-hover">No
+                                <option onclick="checkSelect('car-div')" value="no" class="option-hover">No
                                 </option>
-                                <option onclick="removeSelectRed('select-selected')" value="yes" class="option-hover">
+                                <option onclick="checkSelect('car-div')" value="yes" class="option-hover">
                                     Yes
                                 </option>
 
@@ -481,11 +472,13 @@
                 <div class="first-step" id="dissapeare2">
                     <div class="margin-div">
                         <label for="debt_amount">debt_amount</label>
-                    <input type="text" name="debt_amount" id="debt_amount">
+                        <input type="text" name="debt_amount" id="debt_amount"
+                            onfocusout="validateInput('house_number')">
                     </div>
                     <div class="margin-div">
                         <label for="has_credit_card">has_credit_card</label>
-                    <input type="text" name="has_credit_card" id="has_credit_card">
+                        <input type="text" name="has_credit_card" id="has_credit_card"
+                            onfocusout="validateInput('house_number')">
                     </div>
                 </div>
 
@@ -505,8 +498,14 @@
                         <label for="terms">By clicking the Athe Terms and Conditions , and Privacy Policy .</label>
                     </div>
                 </div>
-                <button type="button" onclick="validateForm('customers-form')" class="submit-green">Get the money</button>
             </div>
+            <!-- end -->
+    </div>
+
+    <div class="button-div">
+        <button id="stepsbutton" type="button" class="register-next" onclick="nextStep(1)">
+            <p>Next </p><img src="img/arrow-register.svg" alt="">
+        </button>
     </div>
 
 
@@ -515,7 +514,7 @@
 
     <!-- third step -->
 
-   
+
     </form>
     </div>
 

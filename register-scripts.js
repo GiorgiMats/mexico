@@ -1,36 +1,136 @@
 var submitinput = true;
-var patterns = {
-    'first_name': /^[a-záéèíñóúüç\s-']+$/i,
-    'last_name': /^[a-záéèíñóúüç\s-']+$/i,
-    'second_last_name': /^[a-záéèíñóúüç\s-']+$/i,
-    personal_id: /^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$/,
-    tax_id_number: /^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$/,
-    bank_account: /^.{18}$/,
-    email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-    postal_code: /^[0-9]{5}$/,
-    maxlength45: /^.{1,45}$/,
-    maxlength255: /^.{1,255}$/,
-    remuneration_deadline: /^([12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$/,
-    city: /^.{1,45}$/,
-    street: /^.{1,45}$/,
-    house_number: /^.{1,45}$/,
-    colony: /^.{1,255}$/,
+var currentStep = 1;
+var patterns = [
+    {
+        first_name: /^[a-záéèíñóúüç\s-']+$/i,
+        last_name: /^[a-záéèíñóúüç\s-']+$/i,
+        second_last_name: /^[a-záéèíñóúüç\s-']+$/i,
+        personal_id: /^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$/,
+        tax_id_number: /^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$/,
+        bank_account: /^.{18}$/,
+        email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+    },
+    {
+        postal_code: /^[0-9]{5}$/,
+        city: /^.{1,45}$/,
+        street: /^.{1,45}$/,
+        house_number: /^.{1,45}$/,
+        region: /^.{1,45}$/,
+    },
+    {
+        remuneration_deadline: /^([12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$/,
+    }
+]
+
+//  colony: /^.{1,255}$/,
+
+var customSelects = [
+    [
+        'marital_status-div',
+        'nationality-div',
+        'dependant_count-div',
+        'phone_plan-div',
+    ],
+    [
+        'housing_type-div',
+    ],
+    [
+        'occupation-div',
+        'credit_score-div',
+        'has_loan-div',
+        'car-div'
+    ]
+]
+
+var customSelects2 = [
+    [
+        'dateDay',
+        'dateMonth',
+        'dateYear'
+    ],
+    [
+
+    ],
+    [
+
+    ]
+]
+
+function nextStep(n) {
+    let steps = document.querySelectorAll('.steps-div');
+    if (n == -1) {
+        alert("fuck off");
+    } else if (n == 1) {
+        if (steps.length < (currentStep + 1)) {
+            if (validateForm('stepsdiv3')) {
+                submitForm();
+            }
+        } else {
+            if (validateForm(`stepsdiv${currentStep}`)) {
+                document.querySelector(`#stepsdiv${currentStep}`).classList.add('displaynone');
+                if (steps.length == (currentStep + 1)) {
+                    document.querySelector('#stepsbutton').classList.add('green-btn');
+                }
+                currentStep = currentStep + n;
+                document.querySelector(`#stepsdiv${currentStep}`).classList.remove('displaynone');
+            }
+        }
+    }
 }
 
 function validateForm(formName) {
     let formGroup = document.querySelectorAll(`#${formName} input`);
+    let patternInputs = getObjectNames(patterns[currentStep - 1]);
+
+    // Check if any input is empty
     formGroup.forEach(inpt => {
         if (inpt.value == '') {
             console.log(`please fill in ${inpt.id} correctly`);
             inputWarning(inpt.id);
             submitinput = false;
-            return;
+            return false;
         }
     });
 
-    if (submitinput) {
-        submitForm();
+    // Check if inputs with Patterns are valid
+    patternInputs.forEach(patternName => {
+        validateInput(patternName);
+    });
+
+    // Check if Selects are selected
+    if (!(customSelects[currentStep - 1].length < 1)) {
+        customSelects[currentStep - 1].forEach(select => {
+            validateSelect(select);
+        });
     }
+
+    if (!(customSelects2[currentStep - 1].length < 1)) {
+        customSelects2[currentStep - 1].forEach(select => {
+            validateCustomSelect(select);
+        });
+    }
+
+    if (currentStep == 1) {
+        let radioMale = document.querySelector('#male');
+        let radioFemale = document.querySelector('#female');
+        if (!(radioMale.checked || radioFemale.checked)) {
+            submitinput = false;
+            document.querySelector('.male-div label').classList.add('radioVibrate');
+            document.querySelector('.female-div label').classList.add('radioVibrate');
+        }
+    }
+
+    if (submitinput) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function selectRadio() {
+    submitinput = true;
+    document.querySelector('.male-div label').classList.remove('radioVibrate');
+    document.querySelector('.female-div label').classList.remove('radioVibrate');
 }
 
 function submitForm() {
@@ -73,6 +173,7 @@ function submitForm() {
 function inputWarning(inptid) {
     inpt = document.querySelector(`#${inptid}`);
 
+    inpt.classList.remove('inpt-success');
     inpt.classList.add('inpt-warning');
 
     return false;
@@ -81,6 +182,7 @@ function inputWarning(inptid) {
 function inputSuccess(inptid) {
     inpt = document.querySelector(`#${inptid}`);
 
+    inpt.classList.remove('inpt-warning');
     inpt.classList.add('inpt-success');
 
     return false;
@@ -88,10 +190,10 @@ function inputSuccess(inptid) {
 
 function validateInput(inptid) {
     let inpt = document.querySelector(`#${inptid}`);
-    if (patterns[`${inptid}`] == undefined) {
+    if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
         inputSuccess(inptid);
     } else {
-        if (!patterns[`${inptid}`].test(inpt.value) || inpt.value == '') {
+        if (!patterns[currentStep - 1][`${inptid}`].test(inpt.value) || inpt.value == '') {
             inputWarning(inptid);
             submitinput = false;
         } else {
@@ -99,6 +201,59 @@ function validateInput(inptid) {
         }
     }
 }
+
+function validateSelect(selectid) {
+    defaultSelect = document.querySelector(`#${selectid} .select-one`);
+
+    if (defaultSelect.selected) {
+        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(234, 51, 34, 0.2)';
+        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(234, 51, 34, 0.6)';
+        submitinput = false;
+    } else {
+        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(55, 210, 0, 0.6)';
+        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(55, 210, 0, 0.2)';
+    }
+}
+
+function checkSelect(selectid) {
+    document.querySelector(`#${selectid} .select-selected`).style.background = '#fff';
+    document.querySelector(`#${selectid} .select-selected`).style.borderColor = '#D2D2D3';
+    submitinput = true;
+}
+
+function getObjectNames(obj) {
+    var keys = [];
+    for (var key in obj) {
+        keys.push(key);
+    }
+    return keys;
+}
+
+function validateCustomSelect(selectid) {
+    defaultSelect = document.querySelector(`#${selectid} .select-one`);
+
+    if (defaultSelect.selected) {
+        document.querySelector(`#${selectid}`).style.background = 'rgba(234, 51, 34, 0.2)';
+        document.querySelector(`#${selectid}`).style.borderColor = 'rgba(234, 51, 34, 0.6)';
+        submitinput = false;
+    } else {
+        document.querySelector(`#${selectid}`).style.background = 'rgba(55, 210, 0, 0.6)';
+        document.querySelector(`#${selectid}`).style.borderColor = 'rgba(55, 210, 0, 0.2)';
+    }
+}
+
+function checkCustomSelect(selectid) {
+    document.querySelector(`#${selectid}`).style.background = '#fff';
+    document.querySelector(`#${selectid}`).style.borderColor = '#D2D2D3';
+    submitinput = true;
+}
+
+
+
+
+
+
+
 
 
 // select//
@@ -112,7 +267,7 @@ for (i = 0; i < l; i++) {
     /* For each element, create a new DIV that will act as the selected item: */
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
-    
+
     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     x[i].appendChild(a);
     /* For each element, create a new DIV that will contain the option list: */
@@ -180,15 +335,23 @@ function closeAllSelect(elmnt) {
     }
 }
 
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
+document.getElementById('phone').addEventListener('input', function (event) {
+    const input = event.target;
 
+    // Remove non-numeric characters (except "+")
+    const cleanedValue = input.value.replace(/[^0-9+]/g, '');
 
-// pop=up
+    // Check if the cleaned value starts with "+52" and has a length greater than 3
+    if (cleanedValue.startsWith("+52")) {
+        // If yes, set the cleaned value with spacing
+        input.value = "+52 " + cleanedValue.slice(3, 6) + ' ' + cleanedValue.slice(6, 9) + ' ' + cleanedValue.slice(9);
+    } else {
+        // If not, add "+52" to the beginning with spacing
+        input.value = "+52 " + cleanedValue.slice(0, 3) + ' ' + cleanedValue.slice(3, 6) + ' ' + cleanedValue.slice(6, 9) + ' ' + cleanedValue.slice(9);
+    }
 
-
-
-
-
-//select //
+    // Limit the total length to 17 characters (including spaces)
+    if (input.value.length > 17) {
+        input.value = input.value.slice(0, 17);
+    }
+});
