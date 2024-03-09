@@ -9,6 +9,7 @@ var patterns = [
         tax_id_number: /^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$/,
         bank_account: /^.{18}$/,
         email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+        phone: /^.{16}$/,
     },
     {
         postal_code: /^[0-9]{5}$/,
@@ -16,9 +17,12 @@ var patterns = [
         street: /^.{1,45}$/,
         house_number: /^.{1,45}$/,
         region: /^.{1,45}$/,
+        district: /^.{1,255}$/,
+        colony: /^.{1,255}$/,
+        county: /^.{1,45}$/,
     },
     {
-        remuneration_deadline: /^([12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$/,
+        employer: /^.{1,45}$/,
     }
 ]
 
@@ -52,7 +56,11 @@ var customSelects2 = [
 
     ],
     [
-
+        'remunerationDay',
+        'remunerationMonth',
+        'remunerationYear',
+        'employedMonth',
+        'employedYear',
     ]
 ]
 
@@ -79,6 +87,7 @@ function nextStep(n) {
 }
 
 function validateForm(formName) {
+    submitinput = true;
     let formGroup = document.querySelectorAll(`#${formName} input`);
     let patternInputs = getObjectNames(patterns[currentStep - 1]);
 
@@ -118,6 +127,10 @@ function validateForm(formName) {
             document.querySelector('.male-div label').classList.add('radioVibrate');
             document.querySelector('.female-div label').classList.add('radioVibrate');
         }
+    }
+
+    if (currentStep == 3) {
+        validateCheckboxes();
     }
 
     if (submitinput) {
@@ -210,8 +223,8 @@ function validateSelect(selectid) {
         document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(234, 51, 34, 0.6)';
         submitinput = false;
     } else {
-        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(55, 210, 0, 0.6)';
-        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(55, 210, 0, 0.2)';
+        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(55, 210, 0, 0.2)';
+        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(55, 210, 0, 0.6)';
     }
 }
 
@@ -237,8 +250,8 @@ function validateCustomSelect(selectid) {
         document.querySelector(`#${selectid}`).style.borderColor = 'rgba(234, 51, 34, 0.6)';
         submitinput = false;
     } else {
-        document.querySelector(`#${selectid}`).style.background = 'rgba(55, 210, 0, 0.6)';
-        document.querySelector(`#${selectid}`).style.borderColor = 'rgba(55, 210, 0, 0.2)';
+        document.querySelector(`#${selectid}`).style.background = 'rgba(55, 210, 0, 0.2)';
+        document.querySelector(`#${selectid}`).style.borderColor = 'rgba(55, 210, 0, 0.6)';
     }
 }
 
@@ -248,8 +261,26 @@ function checkCustomSelect(selectid) {
     submitinput = true;
 }
 
+function validateCheckboxes() {
+    let terms = document.querySelector('#terms');
+    let policy = document.querySelector('#policy');
+    let termsp = document.querySelector('#terms-p');
+    let policyp = document.querySelector('#policy-p');
 
+    if (!(terms.checked) || !(policy.checked)) {
+        submitinput = false;
+        termsp.classList.add('text-warning');
+        policyp.classList.add('text-warning');
+        return false;
+    }
 
+    return true;
+}
+
+function selectCheckbox(checkboxID) {
+    document.querySelector(`#${checkboxID}`).classList.remove('text-warning');
+    submitinput = true;
+}
 
 
 
@@ -344,10 +375,10 @@ document.getElementById('phone').addEventListener('input', function (event) {
     // Check if the cleaned value starts with "+52" and has a length greater than 3
     if (cleanedValue.startsWith("+52")) {
         // If yes, set the cleaned value with spacing
-        input.value = "+52 " + cleanedValue.slice(3, 6) + ' ' + cleanedValue.slice(6, 9) + ' ' + cleanedValue.slice(9);
+        input.value = "+52 " + cleanedValue.slice(3, 6) + (cleanedValue[6] ? ' ' + cleanedValue.slice(6, 9) : '') + (cleanedValue[9] ? ' ' + cleanedValue.slice(9) : '');
     } else {
         // If not, add "+52" to the beginning with spacing
-        input.value = "+52 " + cleanedValue.slice(0, 3) + ' ' + cleanedValue.slice(3, 6) + ' ' + cleanedValue.slice(6, 9) + ' ' + cleanedValue.slice(9);
+        input.value = "+52 " + cleanedValue.slice(0, 3) + (cleanedValue[3] ? ' ' + cleanedValue.slice(3, 6) : '') + (cleanedValue[6] ? ' ' + cleanedValue.slice(6, 9) : '') + (cleanedValue[9] ? ' ' + cleanedValue.slice(9) : '');
     }
 
     // Limit the total length to 17 characters (including spaces)

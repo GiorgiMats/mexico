@@ -52,33 +52,33 @@
 
                 <div class="flex-div">
 
-                    
+
                     <div class="margin-div">
 
 
                         <label for="birth_date">Birth Date</label>
 
                         <div class="margin-div-new">
-                        <div class="date-flex">
-                            <p>
-                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
-                                    id="dateDay" name="birth_day" required>
-                                    <option class="select-one" value="" disabled selected>Día</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateMonth"
-                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
-                                    <option class="select-one" value="" disabled selected>Mes</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateYear"
-                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
-                                    <option class="select-one" value="" disabled selected>Año</option>
-                                </select>
-                            </p>
-                        </div>
+                            <div class="date-flex">
+                                <p>
+                                    <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
+                                        id="dateDay" name="birth_day" required>
+                                        <option class="select-one" value="" disabled selected>Día</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="form-input date-select" id="dateMonth"
+                                        onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
+                                        <option class="select-one" value="" disabled selected>Mes</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="form-input date-select" id="dateYear"
+                                        onclick="checkCustomSelect('dateYear')" name="birth_year" required>
+                                        <option class="select-one" value="" disabled selected>Año</option>
+                                    </select>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,17 +94,17 @@
 
                         <div class="margin-div-new">
 
-                        <div class="gender-div">
-                            <div class="male-div">
-                                <input type="radio" id="male" name="gender" value="MALE">
-                                <label for="male" onclick="selectRadio()">Male</label>
-                            </div>
+                            <div class="gender-div">
+                                <div class="male-div">
+                                    <input type="radio" id="male" name="gender" value="MALE">
+                                    <label for="male" onclick="selectRadio()">Male</label>
+                                </div>
 
-                            <div class="female-div">
-                                <input type="radio" id="female" name="gender" value="FEMALE">
-                                <label for="female" onclick="selectRadio()">Female</label>
+                                <div class="female-div">
+                                    <input type="radio" id="female" name="gender" value="FEMALE">
+                                    <label for="female" onclick="selectRadio()">Female</label>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                                 <option onclick="checkSelect('dependant_count-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
-                                    <option onclick="checkSelect('dependant_count-div')" value="0" class="option-hover">1
+                                <option onclick="checkSelect('dependant_count-div')" value="0" class="option-hover">0
                                 </option>
                                 <option onclick="checkSelect('dependant_count-div')" value="1" class="option-hover">1
                                 </option>
@@ -244,8 +244,8 @@
 
                     <div class="margin-div">
                         <label for="phone">phone</label>
-                        <input type="tel" class="form-input tel-padding" id="phone" name="phone" maxlength="16"
-                            required />
+                        <input type="tel" class="form-input tel-padding" id="phone" name="phone"
+                            onfocusout="validateInput('phone')" maxlength="16" required />
                     </div>
 
                     <div class="margin-div">
@@ -317,12 +317,14 @@
                 <div class="first-step">
                     <div class="margin-div">
                         <label for="district">district</label>
-                        <input type="text" name="district" id="district" maxlength="45">
+                        <input type="text" name="district" id="district" maxlength="45"
+                            onfocusout="validateInput('district')">
                     </div>
 
                     <div class="margin-div">
                         <label for="colony">colony</label>
-                        <input type="text" name="colony" id="colony" maxlength="45">
+                        <input type="text" name="colony" id="colony" maxlength="45"
+                            onfocusout="validateInput('colony')">
                     </div>
                     <div class="margin-div">
                         <label for="housing_type">housing type</label>
@@ -393,33 +395,34 @@
                     </div>
                     <div class="margin-div">
                         <label for="neto_income">neto_income</label>
-                        <input type="text" name="neto_income" id="neto_income"
+                        <input type="number" name="neto_income" id="neto_income"
                             onfocusout="validateInput('house_number')">
                     </div>
                     <div class="margin-div">
                         <label for="remuneration_deadline">remuneration deadline</label>
 
                         <div class="margin-div-new">
-                        <div class="date-flex">
-                            <p>
-                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
-                                    id="dateDay" name="birth_day" required>
-                                    <option class="select-one" value="" disabled selected>Día</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateMonth"
-                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
-                                    <option class="select-one" value="" disabled selected>Mes</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateYear"
-                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
-                                    <option class="select-one" value="" disabled selected>Año</option>
-                                </select>
-                            </p>
-                        </div>
+                            <div class="date-flex">
+                                <p>
+                                    <select class="form-input date-select"
+                                        onclick="checkCustomSelect('remunerationDay')" id="remunerationDay"
+                                        name="birth_day" required>
+                                        <option class="select-one" value="" disabled selected>Día</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="form-input date-select" id="remunerationMonth"
+                                        onclick="checkCustomSelect('remunerationMonth')" name="birth_month" required>
+                                        <option class="select-one" value="" disabled selected>Mes</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="form-input date-select" id="remunerationYear"
+                                        onclick="checkCustomSelect('remunerationYear')" name="birth_year" required>
+                                        <option class="select-one" value="" disabled selected>Año</option>
+                                    </select>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -429,24 +432,18 @@
                         <label for="employed_since">Emplyoed since</label>
                         <div class="margin-div-new">
                             <div class="date-flex">
-                            <p>
-                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
-                                    id="dateDay" name="birth_day" required>
-                                    <option class="select-one" value="" disabled selected>Día</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateMonth"
-                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
-                                    <option class="select-one" value="" disabled selected>Mes</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select class="form-input date-select" id="dateYear"
-                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
-                                    <option class="select-one" value="" disabled selected>Año</option>
-                                </select>
-                            </p>
+                                <p>
+                                    <select class="form-input date-select" id="employedMonth"
+                                        onclick="checkCustomSelect('employedMonth')" name="birth_month" required>
+                                        <option class="select-one" value="" disabled selected>Mes</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="form-input date-select" id="employedYear"
+                                        onclick="checkCustomSelect('employedYear')" name="birth_year" required>
+                                        <option class="select-one" value="" disabled selected>Año</option>
+                                    </select>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -530,7 +527,7 @@
                 <div class="first-step" id="dissapeare2">
                     <div class="margin-div">
                         <label for="debt_amount">debt_amount</label>
-                        <input type="text" name="debt_amount" id="debt_amount"
+                        <input type="number" name="debt_amount" id="debt_amount"
                             onfocusout="validateInput('house_number')">
                     </div>
                     <div class="margin-div">
@@ -545,15 +542,19 @@
                     <div class="terms-box">
 
 
-                        <input type="checkbox" name="policy" id="policy">
-                        <label for="policy">By clicking the Athe Terms and Conditions , and Privacy Policy .</label>
+                        <input type="checkbox" name="policy" id="policy" onclick="selectCheckbox('policy-p')">
+                        <label for="policy" id="policy-p" onclick="selectCheckbox('policy-p')">By clicking the Athe
+                            Terms and Conditions , and Privacy Policy
+                            .</label>
 
                     </div>
 
                     <div class="terms-box">
 
-                        <input type="checkbox" name="terms" id="terms">
-                        <label for="terms">By clicking the Athe Terms and Conditions , and Privacy Policy .</label>
+                        <input type="checkbox" name="terms" id="terms" onclick="selectCheckbox('terms-p')">
+                        <label for="terms" id="terms-p" onclick="selectCheckbox('terms-p')">By clicking the Athe Terms
+                            and Conditions , and Privacy Policy
+                            .</label>
                     </div>
                 </div>
             </div>

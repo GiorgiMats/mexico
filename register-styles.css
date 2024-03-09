@@ -76,8 +76,9 @@ header {
 
 /*  */
 
-.register-h1, .register-h2 {
- align-self: center;
+.register-h1,
+.register-h2 {
+  align-self: center;
 
 }
 
@@ -109,7 +110,8 @@ header {
   }
 }
 
-label, span {
+label,
+span {
   color: rgba(28, 31, 36, 0.95);
 
   font-family: Roboto;
@@ -140,7 +142,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  
+
 }
 
 .steps-div {
@@ -166,7 +168,7 @@ input {
 
 .margin-div {
   display: flex;
-  
+
   gap: 12px;
   justify-content: end;
   align-items: center;
@@ -442,7 +444,7 @@ input:focus {
   align-items: center;
   margin-top: 24px;
   margin-bottom: 100px;
-  
+
 }
 
 .register-next {
@@ -455,4 +457,20 @@ input:focus {
 
 .green-btn:hover {
   background-color: #105c09 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.text-warning {
+  color: red;
 }
