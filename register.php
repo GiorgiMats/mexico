@@ -50,13 +50,15 @@
                     </div>
                 </div>
 
-
                 <div class="flex-div">
 
+                    
                     <div class="margin-div">
 
 
                         <label for="birth_date">Birth Date</label>
+
+                        <div class="margin-div-new">
                         <div class="date-flex">
                             <p>
                                 <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
@@ -77,12 +79,20 @@
                                 </select>
                             </p>
                         </div>
-
+                        </div>
                     </div>
+                </div>
+
+
+                <div class="flex-div">
+
+
 
 
                     <div class="margin-div">
                         <span>Genero</span>
+
+                        <div class="margin-div-new">
 
                         <div class="gender-div">
                             <div class="male-div">
@@ -94,6 +104,7 @@
                                 <input type="radio" id="female" name="gender" value="FEMALE">
                                 <label for="female" onclick="selectRadio()">Female</label>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +162,7 @@
                 <div class="first-step">
                     <div class="margin-div">
                         <label for="bank_account">bank account</label>
-                        <input type="number" name="bank_account" id="bank_account"
+                        <input type="text" name=" bank_account" id="bank_account"
                             onfocusout="validateInput('bank_account')" minlength="18" maxlength="18"
                             placeholder="Enter name">
 
@@ -194,6 +205,8 @@
                                 <option onclick="checkSelect('dependant_count-div')" value="Seleccione uno"
                                     class="select-one" id="select-one">
                                     Seleccione uno</option>
+                                    <option onclick="checkSelect('dependant_count-div')" value="0" class="option-hover">1
+                                </option>
                                 <option onclick="checkSelect('dependant_count-div')" value="1" class="option-hover">1
                                 </option>
                                 <option onclick="checkSelect('dependant_count-div')" value="2" class="option-hover">2
@@ -295,7 +308,7 @@
                             onfocusout="validateInput('region')">
                     </div>
                     <div class="margin-div">
-                        <label for="county">city</label>
+                        <label for="county">county</label>
                         <input type="text" name="county" id="county" maxlength="45"
                             onfocusout="validateInput('county')">
                     </div>
@@ -305,6 +318,11 @@
                     <div class="margin-div">
                         <label for="district">district</label>
                         <input type="text" name="district" id="district" maxlength="45">
+                    </div>
+
+                    <div class="margin-div">
+                        <label for="colony">colony</label>
+                        <input type="text" name="colony" id="colony" maxlength="45">
                     </div>
                     <div class="margin-div">
                         <label for="housing_type">housing type</label>
@@ -380,17 +398,57 @@
                     </div>
                     <div class="margin-div">
                         <label for="remuneration_deadline">remuneration deadline</label>
-                        <input type="text" id="remuneration_deadline"
-                            onfocusout="validateInput('remuneration_deadline')" name="remuneration_deadline"
-                            pattern="^([12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$">
+
+                        <div class="margin-div-new">
+                        <div class="date-flex">
+                            <p>
+                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
+                                    id="dateDay" name="birth_day" required>
+                                    <option class="select-one" value="" disabled selected>Día</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="form-input date-select" id="dateMonth"
+                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
+                                    <option class="select-one" value="" disabled selected>Mes</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="form-input date-select" id="dateYear"
+                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
+                                    <option class="select-one" value="" disabled selected>Año</option>
+                                </select>
+                            </p>
+                        </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="first-step" id="dissapeare">
                     <div class="margin-div">
                         <label for="employed_since">Emplyoed since</label>
-                        <input type="text" name="employed_since" id="employed_since"
-                            onfocusout="validateInput('house_number')">
+                        <div class="margin-div-new">
+                            <div class="date-flex">
+                            <p>
+                                <select class="form-input date-select" onclick="checkCustomSelect('dateDay')"
+                                    id="dateDay" name="birth_day" required>
+                                    <option class="select-one" value="" disabled selected>Día</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="form-input date-select" id="dateMonth"
+                                    onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
+                                    <option class="select-one" value="" disabled selected>Mes</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="form-input date-select" id="dateYear"
+                                    onclick="checkCustomSelect('dateYear')" name="birth_year" required>
+                                    <option class="select-one" value="" disabled selected>Año</option>
+                                </select>
+                            </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="margin-div">
                         <label for="employed_since">Employer</label>

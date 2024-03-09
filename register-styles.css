@@ -76,7 +76,10 @@ header {
 
 /*  */
 
+.register-h1, .register-h2 {
+ align-self: center;
 
+}
 
 .inpt-warning {
   border-color: rgba(234, 51, 34, 0.6) !important;
@@ -106,45 +109,67 @@ header {
   }
 }
 
-input {
-  border: none;
-  outline: none;
-  padding: 16px;
-  border: 1px solid #D2D2D3;
-  border-radius: 8px;
+label, span {
   color: rgba(28, 31, 36, 0.95);
 
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
+input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  border: 1px solid #D2D2D3;
+  border-radius: 4px;
+  color: rgba(28, 31, 36, 0.95);
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 600px;
+}
+
 .first-step {
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
 }
 
 .steps-div {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 16px;
 }
 
 .flex-div {
   display: flex;
-  gap: 40px;
+  gap: 12px;
+  justify-content: end;
+}
+
+.margin-div-new {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  gap: 12px;
 }
 
 .margin-div {
   display: flex;
-  flex-direction: column;
+  
   gap: 12px;
+  justify-content: end;
+  align-items: center;
 }
 
 .gender-div {
@@ -153,10 +178,7 @@ input {
 
 }
 
-.button-div {
-  display: flex;
-  justify-content: end;
-}
+
 
 
 
@@ -168,7 +190,7 @@ input {
   color: rgba(28, 31, 36, 0.95);
 
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -180,8 +202,8 @@ input {
 }
 
 .select-selected {
-
-  border-radius: 8px;
+  width: 600px;
+  border-radius: 4px;
 }
 
 /*style the arrow inside the select element:*/
@@ -206,7 +228,7 @@ input {
 .select-items div,
 .select-selected {
   color: #1c1f24;
-  padding: 16px 16px;
+  padding: 12px 12px;
   border: 1px solid transparent;
   border: 1px solid #D2D2D3;
   cursor: pointer;
@@ -229,7 +251,7 @@ input {
 
   text-align: center;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -255,7 +277,7 @@ input {
 .form-input {
   border-radius: 4px !important;
   border: 1px solid #D2D2D3;
-  padding: 16px;
+  padding: 12px;
 }
 
 .form-input::placeholder,
@@ -263,7 +285,7 @@ input::placeholder {
   color: rgba(28, 31, 36, 0.4);
   background-color: transparent;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -278,8 +300,12 @@ input:focus {
 .date-flex {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   color: #D2D2D3;
+}
+
+.date-select {
+  width: 100px !important;
 }
 
 
@@ -298,9 +324,9 @@ input:focus {
   background-color: #009CD7;
   /* Base color */
   color: white;
-  padding: 16px 32px;
+  padding: 12px 32px;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -343,7 +369,7 @@ input:focus {
   gap: 16px;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   background-color: #009CD7;
   padding: 16px 48px;
@@ -355,6 +381,7 @@ input:focus {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  justify-self: end;
 }
 
 .register-next:hover {
@@ -362,31 +389,31 @@ input:focus {
 }
 
 
-.register-next:focus {
-  background-color: #08678B;
+
+
+.terms-div {
+  display: flex;
+  gap: 12px;
 }
 
 .terms-div {
   display: flex;
-  gap: 16px;
-}
-
-.terms-div {
-  display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-direction: column;
 }
 
 .terms-box {
   display: flex;
   gap: 12px;
+  width: 600px;
+  gap: 12px;
 }
 
 .submit-green {
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   background-color: #16B808;
-  padding: 16px 48px;
+  padding: 12px 48px;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -408,12 +435,24 @@ input:focus {
 }
 
 .button-div {
-  display: grid;
-  max-width: 1280px;
+  display: flex;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 32px 0;
+  justify-content: end;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 100px;
+  
+}
+
+.register-next {
+  width: 600px !important;
 }
 
 .green-btn {
   background-color: #16B808 !important;
+}
+
+.green-btn:hover {
+  background-color: #105c09 !important;
 }
