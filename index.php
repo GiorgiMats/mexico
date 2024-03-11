@@ -145,42 +145,54 @@
                             <h2 class="credit-h3">¿Cuánto dinero necesitas?</h2>
                             <div class="loan-content">
 
-                                <div class="custom-select">
+                                <div class="custom-select" id="loan_purpose" onclick="checkSelect('loan_purpose')">
                                     <select id="mySelect" name="loan_purpose" required>
-                                        <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
+                                        <option onclick="checkSelect('loan_purpose')" value="Seleccione uno"
                                             class="select-one">Propósito del prestamo?</option>
-                                        <option onclick="removeSelectRed('select-selected')"
-                                            value="Pagar deudas de tarjeta de crédito" class="option-hover">Pagar deudas
-                                            de tarjeta de
-                                            crédito</option>
-                                        <option onclick="removeSelectRed('select-selected')"
-                                            value="Consolidar prestamos existentes" class="option-hover">Consolidar
-                                            prestamos existentes
+                                        <option onclick="checkSelect('loan_purpose')" value="PURCHASE_OF_FOOD"
+                                            class="option-hover">PURCHASE_OF_FOOD</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="BUYING_ELECTRONICS"
+                                            class="option-hover">BUYING_ELECTRONICS
                                         </option>
-                                        <option onclick="removeSelectRed('select-selected')" value="Gastos médicos"
-                                            class="option-hover">Gastos médicos</option>
-                                        <option onclick="removeSelectRed('select-selected')" value="Reparar el coche"
-                                            class="option-hover">Reparar el coche</option>
-                                        <option onclick="removeSelectRed('select-selected')" value="Pago de alquiler"
-                                            class="option-hover">Pago de alquiler</option>
-                                        <option onclick="removeSelectRed('select-selected')" value="Reparar el hogar"
-                                            class="option-hover">Reparar el hogar</option>
-                                        <option onclick="removeSelectRed('select-selected')" value="TRAVEL"
-                                            class="option-hover">Viajes ,vacaciones</option>
-                                        <option onclick="removeSelectRed('mySelect')" value="OTHER" class="option-hover">
-                                            Otro</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="CREATE_CREDIT_HISTORY"
+                                            class="option-hover">CREATE_CREDIT_HISTORY
+                                        </option>
+                                        <option onclick="checkSelect('loan_purpose')" value="SCHOOL_EXPENSES"
+                                            class="option-hover">SCHOOL_EXPENSES</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="UNFORESEEN_EXPENSE"
+                                            class="option-hover">UNFORESEEN_EXPENSE</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="MEDICAL_EXPENSES"
+                                            class="option-hover">MEDICAL_EXPENSES</option>
+                                        <option onclick="checkSelect('loan_purpose')"
+                                            value="MAINTENANCE_OR_REPAIR_OF_HOUSE" class="option-hover">
+                                            MAINTENANCE_OR_REPAIR_OF_HOUSE</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="PAY_ANOTHER_LOAN"
+                                            class="option-hover">
+                                            PAY_ANOTHER_LOAN</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="PAYMENT_OF_SERVICES"
+                                            class="option-hover">
+                                            PAYMENT_OF_SERVICES</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="FOR_MY_BUSINESS"
+                                            class="option-hover">
+                                            FOR_MY_BUSINESS</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="TRAVEL"
+                                            class="option-hover">
+                                            TRAVEL</option>
+                                        <option onclick="checkSelect('loan_purpose')" value="OTHER"
+                                            class="option-hover">
+                                            OTHER</option>
                                     </select>
                                 </div>
                             </div>
-                               <div class="form-heading-wrapper">
+                            <div class="form-heading-wrapper">
                                 <p class="credit-p2">Quiero recibir:</p>
-                                    <div class="money-value-new">
-                                        <input type="number" id="range-flex" class="number-input" value="1000" min="1000"
-                                            max="30000" step="500" name="loan_sum">
-                                    </div>
+                                <div class="money-value-new">
+                                    <input type="number" id="range-flex" class="number-input" value="1000" min="1000"
+                                        max="30000" step="500" name="loan_sum">
                                 </div>
-                                <p><input class="range-input" type="range" min="1000" max="30000" value="1000" step="500"
-                                        name="loan_sum" /></p>
+                            </div>
+                            <p><input class="range-input" type="range" min="1000" max="30000" value="6000" step="500"
+                                    name="loan_sum" /></p>
                         </div>
 
                         <div class="tab-2">
@@ -192,14 +204,16 @@
                                     <!-- <input type="number" id="range-flex-2" class="number-input-2" value="24"
                                     min="1" max="361" value="24" step="30" maxlength="7" name="moneycount-2"> -->
                                     <!-- <input type="number" id="range-flex-2" class="number-input-2" value="24" min="1" max="361" step="any" name="loan_period"> -->
-                                    <input type="number" id="range-flex-2" class="number-input-2" min="1" max="361" value="24" step="1" name="loan_period">
+                                    <input type="number" id="range-flex-2" class="number-input-2" min="1" max="361"
+                                        value="24" step="1" name="loan_period">
 
                                     <label class="placeholder-label" for="range-input-2">Dias</label>
                                 </div>
                             </div>
                             <!-- <input class="range-input-2" type="range" min="1" max="361" value="24" step="30"
                                 placeholder="Dias" name="loan_period" /> -->
-                            <input class="range-input-2" type="range" min="1" max="361" value="24" step="1" name="loan_period" placeholder="Dias">
+                            <input class="range-input-2" type="range" min="1" max="361" value="24" step="1"
+                                name="loan_period" placeholder="Dias">
 
 
 
@@ -207,7 +221,7 @@
 
                                 <!-- <button type="submit" id="nextBtn" onclick="nextPrev(1)"> SOLICITA TU PRÉSTAMO
                                 </button> -->
-                                <button type="submit" id="nextBtn" > SOLICITA TU PRÉSTAMO
+                                <button type="button" id="nextBtn" onclick="validateSubmit()"> SOLICITA TU PRÉSTAMO
                                 </button>
                             </div>
                         </div>

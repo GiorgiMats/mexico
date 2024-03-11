@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['leadData'])) {
+    $leadData = $_SESSION['leadData']; // Retrieve lead data
+    // echo $leadData['loan_purpose'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -343,11 +350,6 @@
                                         <input class="step-input" type="text" name="district" id="district"
                                             maxlength="45" onfocusout="validateInput('district')">
                                     </div>
-                                    <div class="step-item">
-                                        <label for="colony">colony</label>
-                                        <input class="step-input" type="text" name="colony" id="colony" maxlength="45"
-                                            onfocusout="validateInput('colony')">
-                                    </div>
                                     <div class="step-item sc-button-container">
                                         <div></div>
                                         <button type="button" class="btn-primary" onclick="nextStep(1)">Next</button>
@@ -377,6 +379,9 @@
                                                 <option onclick="checkSelect('occupation-div')" value="SELF_EMPLOYED"
                                                     class="option-hover">SELF_EMPLOYED
                                                 </option>
+                                                <option onclick="checkSelect('occupation-div')" value="OWN_BUSINESS"
+                                                    class="option-hover">
+                                                    OWN_BUSINESS</option>
                                                 <option onclick="checkSelect('occupation-div')" value="PENSIONER1">
                                                     PENSIONER1</option>
                                                 <option onclick="checkSelect('occupation-div')" value="STUDENT"
@@ -388,9 +393,6 @@
                                                 <option onclick="checkSelect('occupation-div')" value="FREELANCER"
                                                     class="option-hover">
                                                     FREELANCER</option>
-                                                <option onclick="checkSelect('occupation-div')" value="OWN_BUSINESS"
-                                                    class="option-hover">
-                                                    OWN_BUSINESS</option>
                                                 <option onclick="checkSelect('occupation-div')" value="MATERNITY_LEAVE"
                                                     class="option-hover">
                                                     MATERNITY_LEAVE</option>
@@ -429,7 +431,7 @@
                                     <div class="step-item">
                                         <label for="neto_income">neto_income</label>
                                         <input class="step-input" type="number" name="neto_income" id="neto_income"
-                                            onfocusout="validateInput('house_number')">
+                                            onfocusout="validateInput('neto_income')">
                                     </div>
                                     <div class="step-item">
                                         <label for="remuneration_deadline">remuneration deadline</label>
@@ -451,7 +453,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="step-item">
+                                    <div class="step-item displaynone" id="employed_since_step_item">
                                         <label for="employed_since">Emplyoed since</label>
                                         <div class="stepitem-inputs-container">
                                             <select class="form-input date-select" id="employedMonth"
@@ -466,8 +468,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="step-item">
-                                        <label for="employed_since">Employer</label>
+                                    <div class="step-item displaynone" id="employer_step_item">
+                                        <label for="employer">Employer</label>
                                         <input class="step-input" type="text" name="employer" id="employer"
                                             onfocusout="validateInput('employer')">
                                     </div>
@@ -489,6 +491,11 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="step-item displaynone" id="debt_amount_step_item">
+                                        <label for="debt_amount">debt_amount</label>
+                                        <input class="step-input" type="number" name="debt_amount" id="debt_amount"
+                                            onfocusout="validateInput('debt_amount')">
+                                    </div>
                                     <div class="step-item">
                                         <label for="car">car</label>
                                         <div class="custom-select" id="car-div" onclick="checkSelect('car-div')">
@@ -506,15 +513,23 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="step-item">
-                                        <label for="debt_amount">debt_amount</label>
-                                        <input class="step-input" type="number" name="debt_amount" id="debt_amount"
-                                            onfocusout="validateInput('house_number')">
-                                    </div>
-                                    <div class="step-item">
+                                    <div class="step-item displaynone" id="hascard_step_item">
                                         <label for="has_credit_card">has_credit_card</label>
-                                        <input class="step-input" type="text" name="has_credit_card"
-                                            id="has_credit_card" onfocusout="validateInput('house_number')">
+                                        <div class="custom-select" id="has_credit_card-div"
+                                            onclick="checkSelect('has_credit_card-div')">
+                                            <select id="has_credit_card" name="has_credit_card" required>
+                                                <option onclick="checkSelect('has_credit_card-div')"
+                                                    value="Seleccione uno" class="select-one" id="select-one">
+                                                    Seleccione uno</option>
+                                                <option onclick="checkSelect('has_credit_card-div')" value="0"
+                                                    class="option-hover">No
+                                                </option>
+                                                <option onclick="checkSelect('has_credit_card-div')" value="1"
+                                                    class="option-hover">
+                                                    Yes
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="step-item step-item-checkbox">
                                         <input type="checkbox" class="input-checkbox" name="policy" id="policy"

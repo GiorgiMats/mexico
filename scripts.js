@@ -1,4 +1,4 @@
-
+var submitinput = true;
 
 // RANGE Input
 //________________________________________________________________________________ //
@@ -101,5 +101,59 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function validateSelect(selectid) {
+    defaultSelect = document.querySelector(`#${selectid} .select-one`);
 
+    if (defaultSelect.selected) {
+        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(234, 51, 34, 0.2)';
+        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(234, 51, 34, 0.6)';
+        submitinput = false;
+    } else {
+        document.querySelector(`#${selectid} .select-selected`).style.background = 'rgba(55, 210, 0, 0.2)';
+        document.querySelector(`#${selectid} .select-selected`).style.borderColor = 'rgba(55, 210, 0, 0.6)';
+    }
+}
 
+function checkSelect(selectid) {
+    document.querySelector(`#${selectid} .select-selected`).style.background = '#fff';
+    document.querySelector(`#${selectid} .select-selected`).style.borderColor = '#D2D2D3';
+    submitinput = true;
+}
+
+function validateSubmit() {
+    validateSelect('loan_purpose');
+
+    if (submitinput) {
+        submitForm();
+    }
+}
+
+function submitForm() {
+    // Get the form element
+    let form = document.querySelector('#regForm');
+
+    // Get the current action URL
+    let currentAction = form.action;
+
+    // Create an array to store field values
+    let fieldValues = [];
+
+    // Iterate through form elements and store their values
+    for (var i = 0; i < form.elements.length; i++) {
+        var element = form.elements[i];
+        if (element.type !== 'button' && element.name) {
+            var fieldName = encodeURIComponent(element.name);
+            var fieldValue = encodeURIComponent(element.value);
+            fieldValues.push(fieldName + '=' + fieldValue);
+        }
+    }
+
+    // Modify the action URL with the new format
+    var newAction = currentAction + '?' + fieldValues.join('&');
+
+    // Update the form's action attribute
+    form.action = newAction;
+
+    // Submit the form
+    form.submit();
+}

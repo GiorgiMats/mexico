@@ -13,7 +13,7 @@ function fetchBearerToken($url, $clientID, $clientSecret) {
     $options = [
         'http' => [
             'header' => "Content-Type: application/x-www-form-urlencoded",
-            'method' => 'POST', // Make sure this is POST
+            'method' => 'POST',
             'content' => http_build_query($data),
         ],
     ];
@@ -22,11 +22,11 @@ function fetchBearerToken($url, $clientID, $clientSecret) {
     $result = file_get_contents($url, false, $context);
 
     if ($result === FALSE) {
-        return null;
+        return ['error' => true, 'message' => 'Failed to fetch token'];
     }
 
     $response = json_decode($result, true);
-    return $response['access_token'] ?? null;
+    return $response['access_token'] ?? ['error' => true, 'message' => 'Token not found in response'];
 }
 
 function forwardCustomerData($customerData, $token) {
@@ -43,8 +43,9 @@ function forwardCustomerData($customerData, $token) {
 
     $result = curl_exec($ch);
     if ($result === FALSE) {
+        $errorResponse = curl_error($ch);
         curl_close($ch);
-        return ['error' => true, 'message' => 'Failed to submit customer data'];
+        return ['error' => true, 'message' => 'Failed to submit customer data', 'details' => $errorResponse];
     }
 
     curl_close($ch);
@@ -52,11 +53,6 @@ function forwardCustomerData($customerData, $token) {
 }
 
 function forwardLeadData($leadData, $customerUuid, $token) {
-    echo "customerUuid: " . $customerUuid;
-    echo "  ";
-    echo "token: " . $token;
-    echo "  ";
-    var_dump($leadData);
     $url = "https://api.staging.credy.eu/v3/leads?customer={$customerUuid}";
     $ch = curl_init($url);
 
@@ -77,6 +73,17 @@ function forwardLeadData($leadData, $customerUuid, $token) {
         return ['error' => true, 'message' => 'Failed to submit lead data', 'details' => $response];
     }
 
+    $leadResponse = json_decode($result, true);
+    $leadUuid = $leadResponse['uuid'] ?? null;
+
     curl_close($ch);
-    return json_decode($result, true);
+
+    if ($leadUuid) {
+        // Redirect user to the specified URL with the lead UUID
+        $redirectUrl = "https://www.credy.com.mx/loading/?lead={$leadUuid}";
+        header("Location: $redirectUrl");
+        exit;
+    }
+
+    return ['error' => true, 'message' => 'Lead UUID not found in response'];
 }

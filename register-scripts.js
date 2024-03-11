@@ -1,5 +1,6 @@
 var submitinput = true;
 var currentStep = 1;
+var employedSince = false;
 var patterns = [
     {
         first_name: /^[a-záéèíñóúüç\s-']+$/i,
@@ -18,15 +19,14 @@ var patterns = [
         house_number: /^.{1,45}$/,
         region: /^.{1,45}$/,
         district: /^.{1,255}$/,
-        colony: /^.{1,255}$/,
         county: /^.{1,45}$/,
     },
     {
-        employer: /^.{1,45}$/,
+        neto_income: /^.{1,45}$/,
     }
-]
+];
 
-//  colony: /^.{1,255}$/,
+// employer: /^.{1,45}$/,
 
 var customSelects = [
     [
@@ -42,7 +42,7 @@ var customSelects = [
         'occupation-div',
         'credit_score-div',
         'has_loan-div',
-        'car-div'
+        'car-div',
     ]
 ]
 
@@ -59,10 +59,11 @@ var customSelects2 = [
         'remunerationDay',
         'remunerationMonth',
         'remunerationYear',
-        'employedMonth',
-        'employedYear',
     ]
 ]
+
+// 'employedMonth',
+// 'employedYear',
 
 function nextStep(n) {
     let steps = document.querySelectorAll('.step-container');
@@ -94,14 +95,14 @@ function validateForm(formName) {
     let patternInputs = getObjectNames(patterns[currentStep - 1]);
 
     // Check if any input is empty
-    formGroup.forEach(inpt => {
-        if (inpt.value == '') {
-            console.log(`please fill in ${inpt.id} correctly`);
-            inputWarning(inpt.id);
-            submitinput = false;
-            return false;
-        }
-    });
+    // formGroup.forEach(inpt => {
+    //     if (inpt.value == '') {
+    //         console.log(`please fill in ${inpt.id} correctly`);
+    //         inputWarning(inpt.id);
+    //         submitinput = false;
+    //         return false;
+    //     }
+    // });
 
     // Check if inputs with Patterns are valid
     patternInputs.forEach(patternName => {
@@ -181,9 +182,11 @@ function submitForm() {
     fieldValues.push(`remuneration_deadline=${remunerationYear}-${remunerationMonth}-${remunerationDay}`);
 
     // Format Date Inputs
-    let employedMonth = encodeURIComponent(document.querySelector('#employedMonth').value);
-    let employedYear = encodeURIComponent(document.querySelector('#employedYear').value);
-    fieldValues.push(`employed_since=${employedYear}-${employedMonth}-18`);
+    if (employedSince) {
+        let employedMonth = encodeURIComponent(document.querySelector('#employedMonth').value);
+        let employedYear = encodeURIComponent(document.querySelector('#employedYear').value);
+        fieldValues.push(`employed_since=${employedYear}-${employedMonth}-18`);
+    }
 
     // Modify the action URL with the new format
     var newAction = currentAction + '?' + fieldValues.join('&');
@@ -245,6 +248,60 @@ function checkSelect(selectid) {
     document.querySelector(`#${selectid} .select-selected`).style.background = '#fff';
     document.querySelector(`#${selectid} .select-selected`).style.borderColor = '#D2D2D3';
     submitinput = true;
+
+    if (selectid == 'occupation-div') {
+        let occupationOptions = document.querySelector('#occupation').options;
+
+        if (occupationOptions[1].selected || occupationOptions[2].selected || occupationOptions[3].selected) {
+            employedSince = true;
+            document.querySelector('#employed_since_step_item').classList.remove('displaynone');
+            document.querySelector('#employer_step_item').classList.remove('displaynone');
+
+            patterns[2].employer = /^.{1,45}$/;
+            customSelects2[2].push('employedMonth');
+            customSelects2[2].push('employedYear');
+
+        } else {
+            employedSince = false;
+            document.querySelector('#employed_since_step_item').classList.add('displaynone');
+            document.querySelector('#employer_step_item').classList.add('displaynone');
+
+            if ('employer' in patterns[2]) {
+                delete patterns[2].employer;
+                customSelects2[2] = customSelects2[2].filter(function (name) {
+                    return name !== 'employedMonth';
+                });
+                customSelects2[2] = customSelects2[2].filter(function (name) {
+                    return name !== 'employedYear';
+                });
+            }
+        }
+    }
+
+    if (selectid == 'has_loan-div') {
+        let hasLoanOptions = document.querySelector('#has_loan').options;
+
+        if (hasLoanOptions[2].selected) {
+            document.querySelector('#debt_amount_step_item').classList.remove('displaynone');
+            patterns[2].debt_amount = /^.{1,45}$/;
+        } else {
+            document.querySelector('#debt_amount_step_item').classList.add('displaynone');
+        }
+    }
+
+    if (selectid == 'credit_score-div') {
+        let creditScoreOptions = document.querySelector('#credit_score').options;
+
+        if (creditScoreOptions[5].selected) {
+            document.querySelector('#hascard_step_item').classList.remove('displaynone');
+            customSelects[2].push('has_credit_card-div');
+        } else {
+            document.querySelector('#hascard_step_item').classList.add('displaynone');
+            customSelects[2] = customSelects[2].filter(function (name) {
+                return name !== 'has_credit_card-div';
+            });
+        }
+    }
 }
 
 function getObjectNames(obj) {
