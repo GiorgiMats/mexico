@@ -60,7 +60,7 @@
                         <img src="./img/main-logo.svg" alt="MX Credito">
                     </a>
                 </header>
-                <form id="customers-form" action="send_customer.php" method="POST" class="section-register">
+                <form id="customers-form" action="customer_submit.php" method="POST" class="section-register">
                     <div class="accordions">
                         <div class="accordion">
                             <label class="accordion__title" for="radio_1" onclick="changeCurrentStep(1)">

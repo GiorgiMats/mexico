@@ -52,6 +52,11 @@ function forwardCustomerData($customerData, $token) {
 }
 
 function forwardLeadData($leadData, $customerUuid, $token) {
+    echo "customerUuid: " . $customerUuid;
+    echo "  ";
+    echo "token: " . $token;
+    echo "  ";
+    var_dump($leadData);
     $url = "https://api.staging.credy.eu/v3/leads?customer={$customerUuid}";
     $ch = curl_init($url);
 
@@ -64,9 +69,12 @@ function forwardLeadData($leadData, $customerUuid, $token) {
     ]);
 
     $result = curl_exec($ch);
-    if ($result === FALSE) {
+    $httpStatusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    if ($result === FALSE || $httpStatusCode >= 400) {
+        $errorResponse = curl_error($ch);
+        $response = $result ? json_decode($result, true) : ['curl_error' => $errorResponse];
         curl_close($ch);
-        return ['error' => true, 'message' => 'Failed to submit lead data'];
+        return ['error' => true, 'message' => 'Failed to submit lead data', 'details' => $response];
     }
 
     curl_close($ch);

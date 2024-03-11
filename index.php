@@ -134,7 +134,7 @@
             </div>
             <div class="forms-new">
                 <div class="hero-right">
-                    <form id="regForm" action="">
+                    <form id="regForm" action="lead_submit_temporary.php" method="post">
                         <h1>Aplica ahora</h1>
                         <!-- One "tab" for each step in the form: -->
 
@@ -146,7 +146,7 @@
                             <div class="loan-content">
 
                                 <div class="custom-select">
-                                    <select id="mySelect" required>
+                                    <select id="mySelect" name="loan_purpose" required>
                                         <option onclick="removeSelectRed('select-selected')" value="Seleccione uno"
                                             class="select-one">Propósito del prestamo?</option>
                                         <option onclick="removeSelectRed('select-selected')"
@@ -165,26 +165,22 @@
                                             class="option-hover">Pago de alquiler</option>
                                         <option onclick="removeSelectRed('select-selected')" value="Reparar el hogar"
                                             class="option-hover">Reparar el hogar</option>
-                                        <option onclick="removeSelectRed('select-selected')" value="Viajes ,vacaciones"
+                                        <option onclick="removeSelectRed('select-selected')" value="TRAVEL"
                                             class="option-hover">Viajes ,vacaciones</option>
-                                        <option onclick="removeSelectRed('mySelect')" value="Otro" class="option-hover">
+                                        <option onclick="removeSelectRed('mySelect')" value="OTHER" class="option-hover">
                                             Otro</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-heading-wrapper">
+                               <div class="form-heading-wrapper">
                                 <p class="credit-p2">Quiero recibir:</p>
-
-
-                                <div class="money-value-new">
-
-                                    <input type="number" id="range-flex" class="number-input" value="1000" min="1000"
-                                        max="300000" step="1000" maxlength="7" name="moneycount">
-
+                                    <div class="money-value-new">
+                                        <input type="number" id="range-flex" class="number-input" value="1000" min="1000"
+                                            max="30000" step="500" name="loan_sum">
+                                    </div>
                                 </div>
-                            </div>
-                            <p><input class="range-input" type="range" min="1000" max="30000" value="6000" step="500"
-                                    name="moneycount" /></p>
+                                <p><input class="range-input" type="range" min="1000" max="30000" value="1000" step="500"
+                                        name="loan_sum" /></p>
                         </div>
 
                         <div class="tab-2">
@@ -193,20 +189,25 @@
                             <div class="form-heading-wrapper">
                                 <p class="credit-p2">Plazo:</p>
                                 <div class="money-value-new">
-                                    <input type="number" id="range-flex-2" class="number-input-2" value="1000"
-                                        min="1000" max="300000" step="1000" maxlength="7" name="moneycount-2">
+                                    <!-- <input type="number" id="range-flex-2" class="number-input-2" value="24"
+                                    min="1" max="361" value="24" step="30" maxlength="7" name="moneycount-2"> -->
+                                    <!-- <input type="number" id="range-flex-2" class="number-input-2" value="24" min="1" max="361" step="any" name="loan_period"> -->
+                                    <input type="number" id="range-flex-2" class="number-input-2" min="1" max="361" value="24" step="1" name="loan_period">
+
                                     <label class="placeholder-label" for="range-input-2">Dias</label>
                                 </div>
                             </div>
-                            <input class="range-input-2" type="range" min="1" max="365" value="24" step="1"
-                                placeholder="Dias" />
-
+                            <!-- <input class="range-input-2" type="range" min="1" max="361" value="24" step="30"
+                                placeholder="Dias" name="loan_period" /> -->
+                            <input class="range-input-2" type="range" min="1" max="361" value="24" step="1" name="loan_period" placeholder="Dias">
 
 
 
                             <div>
 
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)"> SOLICITA TU PRÉSTAMO
+                                <!-- <button type="submit" id="nextBtn" onclick="nextPrev(1)"> SOLICITA TU PRÉSTAMO
+                                </button> -->
+                                <button type="submit" id="nextBtn" > SOLICITA TU PRÉSTAMO
                                 </button>
                             </div>
                         </div>
