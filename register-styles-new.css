@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background: #F5F5F5;
+}
+
+/* Loan Girl Section */
+.section-loan-girl {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    overflow: hidden;
+    background-image: url('./img/loangirl.jpg');
+    background-position: center center;
+    display: grid;
+    padding: 120px;
+    z-index: -1;
+}
+
+.loan-girl-text {
+    align-self: end;
+    display: grid;
+    grid-gap: 52px;
+    justify-content: start;
+}
+
+.loans-menu-nav {
+    display: grid;
+    grid-gap: 16px;
+}
+
+.loan-girl-text h1 {
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.loans-menu-nav .lmn-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 16px;
+    align-items: center;
+    justify-content: start;
+}
+
+.loans-menu-nav .lmn-item p {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Loan Girl Section END */
+
+/* Main Div */
+
+.main-div {
+    width: 100%;
+    display: grid;
+    justify-content: end;
+}
+
+.inside-main-div {
+    width: 50vw;
+    padding: 32px;
+}
+
+.inside-main-div-div {
+    max-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Main Div END */
+
+/* Accordion */
+
+.section-register {
+    display: grid;
+    margin-top: 40px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.accordions {
+    max-width: 100%;
+    margin: auto;
+}
+
+.accordion .accordion__title {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 16px 24px;
+    color: var(--dark);
+    margin-top: 10px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.accordion .accordion__title input {
+    appearance: none;
+}
+
+.accordion .accordion__title:after {
+    transition: all 0.25s ease;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    float: right;
+    margin-right: 10px;
+}
+
+.accordion .accordion__title:has(input:checked):after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    float: right;
+    margin-right: 10px;
+}
+
+.accordion .accordion__text {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-in-out;
+    font-weight: 400;
+}
+
+.accordion .accordion__text p {
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding: 10px 10px;
+    color: var(--gray-dark);
+}
+
+.accordion .accordion__title:has(input:checked) {
+    color: var(--green-light);
+}
+
+.accordion .accordion__title:has(input:checked)+.accordion__text {
+    max-height: 5000px;
+}
+
+.step-p {
+    color: rgba(28, 31, 36, 0.50);
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.accordion-title-p {
+    color: #1C1F24;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 12px;
+}
+
+/* Accordion END */
+
+/* Steps */
+
+
+
+/* Steps END */
+input,
+select {
+    border: none;
+    outline: none;
+    background: none;
+    color: #1C1F24;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.step-container {
+    display: grid;
+    grid-gap: 12px;
+    padding: 24px;
+}
+
+.step-container .step-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 32px;
+    grid-template-columns: 135px 1fr;
+    align-items: center;
+}
+
+.step-container .step-item label {
+    color: #1C1F24;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.step-input {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(155, 157, 158, 0.40);
+    background: #fff;
+}
+
+.step-container .step-item select {
+    background-color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(155, 157, 158, 0.40);
+}
+
+.stepitem-inputs-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 8px;
+}
+
+/* gender */
+
+/* Hide the default radio button */
+.gender-div input[type="radio"] {
+    display: none;
+}
+
+/* Create a custom label appearance */
+.gender-div label {
+    background-color: #009CD7;
+    /* Base color */
+    color: #1E1E1E !important;
+    padding: 12px 24px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-right: -1px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid rgba(155, 157, 158, 0.40);
+    background: #FFF;
+    /* Remove double borders between buttons */
+}
+
+/* Change background and border color when hovering */
+.gender-div label:hover {
+    background-color: #1E1E1E;
+    color: #fff !important;
+}
+
+/* Change label appearance when the corresponding input is checked */
+.gender-div input[type="radio"]:checked+label {
+    background-color: #1E1E1E;
+    /* Color when clicked */
+    color: white !important;
+}
+
+/* Optional: reset the label's border-radius for a cleaner look */
+.gender-div .male-div label {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.gender-div .female-div label {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.stepradio-inputs-container {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+/* gender end */
+
+/* select */
+
+
+.custom-select {
+    position: relative;
+    color: rgba(28, 31, 36, 0.95);
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+.select-selected {
+    max-width: 505px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 22px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #D2D2D3 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #D2D2D3;
+    top: 14px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #1c1f24;
+    padding: 12px 12px;
+    border: 1px solid transparent;
+    border: 1px solid #D2D2D3;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #ffff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+
+.select-one {
+    color: rgba(28, 31, 36, 0.50);
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: #00ADEF;
+    color: #fff;
+}
+
+/* select end */
+
+
+.sc-button-container {
+    margin-top: 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border-radius: 50px;
+    background: #00ADEF;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 16px 48px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #08678B;
+}
+
+.input-checkbox {
+    justify-self: end;
+}
+
+.green-btn {
+    background-color: #16B808 !important;
+}
+
+.green-btn:hover {
+    background-color: #105c09 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.text-warning {
+    color: red !important;
+}
+
+.displaynone {
+    display: none !important;
+}
+
+.inpt-warning {
+    border-color: rgba(234, 51, 34, 0.6) !important;
+    background: rgba(234, 51, 34, 0.2) !important;
+}
+
+.inpt-success {
+    border-color: rgba(55, 210, 0, 0.6) !important;
+    background: rgba(55, 210, 0, 0.2) !important;
+}
+
+.radioVibrate {
+    animation: radioVibrateAnimation 1s ease-in-out infinite;
+}
+
+@keyframes radioVibrateAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.disabled-title {
+    color: #1C1F2480 !important;
+}
+
+@media only screen and (max-width: 1300px) {
+    .section-loan-girl {
+        display: none;
+    }
+
+    .main-div {
+        justify-content: center;
+    }
+
+    .inside-main-div {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .step-container .step-item {
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+        grid-gap: 12px;
+    }
+
+    .step-item-checkbox {
+        grid-auto-flow: column !important;
+        grid-template-columns: auto 1fr !important;
+    }
+
+    .step-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .step-p,
+    .accordion-title-p {
+        font-size: 16px;
+    }
+
+    .accordion-title-p {
+        padding-left: 4px;
+    }
+
+    .inside-main-div {
+        padding: 24px 16px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+
+    .accordion-title-p {
+        padding-left: 0;
+    }
+
+    .step-p,
+    .accordion-title-p {
+        font-size: 14px;
+    }
+
+    .accordion .accordion__title {
+        padding: 12px 12px;
+    }
+}

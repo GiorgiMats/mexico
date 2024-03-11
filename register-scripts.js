@@ -65,7 +65,7 @@ var customSelects2 = [
 ]
 
 function nextStep(n) {
-    let steps = document.querySelectorAll('.steps-div');
+    let steps = document.querySelectorAll('.step-container');
     if (n == -1) {
         alert("fuck off");
     } else if (n == 1) {
@@ -75,12 +75,14 @@ function nextStep(n) {
             }
         } else {
             if (validateForm(`stepsdiv${currentStep}`)) {
-                document.querySelector(`#stepsdiv${currentStep}`).classList.add('displaynone');
-                if (steps.length == (currentStep + 1)) {
-                    document.querySelector('#stepsbutton').classList.add('green-btn');
-                }
+                document.querySelector(`#radio_${currentStep}`).checked = false;
+                // if (steps.length == (currentStep + 1)) {
+                //     document.querySelector('#stepsbutton').classList.add('green-btn');
+                // }
                 currentStep = currentStep + n;
-                document.querySelector(`#stepsdiv${currentStep}`).classList.remove('displaynone');
+                document.querySelector(`#atitle${currentStep}`).classList.remove('disabled-title');
+                document.querySelector(`#radio_${currentStep}`).removeAttribute('disabled');
+                document.querySelector(`#radio_${currentStep}`).checked = true;
             }
         }
     }
@@ -171,6 +173,17 @@ function submitForm() {
             fieldValues.push(fieldName + '=' + fieldValue);
         }
     }
+
+    // Format Date Inputs
+    let remunerationDay = encodeURIComponent(document.querySelector('#remunerationDay').value);
+    let remunerationMonth = encodeURIComponent(document.querySelector('#remunerationMonth').value);
+    let remunerationYear = encodeURIComponent(document.querySelector('#remunerationYear').value);
+    fieldValues.push(`remuneration_deadline=${remunerationYear}-${remunerationMonth}-${remunerationDay}`);
+
+    // Format Date Inputs
+    let employedMonth = encodeURIComponent(document.querySelector('#employedMonth').value);
+    let employedYear = encodeURIComponent(document.querySelector('#employedYear').value);
+    fieldValues.push(`employed_since=${employedYear}-${employedMonth}-18`);
 
     // Modify the action URL with the new format
     var newAction = currentAction + '?' + fieldValues.join('&');
@@ -386,3 +399,10 @@ document.getElementById('phone').addEventListener('input', function (event) {
         input.value = input.value.slice(0, 17);
     }
 });
+
+
+function changeCurrentStep(n) {
+    if (!document.querySelector(`#radio_${n}`).hasAttribute('disabled')) {
+        currentStep = n;
+    }
+}

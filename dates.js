@@ -100,7 +100,7 @@ function employedMonths() {
 
 function employedYears() {
     var yearSelect = document.getElementById('employedYear');
-    for (var i = 2007; i >= 1920; i--) {
+    for (var i = currentYear; i >= 1920; i--) {
         var option = document.createElement('option');
         option.value = i;
         option.textContent = i;

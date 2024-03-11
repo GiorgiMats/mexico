@@ -25,32 +25,35 @@
 
 
 
-<!-- tagmanager -->
-<script type="text/javascript">
-  (function(w, c, t, u) {
+  <!-- tagmanager -->
+  <script type="text/javascript">
+    (function (w, c, t, u) {
       w._wct = w._wct || {}; w._wct = u;
       var s = c.createElement(t);
       s.type = 'text/javascript'; s.async = true; s.src = 'https://wct-2.com/wct.js?type=session';
       var r = c.getElementsByTagName(t)[0];
       r.parentNode.insertBefore(s, r);
-  }(window, document, 'script', {
-      'uid' : 'hwANyg',
-      'page_mutations' : true,
-      'proxy' : 'https://wct-2.com',
-      'auto_tagging' : true
-  }));
+    }(window, document, 'script', {
+      'uid': 'hwANyg',
+      'page_mutations': true,
+      'proxy': 'https://wct-2.com',
+      'auto_tagging': true
+    }));
   </script>
 
-<link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
+  <link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
 
 
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');</script>
   <!-- End Google Tag Manager -->
 
 
@@ -59,8 +62,8 @@
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="header">
@@ -121,23 +124,37 @@
       <div class="forms-new">
         <div class="hero-right">
           <form id="regForm"
-            action="https://cp.selzy.com/en/subscribe?hash=6m4eoe48wabis55e9jwwqyigoufiy3a1u6p3pp3k7fkojeu4bucry&list_ids=3&"
-            method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+            action="">
             <h1>Aplica ahora</h1>
             <!-- One "tab" for each step in the form: -->
+          
 
 
-            <button type="button" id="prevBtn" class="back-button" onclick="nextPrev(-1)">
-              <img src="/img/arrow-last.png" alt="" class="arrow-last">
-              <p class="back-p">anterior
-              </p>
-            </button>
             <div class="tab">
-              <div class="credit-p">Envíe el formulario para obtener las mejores opciones de préstamo
-              </div>
+
               <h2 class="credit-h3">¿Cuánto dinero necesitas?</h2>
+              <div class="loan-content">
+               
+              <div class="custom-select">
+                <select id="mySelect" required>
+                  <option onclick="removeSelectRed('select-selected')" value="Seleccione uno" class="select-one">Propósito del prestamo?</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Pagar deudas de tarjeta de crédito" class="option-hover">Pagar deudas de tarjeta de
+                    crédito</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Consolidar prestamos existentes" class="option-hover">Consolidar prestamos existentes
+                  </option>
+                  <option onclick="removeSelectRed('select-selected')" value="Gastos médicos" class="option-hover">Gastos médicos</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Reparar el coche" class="option-hover">Reparar el coche</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Pago de alquiler" class="option-hover">Pago de alquiler</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Reparar el hogar" class="option-hover">Reparar el hogar</option>
+                  <option onclick="removeSelectRed('select-selected')" value="Viajes ,vacaciones" class="option-hover">Viajes ,vacaciones</option>
+                  <option onclick="removeSelectRed('mySelect')" value="Otro" class="option-hover">Otro</option>
+                </select>
+              </div>
+            </div>
               <div class="form-heading-wrapper">
                 <p class="credit-p2">Quiero recibir:</p>
+
+                
                 <div class="money-value-new">
 
                   <input type="number" id="range-flex" class="number-input" value="1000" min="1000" max="300000"
@@ -145,126 +162,38 @@
 
                 </div>
               </div>
-              <p><input class="range-input" type="range" min="1000" max="30000" value="6000" step="1000"
+              <p><input class="range-input" type="range" min="1000" max="30000" value="6000" step="500"
                   name="moneycount" /></p>
             </div>
-            <div class="tab">
-              <h2 class="credit-h3">¿Cuál es el propósito de tu préstamo ?
-              </h2>
-              <div class="custom-select">
-                <select id="mySelect" name="reason" required>
-                  <option onclick="removeSelectRed('select-selected')" value="Seleccione uno" class="select-one">
-                    Seleccione uno</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Pay credit card debt"
-                    class="option-hover">Pagar deudas de tarjeta de
-                    crédito</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Consolidate existing loans"
-                    class="option-hover">Consolidar prestamos existentes
-                  </option>
-                  <option onclick="removeSelectRed('select-selected')" value="Medical expenses" class="option-hover">
-                    Gastos médicos</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Repair the car" class="option-hover">
-                    Reparar el coche</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Rent payment" class="option-hover">
-                    Pago de alquiler</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Repair the home" class="option-hover">
-                    Reparar el hogar</option>
-                  <option onclick="removeSelectRed('select-selected')" value="Travel, vacation" class="option-hover">
-                    Viajes ,vacaciones</option>
-                  <option onclick="removeSelectRed('mySelect')" value="Other" class="option-hover">Otro</option>
-                </select>
+
+            <div class="tab-2">
+              
+              <!-- Second range input -->
+              <div class="form-heading-wrapper">
+                <p class="credit-p2">Plazo:</p>
+                <div class="money-value-new">
+                  <input type="number" id="range-flex-2" class="number-input-2" value="1000" min="1000" max="300000"
+                    step="1000" maxlength="7" name="moneycount-2" >
+                    <label class="placeholder-label" for="range-input-2">Dias</label>
+                </div>
               </div>
-            </div>
-            <div class="tab">
-              <h2 class="credit-h3">Por favor indícanos tu número de contacto</h2>
-              <div class="phone-input-container">
-                <span class="country-code">+52</span>
-                <input type="tel" class="form-input tel-padding" onclick="checkForInput('phone')" id="phone"
-                  name="phone" placeholder="(999) 999 9999" maxlength="13" required />
-              </div>
-            </div>
-            <div class="tab">
-              <h2 class="credit-h3">Por favor indícanos tu dirección de email</h2>
-              <p><input type="email" class="form-input" onclick="checkForInput('mail')" id="mail" name="email"
-                  placeholder="ejemplo@egmail.com" maxlength="40" required /></p>
-            </div>
-            <div class="tab">
-              <h2 class="credit-h3">Nombre completo</h2>
-              <div class="surname-flex">
-                <p><input placeholder="Nombre" id="fname" onclick="checkForInput('fname')" maxlength="20"
-                    oninput="this.className = ''" name="Name" class="form-input"></p>
-                <p><input placeholder="Primer apellido" id="lname" onclick="checkForInput('lname')" maxlength="20"
-                    oninput="this.className = ''" name="last_name" class="form-input"></p>
-              </div>
-            </div>
-            <div class="tab relative-tab">
-              <h2 class="credit-h3">Por favor selecciona tu género</h2>
-              <div class="radio-toolbar">
-                <label for="radio-man">Masculino</label>
-                <p><input type="radio" value="man" id="radio-man" name="gender" class="" onclick="nextPrev(1)"></p>
-                <label for="radio-woman" class="ridio-1">Femenino</label>
-                <p><input type="radio" value="woman" id="radio-woman" name="gender" onclick="nextPrev(1)"></p>
-              </div>
-              <div class="absolute-div">
-                <p>Seleccione uno por favor</p>
-              </div>
-            </div>
-            <div class="tab">
-              <h2 class="credit-h3">Fecha de nacimiento</h2>
-              <div class="date-flex">
-                <p>
-                  <select class="form-input date-select" onclick="checkForInput('dateDay')" id="dateDay"
-                    name="birth_day" required>
-                    <option value="" disabled selected>Día</option>
-                  </select>
-                </p>
-                <p>
-                  <select class="form-input date-select" id="dateMonth" onclick="checkForInput('dateMonth')"
-                    name="birth_month" required>
-                    <option value="" disabled selected>Mes</option>
-                  </select>
-                </p>
-                <p>
-                  <select class="form-input date-select" id="dateYear" onclick="checkForInput('dateYear')"
-                    name="birth_year" required>
-                    <option value="" disabled selected>Año</option>
-                  </select>
-                </p>
-              </div>
-            </div>
-            <div class="tab lastTab">
-              <h2 class="credit-h3">Haz click en</h2>
-              <p>Obtener ofertas para recibir el dinero, dando click en este apartado, aceptas <a href="/politicas.html" class="policy-span">los términos</a> del
-                procesamiento de datos personales</p>
-              <label class="container-radio">
-                <p id="agreecheckbox-p">Quiero recibir correos electrónicos de MX Crédito.</p>
-                <input type="checkbox" checked="checked" id="agreecheckbox" required>
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div>
+              <input class="range-input-2" type="range" min="1" max="365" value="24" step="1" placeholder="Dias" />
+
+              
+
+
               <div>
 
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">            SOLICITA TU PRÉSTAMO
+                </button>
               </div>
             </div>
             <!-- Circles which indicates the steps of the form: -->
-            <div class="step-flex">
-              <p class="step-p">8 paso</p>
-              <div>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-              </div>
-            </div>
+  
             <h3 class="documents-h3">Solicitudes realizadas hoy: 4714</h3>
             <p class="terms">
-              Al hacer clic en el botón "Siguiente", acepta <a href="/normas.html" class="policy-span"> los términos</a> de procesamiento de datos personales.
+              Al hacer clic en el botón "Siguiente", acepta <a href="/normas.html" class="policy-span"> los términos</a>
+              de procesamiento de datos personales.
             </p>
           </form>
         </div>

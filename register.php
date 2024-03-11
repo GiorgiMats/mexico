@@ -26,7 +26,7 @@
     <div class="form-container">
         <form id="customers-form" action="send_customer.php" method="post">
             <!-- first-step -->
-            <div class="steps-div" id="stepsdiv1">
+            <div class="steps-div displaynone" id="stepsdiv1">
                 <h1 class="register-h1">First step 1/3</h1>
                 <h2 class="register-h2">Personal information</h2>
                 <div class="first-step">
@@ -355,7 +355,7 @@
             <!-- end -->
 
             <!-- third step -->
-            <div class="steps-div displaynone" id="stepsdiv3">
+            <div class="steps-div" id="stepsdiv3">
                 <h1 class="register-h1">Third step 3/3</h1>
                 <h2 class="register-h2">Adress</h2>
                 <div class="first-step">

@@ -281,6 +281,15 @@
        
     }
 
+
+    
+.placeholder-label {
+  right: 12% !important;
+  }
+
+
+ 
+
     .container-border {
         padding: 24px;
         background: transparent;
@@ -399,6 +408,10 @@
 
 
 @media only screen and (max-width: 950px) {
+
+    .placeholder-label {
+        right: 10% !important;
+        }
 
     .date-flex {
         gap: 16px;
@@ -843,12 +856,23 @@
         font-size: 20px !important;
     }
 
+    .placeholder-label {
+        right: 12% !important;
+        }
+
 }
 
 
 
 
 @media only screen and (max-width: 400px){
+
+    .placeholder-label {
+        right: 14% !important;
+        }
+
+}
+
 
 
     .progress-h2 {
@@ -945,6 +969,14 @@
  }
 
 
-}
 
 
+
+ @media only screen and (max-width: 350px){
+
+    .placeholder-label {
+        right: 18% !important;
+        }
+
+
+    }
