@@ -176,7 +176,7 @@ footer {
 
 .hero-container-new {
   padding: 32px 0 32px 0;
-  
+
   gap: 60px;
 
   max-width: 1280px;
@@ -1187,7 +1187,7 @@ hr {
 .custom-select {
   position: relative;
   color: rgba(28, 31, 36, 0.95);
-  
+
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -1386,4 +1386,3 @@ hr {
 }
 
 /* radio */
-

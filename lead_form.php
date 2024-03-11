@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Lead Data</title>
 </head>
+
 <body>
     <form action="lead_submit.php" method="post">
-    <label for="loan_purpose">loan_purpose</label>
+        <label for="loan_purpose">loan_purpose</label>
         <select name="loan_purpose" id="loan_purpose">
             <option value="disabled">disabled</option>
             <option value="PURCHASE_OF_FOOD">PURCHASE_OF_FOOD</option>
@@ -30,4 +32,5 @@
         <button type="submit">Submit Lead</button>
     </form>
 </body>
+
 </html>

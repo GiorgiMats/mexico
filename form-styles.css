@@ -123,18 +123,18 @@ input.invalid {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  
+
 }
 
 
 .back-p {
   color: #009CD7;
 
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .arrow-final {
@@ -351,7 +351,7 @@ input[type="number"] {
   padding: 8px 0px 8px 54px;
   align-self: flex-end;
   justify-self: end;
-  
+
   background-repeat: no-repeat;
   border-radius: 8px;
   background-position: 10px center;
@@ -383,16 +383,16 @@ input.number-input-2 {
 .placeholder-label {
   position: absolute;
 
-  
+
   right: 10%;
- 
+
   pointer-events: none;
   color: #1C1F24;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 
