@@ -28,25 +28,25 @@
             <!-- first-step -->
             <div class="steps-div displaynone" id="stepsdiv1">
                 <h1 class="register-h1">First step 1/3</h1>
-                <h2 class="register-h2">Personal information</h2>
+                <h2 class="register-h2">Datos personales</h2>
                 <div class="first-step">
                     <div class="first-name margin-div">
                         <label for="first_name">Nombre</label>
                         <input type="text" name="first_name" id="first_name" required maxlength="255"
-                            onfocusout="validateInput('first_name')" placeholder="Enter name">
+                            onfocusout="validateInput('first_name')" placeholder="Ingrese su nombre">
                     </div>
 
                     <div class="last-name margin-div">
-                        <label for="last_name">Apellido</label>
+                        <label for="last_name">Apellido paterno</label>
                         <input type="text" name="last_name" id="last_name" onfocusout="validateInput('last_name')"
-                            required placeholder="Enter name">
+                            required placeholder="Ingrese su apellido paterno">
                     </div>
 
                     <div class="second-lastname margin-div">
-                        <label for="second_last_name">Segundo apellido</label>
+                        <label for="second_last_name">Apellido materno</label>
                         <input type="text" name="second_last_name" id="second_last_name"
                             onfocusout="validateInput('second_last_name')" required maxlength="255"
-                            placeholder="Enter name">
+                            placeholder="Ingrese su apellido materno">
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                     <div class="margin-div">
 
 
-                        <label for="birth_date">Birth Date</label>
+                        <label for="birth_date">Fecha de nacimiento</label>
 
                         <div class="margin-div-new">
                             <div class="date-flex">
@@ -90,19 +90,19 @@
 
 
                     <div class="margin-div">
-                        <span>Genero</span>
+                        <span>Género</span>
 
                         <div class="margin-div-new">
 
                             <div class="gender-div">
                                 <div class="male-div">
                                     <input type="radio" id="male" name="gender" value="MALE">
-                                    <label for="male" onclick="selectRadio()">Male</label>
+                                    <label for="male" onclick="selectRadio()">Masculino</label>
                                 </div>
 
                                 <div class="female-div">
                                     <input type="radio" id="female" name="gender" value="FEMALE">
-                                    <label for="female" onclick="selectRadio()">Female</label>
+                                    <label for="female" onclick="selectRadio()">Feminino</label>
                                 </div>
                             </div>
                         </div>
@@ -111,21 +111,21 @@
 
                 <div class="first-step">
                     <div class="margin-div">
-                        <label for="personal_id">personal id</label>
+                        <label for="personal_id">CURP</label>
                         <input type="text" onfocusout="validateInput('personal_id')" name="personal_id" id="personal_id"
                             pattern="^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$"
-                            placeholder="Enter name">
+                            placeholder="Ingrese su CURP">
 
                     </div>
 
 
                     <div class="margin-div">
 
-                        <label for="tax_id_number">tax id number</label>
+                        <label for="tax_id_number">RFC</label>
                         <input type="text" name="tax_id_number" id="tax_id_number"
                             onfocusout="validateInput('tax_id_number')" required
                             pattern="^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$"
-                            placeholder="Enter name">
+                            placeholder="Ingrese su RFC">
 
                     </div>
 
@@ -164,7 +164,7 @@
                         <label for="bank_account">bank account</label>
                         <input type="text" name=" bank_account" id="bank_account"
                             onfocusout="validateInput('bank_account')" minlength="18" maxlength="18"
-                            placeholder="Enter name">
+                            placeholder="Ingrese su">
 
                     </div>
 
@@ -239,7 +239,7 @@
 
 
                         <input type="email" class="form-input" onfocusout="validateInput('email')" id="email"
-                            name="email" maxlength="40" required placeholder="Enter name">
+                            name="email" maxlength="40" required placeholder="Ingrese su">
                     </div>
 
                     <div class="margin-div">

@@ -425,6 +425,13 @@ button {
     transition: 0.2s ease-in-out;
 }
 
+
+
+a {
+    text-decoration: underline;
+    color: #009CD7;
+}
+
 .btn-primary:hover {
     background-color: #08678B;
 }
@@ -472,7 +479,7 @@ input[type=number] {
 }
 
 .radioVibrate {
-    animation: radioVibrateAnimation 1s ease-in-out infinite;
+    border-color: rgba(234, 51, 34, 0.6) !important;
 }
 
 @keyframes radioVibrateAnimation {
@@ -493,6 +500,12 @@ input[type=number] {
     color: #1C1F2480 !important;
 }
 
+@media only screen and (max-width: 1550px) {
+    .loan-girl-text h1 {
+        font-size: 42px !important;
+    }
+}
+
 @media only screen and (max-width: 1300px) {
     .section-loan-girl {
         display: none;
@@ -505,6 +518,10 @@ input[type=number] {
     .inside-main-div {
         width: 100%;
     }
+
+
+
+
 }
 
 @media only screen and (max-width: 664px) {
@@ -552,4 +569,6 @@ input[type=number] {
     .accordion .accordion__title {
         padding: 12px 12px;
     }
+
+
 }

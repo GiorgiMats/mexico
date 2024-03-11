@@ -148,39 +148,40 @@
                                 <div class="custom-select" id="loan_purpose" onclick="checkSelect('loan_purpose')">
                                     <select id="mySelect" name="loan_purpose" required>
                                         <option onclick="checkSelect('loan_purpose')" value="Seleccione uno"
-                                            class="select-one">Propósito del prestamo?</option>
+                                            class="select-one">Por qué solicita el préstamo
+                                        </option>
                                         <option onclick="checkSelect('loan_purpose')" value="PURCHASE_OF_FOOD"
-                                            class="option-hover">PURCHASE_OF_FOOD</option>
+                                            class="option-hover">Comprar alimentos</option>
                                         <option onclick="checkSelect('loan_purpose')" value="BUYING_ELECTRONICS"
-                                            class="option-hover">BUYING_ELECTRONICS
+                                            class="option-hover">Comprando electrónicos
                                         </option>
                                         <option onclick="checkSelect('loan_purpose')" value="CREATE_CREDIT_HISTORY"
-                                            class="option-hover">CREATE_CREDIT_HISTORY
+                                            class="option-hover">Crear historial crediticio
                                         </option>
                                         <option onclick="checkSelect('loan_purpose')" value="SCHOOL_EXPENSES"
-                                            class="option-hover">SCHOOL_EXPENSES</option>
+                                            class="option-hover">Gastos escolares</option>
                                         <option onclick="checkSelect('loan_purpose')" value="UNFORESEEN_EXPENSE"
-                                            class="option-hover">UNFORESEEN_EXPENSE</option>
+                                            class="option-hover">Gasto imprevisto</option>
                                         <option onclick="checkSelect('loan_purpose')" value="MEDICAL_EXPENSES"
-                                            class="option-hover">MEDICAL_EXPENSES</option>
+                                            class="option-hover">Gastos médicos</option>
                                         <option onclick="checkSelect('loan_purpose')"
                                             value="MAINTENANCE_OR_REPAIR_OF_HOUSE" class="option-hover">
-                                            MAINTENANCE_OR_REPAIR_OF_HOUSE</option>
+                                            Mantenimiento o reparación de la casa</option>
                                         <option onclick="checkSelect('loan_purpose')" value="PAY_ANOTHER_LOAN"
                                             class="option-hover">
-                                            PAY_ANOTHER_LOAN</option>
+                                            Pagar otro préstamo</option>
                                         <option onclick="checkSelect('loan_purpose')" value="PAYMENT_OF_SERVICES"
                                             class="option-hover">
-                                            PAYMENT_OF_SERVICES</option>
+                                            Pago de servicios</option>
                                         <option onclick="checkSelect('loan_purpose')" value="FOR_MY_BUSINESS"
                                             class="option-hover">
-                                            FOR_MY_BUSINESS</option>
+                                            Para mi negocio</option>
                                         <option onclick="checkSelect('loan_purpose')" value="TRAVEL"
                                             class="option-hover">
-                                            TRAVEL</option>
+                                            Viaje</option>
                                         <option onclick="checkSelect('loan_purpose')" value="OTHER"
                                             class="option-hover">
-                                            OTHER</option>
+                                            Otro</option>
                                     </select>
                                 </div>
                             </div>
@@ -205,7 +206,7 @@
                                     min="1" max="361" value="24" step="30" maxlength="7" name="moneycount-2"> -->
                                     <!-- <input type="number" id="range-flex-2" class="number-input-2" value="24" min="1" max="361" step="any" name="loan_period"> -->
                                     <input type="number" id="range-flex-2" class="number-input-2" min="1" max="361"
-                                        value="24" step="1" name="loan_period">
+                                        value="24" step="1" name="loan_period" onkeyup=enforceMinMax(this)>
 
                                     <label class="placeholder-label" for="range-input-2">Dias</label>
                                 </div>
