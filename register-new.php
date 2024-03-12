@@ -339,11 +339,11 @@ if (isset($_SESSION['leadData'])) {
                                             placeholder="Ingrese dirección...">
                                     </div>
                                     <div class="step-item">
-                                        <label for="house_number"> Número Exterior
+                                        <label for="house_number"> Número exterior
                                         </label>
                                         <input class="step-input" type="text" name="house_number"
                                             onfocusout="validateInput('house_number')" id="house_number" maxlength="45"
-                                            placeholder="Ingrese         número exterior...">
+                                            placeholder="Ingrese número exterior...">
                                     </div>
                                     <div class="step-item">
                                         <label for="region">Estado</label>
@@ -565,8 +565,8 @@ if (isset($_SESSION['leadData'])) {
                                     </div>
                                     <div class="step-item sc-button-container">
                                         <div></div>
-                                        <button type="button" class="btn-primary" onclick="nextStep(1)">Obtener
-                                            dinero.</button>
+                                        <button type="button" class="btn-primary" id="last-btn"  onclick="nextStep(1)">Obtener
+                                            dinero</button>
                                     </div>
                                 </div>
                             </div>

@@ -365,6 +365,13 @@ select {
     user-select: none;
 }
 
+.select-items div {
+    padding: 10px !important;
+    border-radius: 0 !important;
+  }
+
+
+
 /*style items (options):*/
 .select-items {
     position: absolute;
@@ -481,6 +488,17 @@ input[type=number] {
 .radioVibrate {
     border-color: rgba(234, 51, 34, 0.6) !important;
 }
+
+
+#last-btn {
+    background-color: #1BCC0C;
+    transition: 0.3s;
+}
+
+#last-btn:hover {
+ background-color: #108F05;
+}
+
 
 @keyframes radioVibrateAnimation {
     0% {

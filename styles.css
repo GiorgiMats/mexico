@@ -635,14 +635,14 @@ a {
 }
 
 .conditions-img1 {
-  background-image: url(/img/condition-2.jpg);
+  background-image: url(/mexico/img/condition-2-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
 }
 
 .conditions-img2 {
-  background-image: url(/img/condition-1.jpg);
+  background-image: url(/mexico/img/condition-1-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1258,6 +1258,11 @@ hr {
 /*hide the items when the select box is closed:*/
 .select-hide {
   display: none;
+}
+
+.select-items div {
+  padding: 10px !important;
+  border-radius: 0 !important;
 }
 
 .select-items div:hover,
