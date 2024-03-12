@@ -243,7 +243,7 @@ if (isset($_SESSION['leadData'])) {
                                     </div>
                                     <div class="step-item">
                                         <label for="bank_account">CLABE account</label>
-                                        <input class="step-input" type="text" name=" bank_account" id="bank_account"
+                                        <input class="step-input" type="number" name=" bank_account" id="bank_account"
                                             onfocusout="validateInput('bank_account')" minlength="18" maxlength="18"
                                             placeholder="CLABE account...">
                                     </div>
