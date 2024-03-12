@@ -139,6 +139,7 @@ $customerData = [
         'county' => $_POST['county'] ?? '',
         'district' => $_POST['district'] ?? '',
         'colony' => $_POST['colony'] ?? '',
+        'postal_index' => $_POST['postal_index'] ?? '',
     ],
     'housing_type' => $_POST['housing_type'] ?? '',
     'occupation' => $_POST['occupation'] ?? '',

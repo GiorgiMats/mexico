@@ -436,11 +436,11 @@ if (isset($_SESSION['leadData'])) {
                                                 <option onclick="checkSelect('credit_score-div')" value="LOW_300_TO_550"
                                                     class="option-hover">
                                                     Bajo (300 a 550)</option>
-                                                <option onclick="checkSelect('credit_score-div')" value="WITH_PARENTS"
+                                                <option onclick="checkSelect('credit_score-div')" value="DONT_KNOW"
                                                     class="option-hover">
                                                     No sé</option>
-                                                <option onclick="checkSelect('credit_score-div')" value="WITH_PARENTS"
-                                                    class="option-hover">
+                                                <option onclick="checkSelect('credit_score-div')"
+                                                    value="NO_CREDIT_HISTORY" class="option-hover">
                                                     No tengo historial crediticio</option>
                                             </select>
                                         </div>
@@ -565,7 +565,8 @@ if (isset($_SESSION['leadData'])) {
                                     </div>
                                     <div class="step-item sc-button-container">
                                         <div></div>
-                                        <button type="button" class="btn-primary" id="last-btn"  onclick="nextStep(1)">Obtener
+                                        <button type="button" class="btn-primary" id="last-btn"
+                                            onclick="nextStep(1)">Obtener
                                             dinero</button>
                                     </div>
                                 </div>
