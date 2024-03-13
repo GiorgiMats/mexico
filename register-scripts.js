@@ -133,16 +133,6 @@ function validateForm(formName) {
             document.querySelector('.male-div label').classList.add('radioVibrate');
             document.querySelector('.female-div label').classList.add('radioVibrate');
         }
-
-        let accountNumber = document.querySelector('#bank_account').value;
-        let controlDigit = calculateControlDigit(accountNumber);
-        if (!compareLastDigit(accountNumber, controlDigit)) {
-            submitinput = false;
-            inputWarning('bank_account');
-            console.log(accountNumber, controlDigit);
-        }
-
-        // djawidjawiojddddddddddddddddddddddddddddddddddddddddddddddd
     }
 
     if (currentStep == 3) {
@@ -232,14 +222,27 @@ function inputSuccess(inptid) {
 
 function validateInput(inptid) {
     let inpt = document.querySelector(`#${inptid}`);
-    if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
-        inputSuccess(inptid);
-    } else {
-        if (!patterns[currentStep - 1][`${inptid}`].test(inpt.value) || inpt.value == '') {
-            inputWarning(inptid);
+    if (inptid == 'bank_account') {
+        // fffffffffffffffffffffffffffffffffffffffffffffffff
+        let accountNumber = document.querySelector('#bank_account').value;
+        let controlDigit = calculateControlDigit(accountNumber);
+        if (!compareLastDigit(accountNumber, controlDigit)) {
             submitinput = false;
+            inputWarning('bank_account');
+            console.log(accountNumber, controlDigit);
         } else {
             inputSuccess(inptid);
+        }
+    } else {
+        if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
+            inputSuccess(inptid);
+        } else {
+            if (!patterns[currentStep - 1][`${inptid}`].test(inpt.value) || inpt.value == '') {
+                inputWarning(inptid);
+                submitinput = false;
+            } else {
+                inputSuccess(inptid);
+            }
         }
     }
 }
