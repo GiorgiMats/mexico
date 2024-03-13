@@ -71,7 +71,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="header-container">
-            <a href="/index.html">
+            <a href="./index.php">
                 <img src="img/main-logo.svg" alt="" class="logo">
             </a>
 

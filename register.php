@@ -360,7 +360,7 @@
                 <h2 class="register-h2">Adress</h2>
                 <div class="first-step">
                     <div class="margin-div">
-                        <label for="occupation">occupation</label>
+                        <label for="occupation">Estado de Empleo</label>
 
 
                         <div class="custom-select" id="occupation-div" onclick="checkSelect('occupation-div')">

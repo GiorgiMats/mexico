@@ -392,7 +392,7 @@ if (isset($_SESSION['leadData'])) {
                             <div class="accordion__text">
                                 <div id="stepsdiv3" class="step-2-container step-container">
                                     <div class="step-item">
-                                        <label for="occupation">occupation</label>
+                                        <label for="occupation">Estado de Empleo</label>
                                         <div class="custom-select" id="occupation-div"
                                             onclick="checkSelect('occupation-div')">
                                             <select id="occupation" name="occupation" required>
@@ -484,7 +484,7 @@ if (isset($_SESSION['leadData'])) {
                                         </div>
                                     </div>
                                     <div class="step-item displaynone" id="employed_since_step_item">
-                                        <label for="employed_since">Emplyoed since</label>
+                                        <label for="employed_since">Empleado desde</label>
                                         <div class="stepitem-inputs-container">
                                             <select class="form-input date-select" id="employedMonth"
                                                 onclick="checkCustomSelect('employedMonth')" name="employed_month"

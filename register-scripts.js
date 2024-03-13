@@ -555,3 +555,5 @@ function isPhoneNumberValid(phoneNumber) {
     // Check if the extracted prefix is in the list of valid prefixes
     return prefixes.includes(extractedPrefix);
 }
+
+
