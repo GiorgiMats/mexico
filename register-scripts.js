@@ -233,6 +233,13 @@ function validateInput(inptid) {
         } else {
             inputSuccess(inptid);
         }
+    } else if (inptid == 'phone') {
+        if (isPhoneNumberValid(document.querySelector('#phone').value)) {
+            inputSuccess(inptid);
+        } else {
+            submitinput = false;
+            inputWarning(inptid);
+        }
     } else {
         if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
             inputSuccess(inptid);
@@ -508,4 +515,23 @@ function compareLastDigit(num1, num2) {
 
     // Check if the last digit equals the second number
     return lastDigit === strNum2;
+}
+
+function isPhoneNumberValid(phoneNumber) {
+    // Remove non-digit characters from the phone number
+    const cleanedNumber = phoneNumber.replace(/\D/g, '');
+
+    // Define the prefixes
+    const prefixes = [
+        "479", "440", "729", "664", "446", "222", "990", "56", "55", "81", "33", "656",
+        "614", "618", "999", "221", "442", "449", "663", "612", "624", "844", "686", "667",
+        "722", "998", "871", "744", "444", "833", "477", "961", "662", "633", "645", "644",
+        "642", "631", "229", "443", "921", "771", "981", "899", "868"
+    ];
+
+    // Extract the first 3 (or 2) digits from the cleaned number
+    const extractedPrefix = cleanedNumber.slice(0, 3);
+
+    // Check if the extracted prefix is in the list of valid prefixes
+    return prefixes.includes(extractedPrefix);
 }
