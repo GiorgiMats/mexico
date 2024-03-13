@@ -299,7 +299,7 @@ if (isset($_SESSION['leadData'])) {
                         </div>
                         <div class="accordion">
                             <label class="accordion__title" for="radio_2" onclick="changeCurrentStep(2)">
-                                <input id="radio_2" type="radio" name="radio" /><span class="step-p">Paso
+                                <input id="radio_2" disabled type="radio" name="radio" /><span class="step-p">Paso
                                     2/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle2">Dirección</span>
                             </label>
@@ -385,7 +385,7 @@ if (isset($_SESSION['leadData'])) {
                         </div>
                         <div class="accordion">
                             <label class="accordion__title" for="radio_3">
-                                <input id="radio_3" type="radio" name="radio" /><span class="step-p">Paso
+                                <input id="radio_3" disabled type="radio" name="radio" /><span class="step-p">Paso
                                     2/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle3">Tipo de empleo</span>
                             </label>
