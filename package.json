@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "validate-curp": "^1.0.0",
+    "validate-rfc": "^2.0.3"
+  }
+}

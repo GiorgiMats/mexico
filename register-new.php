@@ -11,6 +11,19 @@ if (isset($_SESSION['leadData'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest version -->
+    <script src="https://cdn.jsdelivr.net/gh/manuelmhtr/validate-rfc@latest/dist/index.js" type="text/javascript">
+    </script>
+    <!-- Latest version -->
+    <script src="https://cdn.jsdelivr.net/gh/manuelmhtr/validate-curp@latest/dist/index.js" type="text/javascript">
+    </script>
+    <!-- This will export a global function "validateRfc": -->
+    <script type="text/javascript">
+    var data = validateRfc('mhtr93041179a');
+    console.log(data);
+    var data2 = validateCurp('motr930411hjcrmn03');
+    console.log(data2);
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
@@ -212,7 +225,6 @@ if (isset($_SESSION['leadData'])) {
                                         <label for="tax_id_number">RFC</label>
                                         <input class="step-input" type="text" name="tax_id_number" id="tax_id_number"
                                             onfocusout="validateInput('tax_id_number')" required
-                                            pattern="^[A-Z]{1}[AEIOUX]{1}[A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Za-z0-9]{3}$"
                                             placeholder="Ingrese su RFC...">
                                     </div>
                                     <div class="step-item">
@@ -448,7 +460,8 @@ if (isset($_SESSION['leadData'])) {
                                     <div class="step-item">
                                         <label for="neto_income">Sueldo neto $</label>
                                         <input class="step-input" type="number" name="neto_income" id="neto_income"
-                                            onfocusout="validateInput('neto_income')" placeholder="Sueldo neto..." min="1000">
+                                            onfocusout="validateInput('neto_income')" placeholder="Sueldo neto..."
+                                            min="1000">
                                     </div>
                                     <div class="step-item">
                                         <label for="remuneration_deadline">Fecha límite del próximo sueldo</label>

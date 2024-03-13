@@ -243,6 +243,22 @@ function validateInput(inptid) {
             submitinput = false;
             inputWarning(inptid);
         }
+    } else if (inptid == 'tax_id_number') {
+        if (validateRfc(document.querySelector('#tax_id_number').value).isValid) {
+            inputSuccess(inptid);
+        } else {
+            console.log(validateRfc(document.querySelector('#tax_id_number').value));
+            submitinput = false;
+            inputWarning(inptid);
+        }
+    } else if (inptid == 'personal_id') {
+        if (validateCurp(document.querySelector('#personal_id').value).isValid) {
+            inputSuccess(inptid);
+        } else {
+            console.log(validateCurp(document.querySelector('#personal_id').value));
+            submitinput = false;
+            inputWarning(inptid);
+        }
     } else {
         if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
             inputSuccess(inptid);
