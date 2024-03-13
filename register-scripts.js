@@ -7,13 +7,12 @@ var patterns = [
         last_name: /^[a-záéèíñóúüç\s-']+$/i,
         second_last_name: /^[a-záéèíñóúüç\s-']+$/i,
         personal_id: /^[A-Z]{1}[AEIOU]{1}[A-Z]{2}\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}\d{1}$/,
-        tax_id_number:/^[A-Z&Ñ]{3,4}\d{6}[A-Za-z\d]{3}$/    ,
-        bank_account: /^(002|006|009|012|014|019|021|030|032|036|037|042|044|058|059|060|062|072|102|103|106|108|110|112|113|116|124|126|127|128|129|130|131|132|133|134|135|136|137|138|139|140|141|143|145|156|166|168|600|601|602|605|606|607|608|610|614|615|616|617|618|619|620|621|622|623|626|627|628|629|630|631|632|633|634|636|637|638|640|642|646|647|648|649|651|652|653|655|656|659|670|706|901|902|999)\d{15}$/,
-        email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+        tax_id_number: /^[A-Z&Ñ]{3,4}\d{6}[A-Za-z\d]{3}$/,
+        bank_account: /^.{18}$/,
         phone: /^.{16}$/,
     },
 
-    
+
 
 
     {
@@ -134,6 +133,16 @@ function validateForm(formName) {
             document.querySelector('.male-div label').classList.add('radioVibrate');
             document.querySelector('.female-div label').classList.add('radioVibrate');
         }
+
+        let accountNumber = document.querySelector('#bank_account').value;
+        let controlDigit = calculateControlDigit(accountNumber);
+        if (!compareLastDigit(accountNumber, controlDigit)) {
+            submitinput = false;
+            inputWarning('bank_account');
+            console.log(accountNumber, controlDigit);
+        }
+
+        // djawidjawiojddddddddddddddddddddddddddddddddddddddddddddddd
     }
 
     if (currentStep == 3) {
@@ -466,4 +475,34 @@ function changeCurrentStep(n) {
     if (!document.querySelector(`#radio_${n}`).hasAttribute('disabled')) {
         currentStep = n;
     }
+}
+
+function calculateControlDigit(clabe) {
+    // Define weights for each position in the CLABE
+    const weights = [3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7];
+
+    // Calculate the sum of products
+    let sum = 0;
+    for (let i = 0; i < 17; i++) {
+        sum += parseInt(clabe.charAt(i), 10) * weights[i];
+    }
+
+    // Calculate the control digit
+    let controlDigit = 10 - (sum % 10);
+    if (controlDigit === 10) {
+        controlDigit = 0;
+    }
+
+    return controlDigit;
+}
+
+function compareLastDigit(num1, num2) {
+    // Extract the last character of the first number
+    const lastDigit = num1.charAt(num1.length - 1);
+
+    // Convert the second number to a string for comparison
+    const strNum2 = num2.toString();
+
+    // Check if the last digit equals the second number
+    return lastDigit === strNum2;
 }
