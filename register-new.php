@@ -111,18 +111,18 @@ if (isset($_SESSION['leadData'])) {
                                     <div class="step-item">
                                         <label for="birth_day">Fecha de nacimiento</label>
                                         <div class="stepitem-inputs-container">
-                                            <select class="form-input date-select"
-                                                onclick="checkCustomSelect('dateDay')" id="dateDay" name="birth_day"
-                                                required>
-                                                <option class="select-one" value="" disabled selected>Día</option>
+                                            <select class="form-input date-select" id="dateYear"
+                                                onclick="checkCustomSelect('dateYear')" name="birth_year" required>
+                                                <option class="select-one" value="" disabled selected>Año</option>
                                             </select>
                                             <select class="form-input date-select" id="dateMonth"
                                                 onclick="checkCustomSelect('dateMonth')" name="birth_month" required>
                                                 <option class="select-one" value="" disabled selected>Mes</option>
                                             </select>
-                                            <select class="form-input date-select" id="dateYear"
-                                                onclick="checkCustomSelect('dateYear')" name="birth_year" required>
-                                                <option class="select-one" value="" disabled selected>Año</option>
+                                            <select class="form-input date-select"
+                                                onclick="checkCustomSelect('dateDay')" id="dateDay" name="birth_day"
+                                                required>
+                                                <option class="select-one" value="" disabled selected>Día</option>
                                             </select>
                                         </div>
                                     </div>
@@ -299,7 +299,7 @@ if (isset($_SESSION['leadData'])) {
                         </div>
                         <div class="accordion">
                             <label class="accordion__title" for="radio_2" onclick="changeCurrentStep(2)">
-                                <input id="radio_2" disabled type="radio" name="radio" /><span class="step-p">Paso
+                                <input id="radio_2" type="radio" name="radio" /><span class="step-p">Paso
                                     2/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle2">Dirección</span>
                             </label>
@@ -385,7 +385,7 @@ if (isset($_SESSION['leadData'])) {
                         </div>
                         <div class="accordion">
                             <label class="accordion__title" for="radio_3">
-                                <input id="radio_3" disabled type="radio" name="radio" /><span class="step-p">Paso
+                                <input id="radio_3" type="radio" name="radio" /><span class="step-p">Paso
                                     2/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle3">Tipo de empleo</span>
                             </label>
@@ -466,35 +466,35 @@ if (isset($_SESSION['leadData'])) {
                                     <div class="step-item">
                                         <label for="remuneration_deadline">Fecha límite del próximo sueldo</label>
                                         <div class="stepitem-inputs-container">
-                                            <select class="form-input date-select"
-                                                onclick="checkCustomSelect('remunerationDay')" id="remunerationDay"
-                                                name="remuneration_day" required>
-                                                <option class="select-one" value="" disabled selected>Día</option>
+                                            <select class="form-input date-select" id="remunerationYear"
+                                                onclick="checkCustomSelect('remunerationYear')" name="remuneration_year"
+                                                required>
+                                                <option class="select-one" value="" disabled selected>Año</option>
                                             </select>
                                             <select class="form-input date-select" id="remunerationMonth"
                                                 onclick="checkCustomSelect('remunerationMonth')"
                                                 name="remuneration_month" required>
                                                 <option class="select-one" value="" disabled selected>Mes</option>
                                             </select>
-                                            <select class="form-input date-select" id="remunerationYear"
-                                                onclick="checkCustomSelect('remunerationYear')" name="remuneration_year"
-                                                required>
-                                                <option class="select-one" value="" disabled selected>Año</option>
+                                            <select class="form-input date-select"
+                                                onclick="checkCustomSelect('remunerationDay')" id="remunerationDay"
+                                                name="remuneration_day" required>
+                                                <option class="select-one" value="" disabled selected>Día</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="step-item displaynone" id="employed_since_step_item">
                                         <label for="employed_since">Empleado desde</label>
                                         <div class="stepitem-inputs-container">
-                                            <select class="form-input date-select" id="employedMonth"
-                                                onclick="checkCustomSelect('employedMonth')" name="employed_month"
-                                                required>
-                                                <option class="select-one" value="" disabled selected>Mes</option>
-                                            </select>
                                             <select class="form-input date-select" id="employedYear"
                                                 onclick="checkCustomSelect('employedYear')" name="employed_year"
                                                 required>
                                                 <option class="select-one" value="" disabled selected>Año</option>
+                                            </select>
+                                            <select class="form-input date-select" id="employedMonth"
+                                                onclick="checkCustomSelect('employedMonth')" name="employed_month"
+                                                required>
+                                                <option class="select-one" value="" disabled selected>Mes</option>
                                             </select>
                                         </div>
                                     </div>

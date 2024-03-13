@@ -4,14 +4,34 @@ let currentYear = currentDate.getFullYear();
 // Birth Date //
 
 document.addEventListener('DOMContentLoaded', function () {
-    populateDays();
     populateMonths();
     populateYears();
+    updateDays(); // Initial population of days based on the current month and year
 });
+
+document.getElementById('dateMonth').addEventListener('change', updateDays);
+document.getElementById('dateYear').addEventListener('change', updateDays);
+
+function updateDays() {
+    populateDays();
+}
 
 function populateDays() {
     var daySelect = document.getElementById('dateDay');
-    for (var i = 1; i <= 31; i++) {
+    var monthSelect = document.getElementById('dateMonth');
+    var yearSelect = document.getElementById('dateYear');
+
+    var selectedMonth = parseInt(monthSelect.value, 10);
+    var selectedYear = parseInt(yearSelect.value, 10);
+
+    // Clear existing options
+    daySelect.innerHTML = '<option class="select-one" value="" disabled selected>Día</option>';
+
+    // Get the number of days in the selected month and year
+    var daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
+
+    // Populate days
+    for (var i = 1; i <= daysInMonth; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = i;
@@ -40,19 +60,40 @@ function populateYears() {
     }
 }
 
-
-// Remuneration Deadline //
+// Remuneration Date //
 
 document.addEventListener('DOMContentLoaded', function () {
-    renumerationDays();
-    renumerationMonths();
-    renumerationYears();
+    populateRemunerationMonths();
+    populateRemunerationYears();
+    updateRemunerationDays(); // Initial population of days based on the current month and year
 });
 
-function renumerationDays() {
-    let currentDay = currentDate.getDate();
+document.getElementById('remunerationMonth').addEventListener('change', updateRemunerationDays);
+document.getElementById('remunerationYear').addEventListener('change', updateRemunerationDays);
+
+function updateRemunerationDays() {
+    populateRemunerationDays();
+}
+
+function populateRemunerationDays() {
     var daySelect = document.getElementById('remunerationDay');
-    for (var i = currentDay; i <= 31; i++) {
+    var monthSelect = document.getElementById('remunerationMonth');
+    var yearSelect = document.getElementById('remunerationYear');
+
+    var selectedMonth = parseInt(monthSelect.value, 10);
+    var selectedYear = parseInt(yearSelect.value, 10);
+
+    // Clear existing options
+    daySelect.innerHTML = '<option class="select-one" value="" disabled selected>Día</option>';
+
+    // Calculate the maximum days based on the selected month and year
+    var maxDays = new Date(selectedYear, selectedMonth, 0).getDate();
+
+    // Calculate the minimum day (current date) for the current year and selected month
+    var minDay = (currentYear === selectedYear && selectedMonth === currentDate.getMonth() + 1) ? currentDate.getDate() : 1;
+
+    // Populate days
+    for (var i = minDay; i <= maxDays; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = i;
@@ -60,10 +101,10 @@ function renumerationDays() {
     }
 }
 
-function renumerationMonths() {
-    let currentMonth = currentDate.getMonth() + 1;
+function populateRemunerationMonths() {
     var monthSelect = document.getElementById('remunerationMonth');
     var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    var currentMonth = currentDate.getMonth() + 1; // Months are zero-based in JavaScript Date objects
     for (var i = currentMonth; i <= 12; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
@@ -72,9 +113,9 @@ function renumerationMonths() {
     }
 }
 
-function renumerationYears() {
+function populateRemunerationYears() {
     var yearSelect = document.getElementById('remunerationYear');
-    for (var i = (currentYear + 1); i >= currentYear; i--) {
+    for (var i = currentYear; i <= currentYear + 1; i++) {
         var option = document.createElement('option');
         option.value = i;
         option.textContent = i;
@@ -82,17 +123,32 @@ function renumerationYears() {
     }
 }
 
-// Employed Since //
+// Employed Date //
+
+// Employed Date //
 
 document.addEventListener('DOMContentLoaded', function () {
-    employedMonths();
-    employedYears();
+    populateEmployedMonths();
+    populateEmployedYears();
 });
 
-function employedMonths() {
+document.getElementById('employedYear').addEventListener('change', updateEmployedMonths);
+
+function updateEmployedMonths() {
+    populateEmployedMonths();
+}
+
+function populateEmployedMonths() {
     var monthSelect = document.getElementById('employedMonth');
+    var yearSelect = document.getElementById('employedYear');
     var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-    for (var i = 1; i <= 12; i++) {
+    var selectedYear = parseInt(yearSelect.value, 10);
+    var currentMonth = (currentYear === selectedYear) ? currentDate.getMonth() + 1 : 12;
+
+    // Clear existing options
+    monthSelect.innerHTML = '<option class="select-one" value="" disabled selected>Mes</option>';
+
+    for (var i = 1; i <= currentMonth; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = months[i - 1];
@@ -100,7 +156,7 @@ function employedMonths() {
     }
 }
 
-function employedYears() {
+function populateEmployedYears() {
     var yearSelect = document.getElementById('employedYear');
     for (var i = currentYear; i >= 1920; i--) {
         var option = document.createElement('option');
