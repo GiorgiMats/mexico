@@ -1,5 +1,5 @@
 var submitinput = true;
-var currentStep = 3;
+var currentStep = 1;
 var employedSince = false;
 var patterns = [
     {
