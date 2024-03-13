@@ -8,6 +8,7 @@ var patterns = [
         second_last_name: /^[a-záéèíñóúüç\s-']+$/i,
         personal_id: /^[A-Z]{1}[AEIOU]{1}[A-Z]{2}\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}\d{1}$/,
         tax_id_number: /^[A-Z&Ñ]{3,4}\d{6}[A-Za-z\d]{3}$/,
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
         bank_account: /^.{18}$/,
         phone: /^.{16}$/,
     },
@@ -237,6 +238,7 @@ function validateInput(inptid) {
         if (isPhoneNumberValid(document.querySelector('#phone').value)) {
             inputSuccess(inptid);
         } else {
+            console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
             submitinput = false;
             inputWarning(inptid);
         }
@@ -521,6 +523,11 @@ function isPhoneNumberValid(phoneNumber) {
     // Remove non-digit characters from the phone number
     const cleanedNumber = phoneNumber.replace(/\D/g, '');
 
+    // Remove the country code and any leading "1" for long distance dialing within Mexico
+    const numberWithoutCountryCode = cleanedNumber.startsWith("521") ? cleanedNumber.slice(3) :
+        cleanedNumber.startsWith("52") ? cleanedNumber.slice(2) :
+            cleanedNumber;
+
     // Define the prefixes
     const prefixes = [
         "479", "440", "729", "664", "446", "222", "990", "56", "55", "81", "33", "656",
@@ -529,8 +536,8 @@ function isPhoneNumberValid(phoneNumber) {
         "642", "631", "229", "443", "921", "771", "981", "899", "868"
     ];
 
-    // Extract the first 3 (or 2) digits from the cleaned number
-    const extractedPrefix = cleanedNumber.slice(0, 3);
+    // Extract the first 3 digits as the prefix from the number without the country code
+    const extractedPrefix = numberWithoutCountryCode.slice(0, 3);
 
     // Check if the extracted prefix is in the list of valid prefixes
     return prefixes.includes(extractedPrefix);
