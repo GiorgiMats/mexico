@@ -448,7 +448,7 @@ if (isset($_SESSION['leadData'])) {
                                     <div class="step-item">
                                         <label for="neto_income">Sueldo neto $</label>
                                         <input class="step-input" type="number" name="neto_income" id="neto_income"
-                                            onfocusout="validateInput('neto_income')" placeholder="Sueldo neto...">
+                                            onfocusout="validateInput('neto_income')" placeholder="Sueldo neto..." min="1000">
                                     </div>
                                     <div class="step-item">
                                         <label for="remuneration_deadline">Fecha límite del próximo sueldo</label>

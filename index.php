@@ -89,7 +89,7 @@
 
             <ul class="nav">
                 <li><a href="#" class="nav-focus">Principal</a></li>
-                <li><a href="/about-us.html" class="nav-link">Sobre nosotros</a></li>
+                <li><a href="./about-us.php" class="nav-link">Sobre nosotros</a></li>
                 <li><a href="#faqs" class="nav-link">Preguntas frecuentes</a></li>
             </ul>
 
@@ -230,7 +230,7 @@
 
                         <h3 class="documents-h3">Solicitudes realizadas hoy: 4714</h3>
                         <p class="terms">
-                            Al hacer clic en el botón "Siguiente", acepta <a href="/normas.html" class="policy-span">
+                            Al hacer clic en el botón "Siguiente", acepta <a href="./normas.php" class="policy-span">
                                 los términos</a>
                             de procesamiento de datos personales.
                         </p>
@@ -258,6 +258,53 @@
 
 
     <main>
+
+
+    <div class="container-1 container-circle">
+
+
+      <div class="how how-2">
+
+
+        <div class="how-box" id="circle-box">
+          <div class="circle">
+            <p class="circle-p">1</p>
+          </div>
+          <div class="circle-info">
+            <p class="how-p1" id="how-changed">Заповніть форму</p>
+            <p class="how-p2" id="how-changed-p">
+              Введіть ваші дані у наданих полях, переконавшись у їх точності, і потім перейдіть до їх підтвердження.
+            </p>
+          </div>
+        </div>
+        <div class="how-box" id="circle-box">
+          <div class="circle">
+            <p class="circle-p">2</p>
+          </div>
+          <div class="circle-info">
+            <p class="how-p1" id="how-changed">Оберіть пропозицію</p>
+            <p class="how-p2" id="how-changed-p">
+              Наш сервіс вибере найкращі варіанти для отримання коштів на ваш кредит, ми надішлемо ваш запит установам з
+              найвищим відсотком схвалення.
+            </p>
+          </div>
+        </div>
+        <div class="how-box" id="circle-box">
+          <div class="circle">
+            <p class="circle-p">3</p>
+          </div>
+          <div class="circle-info">
+            <p class="how-p1" id="how-changed">Отримайте свої гроші</p>
+            <p class="how-p2" id="how-changed-p">
+              Після того, як вашу заявку буде погоджено, гроші миттєво зараховуються на ваш рахунок
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div> 
         <div class="container-1">
             <h2 class="h22">¿Cómo conseguir tu préstamo ?</h2>
 
@@ -335,6 +382,7 @@
             </div>
         </div>
 
+  
         <div class="container-1 container-flex">
             <h2 class="h22">Asistencia para tu préstamo</h2>
 
@@ -343,125 +391,7 @@
             </p>
             <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
         </div>
-
-        <div class="container-1">
-            <div class="conditions-box">
-                <div class="benefits-box1 pink-box">
-                    <p class="benefits-p1">Términos del préstamo:</p>
-                    <div class="condition-info">
-                        <div class="benefit-info">
-                            <img src="img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                El periodo mínimo de liquidación de la deuda es de 61 días , el periodo máximo de
-                                liquidación de 120
-                                días.
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                La tasa de interés Efectiva Anual es de hasta 28,98% + IVA.
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Los intereses varían según el prestamista, el interés propuesto dependerá de tus
-                                circunstancias e
-                                historial crediticio.
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Si se llegase a presentar un incumplimiento de los pagos prolongados , la información
-                                del beneficiario
-                                del préstamo será enviada a la oficina de historial de crédito.
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Especifique los términos y condiciones finales al comunicarse con la entidad
-                                expendedora.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conditions-img1"></div>
-                <div class="benefits-box1 blue-box">
-                    <p class="benefits-p1">Requisitos del solicitante:</p>
-                    <div class="condition-info">
-                        <div class="benefit-info">
-                            <img src="/img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Identificación oficial vigente , ya sea INE,IFE o pasaporte
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="/img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Número de teléfono nacional valido
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="/img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Correo electrónico (para la creación de una cuenta en nuestra plataforma)
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="/img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Cuenta bancaria propia en México
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <img src="/img/black-check.svg" alt="" />
-                            <p class="benefits-p2">
-                                Estado de cuenta , con ingresos y gastos mensuales
-                            </p>
-                        </div>
-                        <div class="benefit-info">
-                            <p class="benefits-p2">
-                                * los términos finales del préstamo estarán vinculados con los términos de la entidad
-                                financiera
-                                asociada.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="conditions-box2">
-                <div class="benefits-box1 border-box">
-                    <p class="benefits-p1">Sobre el servicio</p>
-                    <p class="benefits-p2">
-                        Credito-mx es tu mejor asistente en la obtención de préstamos , trabajamos con más de 100
-                        entidades
-                        bancarias y
-                        organizaciones financieras con las mejores ofertas de préstamo , ya no necesitas buscar un
-                        prestamista .
-                        ¡Haremos todo por ti! Ayudamos a las personas a resolver sus problemas financieros todos los
-                        días , sin
-                        hacer colas , sin el estrés de la búsqueda y la tramitación para obtener uno.
-                    </p>
-                </div>
-
-                <div class="benefits-box1 green-box">
-                    <p class="benefits-p1">¿Qué pasa si no pagas por la obtención de préstamos?</p>
-                    <p class="benefits-p2">
-                        En el caso de que se produzca una demora o impago en tu préstamo, la entidad financiera lo
-                        registrará en el
-                        Buró de Crédito donde obtendrás un reporte negativo por mal comportamiento financiero y un mal
-                        historial.
-                    </p>
-                </div>
-
-                <div class="conditions-img2"></div>
-            </div>
-        </div>
+      
 
         <div class="container-1">
             <h2 class="h22">¿Por qué nosotros?</h2>
@@ -498,14 +428,7 @@
             </div>
         </div>
 
-        <div class="container-1 container-flex">
-            <h2 class="h22">Asistencia para tu préstamo</h2>
-
-            <p class="receive-p">
-                ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
-            </p>
-            <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
-        </div>
+     
 
         <div class="container-1">
             <h2 class="h22">Reseñas</h2>
@@ -690,6 +613,14 @@
                     no es una entidad financiera, un banco o un prestamista.
                 </p>
             </div>
+            <div class="container-1 container-flex">
+            <h2 class="h22">Asistencia para tu préstamo</h2>
+
+            <p class="receive-p">
+                ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
+            </p>
+            <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
+        </div>
 
     </main>
 
@@ -699,10 +630,10 @@
                 <div class="footer-box">
                     <p class="footer-p">Compañía</p>
                     <div class="pages">
-                        <p class="pages-p"><a href="/about-us.html">Sobre nosotras</a></p>
-                        <p class="pages-p"><a href="/politicas.html">Políticas</a></p>
-                        <p class="pages-p"><a href="/normas.html">Normas</a></p>
-                        <p class="pages-p"><a href="/acuerdos.html">Acuerdos</a></p>
+                        <p class="pages-p"><a href="./about-us.php">Sobre nosotras</a></p>
+                        <p class="pages-p"><a href="./politicas.php">Políticas</a></p>
+                        <p class="pages-p"><a href="./normas.php">Normas</a></p>
+                        <p class="pages-p"><a href="./acuerdos.php">Acuerdos</a></p>
                     </div>
                 </div>
 

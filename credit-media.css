@@ -411,6 +411,14 @@
 
 @media only screen and (max-width: 950px) {
 
+  
+
+    .how-2 {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
     .placeholder-label {
         right: 10% !important;
     }
@@ -493,7 +501,7 @@
 
 
     .hero-container {
-        margin-bottom: 80px;
+        margin-bottom: 0px;
     }
 
 
@@ -629,6 +637,20 @@
 
 @media only screen and (max-width: 650px) {
 
+    .how-2 {
+        align-items: center !important;
+        
+    }
+
+    .container-circle {
+        margin-top: 0 !important;
+    }
+
+    .how-box {
+        align-items: center;
+        justify-content: center;
+    }
+
     .info-logo {
         max-width: 24px;
     }
@@ -670,7 +692,7 @@
 
 
     .hero-container {
-        margin-bottom: 60px;
+        margin-bottom: 0px;
     }
 
 
@@ -875,7 +897,7 @@
         right: 14% !important;
     }
 
-}
+
 
 
 
@@ -971,6 +993,10 @@
 .date-select {
     max-width: 100px;
 }
+
+}
+
+
 
 
 

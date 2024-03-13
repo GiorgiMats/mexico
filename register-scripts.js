@@ -8,7 +8,7 @@ var patterns = [
         second_last_name: /^[a-záéèíñóúüç\s-']+$/i,
         personal_id: /^[A-Z]{1}[AEIOU]{1}[A-Z]{2}\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}\d{1}$/,
         tax_id_number: /^[A-Z&Ñ]{3,4}\d{6}[A-Za-z\d]{3}$/,
-        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         bank_account: /^.{18}$/,
         phone: /^.{16}$/,
     },
@@ -26,7 +26,8 @@ var patterns = [
         county: /^.{1,45}$/,
     },
     {
-        neto_income: /^.{1,45}$/,
+        neto_income: /^(?:[1-9]\d{3,}|1000)$/
+        ,
     }
 ];
 

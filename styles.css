@@ -105,7 +105,7 @@ p {
 }
 
 header {
-  padding: 40px 60px 40px 60px;
+  padding: 28px 60px 28px 60px;
 }
 
 footer {
@@ -165,7 +165,7 @@ footer {
 
 
 .hero-container {
-  padding: 60px 0 40px 0;
+  padding: 60px 0 70px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -202,6 +202,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  
 }
 
 .credit-box {
@@ -304,7 +305,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  margin-top: 164px;
+  margin-top: 232px;
 }
 
 .hero-left-new {
@@ -1391,3 +1392,47 @@ hr {
 }
 
 /* radio */
+
+
+
+#circle-box {
+  display: flex;
+  flex-direction: row !important;
+  gap: 16px;
+  align-items: start;
+
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 400px;
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(15, 15, 19, 0.1);
+  
+  background: #FFF;
+  
+  box-shadow: 0px 14px 26px -12px rgba(0, 89, 123, 0.5);
+}
+
+.circle-p {
+  color: #1c1f24;
+
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#how-changed {
+  margin-top: 0 !important;
+  text-align: start;
+}
+
+#how-changed-p {
+  text-align: start !important;
+}

@@ -69,7 +69,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="header-container">
-            <a href="/index.html">
+            <a href="./index.php">
                 <img src="img/main-logo.svg" alt="" class="logo">
             </a>
 
@@ -78,9 +78,9 @@
             </div>
 
             <ul class="nav">
-                <li><a href="/index.html" class="nav-link">Principal</a></li>
+                <li><a href="./index.php" class="nav-link">Principal</a></li>
                 <li><a href="#" class="nav-focus">Sobre nosotros</a></li>
-                <li><a href="/faqs.html" class="nav-link">Preguntas frecuentes</a></li>
+                <li><a href="./faqs.php" class="nav-link">Preguntas frecuentes</a></li>
             </ul>
 
             <div class="close">
@@ -124,10 +124,10 @@
                 <div class="footer-box">
                     <p class="footer-p">Compañía</p>
                     <div class="pages">
-                        <p class="pages-p"><a href="/about-us.html">Sobre nosotras</a></p>
-                        <p class="pages-p"><a href="/politicas.html">Políticas</a></p>
-                        <p class="pages-p"><a href="/normas.html">Normas</a></p>
-                        <p class="pages-p"><a href="/acuerdos.html">Acuerdos</a></p>
+                        <p class="pages-p"><a href="./about-us.php">Sobre nosotras</a></p>
+                        <p class="pages-p"><a href="./politicas.php">Políticas</a></p>
+                        <p class="pages-p"><a href="./normas.php">Normas</a></p>
+                        <p class="pages-p"><a href="./acuerdos.php">Acuerdos</a></p>
                     </div>
                 </div>
 
@@ -136,17 +136,17 @@
                     <div class="pages">
                         <p class="pages-p pages-p2">
                             credito-mx.com - es un servicio online gratuito dedicado a conectarte con las mejores
-                            opciones de préstamo en el mercado. El periodo mínimo de liquidación de la deuda es de 61
-                            días , el periodo máximo de liquidación de 120 días. La tasa de interés Efectiva Anual es de
-                            hasta 28,98% + IVA. Los intereses varían según el prestamista, el interés propuesto
-                            dependerá de tus circunstancias e historial crediticio. La página actual no es una entidad
-                            financiera, un banco o un prestamista. El servicio credito-mx escoge préstamos para clientes
-                            haciendo de intermediario entre los clientes que quieren recibir un préstamo y las
+                            opciones de préstamo
+                            en el mercado. El servicio credito-mx escoge
+                            préstamos para clientes haciendo de intermediario entre los clientes que quieren recibir un
+                            préstamo y las
                             instituciones financieras licenciadas. El servicio no se hace responsable de los acuerdos
-                            crediticios. La página actual no cobra por el servicio ni tampoco se hace responsable de las
-                            acciones, incumplimientos o tasas de interés de cualquier prestamista. No estás obligado a
-                            usar los servicios de credito-mx ni contactar o solicitar un préstamo a los prestamistas que
-                            aparecen en esta página.
+                            crediticios. La
+                            página actual no cobra por el servicio ni tampoco se hace responsable de las acciones,
+                            incumplimientos o
+                            tasas de interés de cualquier prestamista. No estás obligado a usar los servicios de
+                            credito-mx ni
+                            contactar o solicitar un préstamo a los prestamistas que aparecen en esta página.
                         </p>
                     </div>
                 </div>
@@ -155,6 +155,8 @@
                 credito-mx.com ©2024 - todos los derechos registrados.
             </p>
         </div>
+
+
     </footer>
 
     <script src="stepper.js"></script>
