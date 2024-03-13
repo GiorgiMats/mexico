@@ -1,5 +1,5 @@
 var submitinput = true;
-var currentStep = 1;
+var currentStep = 3;
 var employedSince = false;
 var patterns = [
     {
@@ -12,10 +12,6 @@ var patterns = [
         bank_account: /^.{18}$/,
         phone: /^.{16}$/,
     },
-
-
-
-
     {
         postal_code: /^[0-9]{5}$/,
         city: /^.{1,45}$/,

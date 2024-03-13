@@ -50,8 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function renumerationDays() {
+    let currentDay = currentDate.getDate();
     var daySelect = document.getElementById('remunerationDay');
-    for (var i = 1; i <= 31; i++) {
+    for (var i = currentDay; i <= 31; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = i;
@@ -60,9 +61,10 @@ function renumerationDays() {
 }
 
 function renumerationMonths() {
+    let currentMonth = currentDate.getMonth() + 1;
     var monthSelect = document.getElementById('remunerationMonth');
     var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-    for (var i = 1; i <= 12; i++) {
+    for (var i = currentMonth; i <= 12; i++) {
         var option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = months[i - 1];
