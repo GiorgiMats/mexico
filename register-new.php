@@ -565,7 +565,7 @@ if (isset($_SESSION['leadData'])) {
                                         <input type="checkbox" class="input-checkbox" name="policy" id="policy"
                                             onclick="selectCheckbox('policy-p')">
                                         <label for="policy" id="policy-p" onclick="selectCheckbox('policy-p')">He leído
-                                            y acepto el <a href="./politicas.php"> aviso de privacidad</a> así como
+                                            y acepto el <a href="./politicas.php" target="_blank"> aviso de privacidad</a> así como
                                             tratamiento de mis datos personales
                                             y patrimoniales.
                                             .</label>
@@ -574,7 +574,7 @@ if (isset($_SESSION['leadData'])) {
                                         <input type="checkbox" class="input-checkbox" name="terms" id="terms"
                                             onclick="selectCheckbox('terms-p')">
                                         <label for="terms" id="terms-p" onclick="selectCheckbox('terms-p')">Asimismo,
-                                            acepto los <a href="./normas.php">Términos y Condiciones</a></label>
+                                            acepto los <a href="./normas.php" target="_blank" >Términos y Condiciones</a></label>
                                     </div>
                                     <div class="step-item sc-button-container">
                                         <div></div>

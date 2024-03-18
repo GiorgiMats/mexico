@@ -271,9 +271,9 @@
             <p class="circle-p">1</p>
           </div>
           <div class="circle-info">
-            <p class="how-p1" id="how-changed">Заповніть форму</p>
+            <p class="how-p1" id="how-changed">Completa el formulario</p>
             <p class="how-p2" id="how-changed-p">
-              Введіть ваші дані у наданих полях, переконавшись у їх точності, і потім перейдіть до їх підтвердження.
+            Todo lo que necesitas es Copia de DNI, pasaporte o NIE. Estado de cuenta bancario con ingresos y gastos mensuales
             </p>
           </div>
         </div>
@@ -282,10 +282,9 @@
             <p class="circle-p">2</p>
           </div>
           <div class="circle-info">
-            <p class="how-p1" id="how-changed">Оберіть пропозицію</p>
+            <p class="how-p1" id="how-changed">Escoge la mejor oferta</p>
             <p class="how-p2" id="how-changed-p">
-              Наш сервіс вибере найкращі варіанти для отримання коштів на ваш кредит, ми надішлемо ваш запит установам з
-              найвищим відсотком схвалення.
+            Nuestro servicio seleccionará las mejores opciones de obtención de fondos para tu préstamo , enviaremos tu solicitud a las entidades con el mayor porcentaje de aprobación
             </p>
           </div>
         </div>
@@ -294,10 +293,9 @@
             <p class="circle-p">3</p>
           </div>
           <div class="circle-info">
-            <p class="how-p1" id="how-changed">Отримайте свої гроші</p>
+            <p class="how-p1" id="how-changed">Recibe tu dinero</p>
             <p class="how-p2" id="how-changed-p">
-              Після того, як вашу заявку буде погоджено, гроші миттєво зараховуються на ваш рахунок
-            </p>
+            Haznos saber la forma más cómoda para la recepción de tu préstamo, a tu tarjeta bancaria , cuenta o en efectivo            </p>
           </div>
         </div>
 
@@ -305,39 +303,7 @@
 
       </div>
     </div> 
-        <div class="container-1">
-            <h2 class="h22">¿Cómo conseguir tu préstamo ?</h2>
-
-            <div class="how">
-                <div class="how-box">
-                    <img src="img/how-11.svg" alt="" class="how-img" />
-                    <p class="how-p1">Completa el formulario</p>
-                    <p class="how-p2">
-                        Todo lo que necesitas es Copia de DNI, pasaporte o NIE. Estado de cuenta bancario con ingresos y
-                        gastos
-                        mensuales
-                    </p>
-                </div>
-                <div class="how-box">
-                    <img src="img/how-22.svg" alt="" class="how-img" />
-                    <p class="how-p1">Escoge la mejor oferta</p>
-                    <p class="how-p2">
-                        Nuestro servicio seleccionará las mejores opciones de obtención de fondos para tu préstamo ,
-                        enviaremos tu
-                        solicitud a las entidades con el mayor porcentaje de aprobación
-                    </p>
-                </div>
-                <div class="how-box">
-                    <img src="img/how-33.svg" alt="" class="how-img" />
-                    <p class="how-p1">Recibe tu dinero</p>
-                    <p class="how-p2">
-                        Haznos saber la forma más cómoda para la recepción de tu préstamo, a tu tarjeta bancaria ,
-                        cuenta o en
-                        efectivo
-                    </p>
-                </div>
-            </div>
-        </div>
+ 
 
         <div class="container-1">
             <h2 class="h22">Ventajas de usar nuestro servicio</h2>

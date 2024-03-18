@@ -204,18 +204,7 @@ select {
     line-height: normal;
 }
 
-/* Targeting the autofill */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
-    border-color: rgba(55, 210, 0, 0.6) !important;
-    background: rgba(55, 210, 0, 0.2) !important;
-    -webkit-text-fill-color: #1C1F24 !important;
-    -webkit-box-shadow: 0 0 0px 1000px rgba(55, 210, 0, 0.2) inset !important;
-    box-shadow: transparent;
-    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
-}
+
 
 
 
