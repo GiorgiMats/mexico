@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit; // Just exit with 200 OK and the above headers for pre-flight requests
 }
 
-$tokenUrl = "https://api.staging.credy.eu/v3/token";
+$tokenUrl = "https://api.credy.eu/v3/token";
 $clientID = "mx_digital_way"; // Replace with your actual client ID
-$clientSecret = "5dc6f804-c9f7-4ca7-8021-91bc9bbf308a"; // Replace with your actual client secret
+$clientSecret = "9dcc9308-9036-4412-b44e-13253b811137"; // Replace with your actual client secret
 
 // Fetch the bearer token from the /v3/token endpoint
 function fetchBearerToken($url, $clientID, $clientSecret) {
@@ -44,7 +44,7 @@ function fetchBearerToken($url, $clientID, $clientSecret) {
 }
 
 function forwardCustomerData($customerData, $token) {
-    $url = "https://api.staging.credy.eu/v3/customers";
+    $url = "https://api.credy.eu/v3/customers";
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
@@ -75,7 +75,7 @@ function forwardCustomerData($customerData, $token) {
 }
 
 function forwardLeadData($leadData, $customerUuid, $token) {
-    $url = "https://api.staging.credy.eu/v3/leads?customer={$customerUuid}";
+    $url = "https://api.credy.eu/v3/leads?customer={$customerUuid}";
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
