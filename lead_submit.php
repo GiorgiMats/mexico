@@ -18,6 +18,12 @@ $leadData = [
     'loan_period' => $_POST['loan_period'] ?? '',
     'ip_address' => $_POST['ip_address'] ?? '',
     'loan_purpose' => $_POST['loan_purpose'] ?? '',
+    'customer' => [
+        'agreements' => [
+            'terms_of_service' => 1,
+            'data_proccessing_policy' => 1,
+        ],
+    ],
 ];
 
 $customerUuid = $_SESSION['customerUuid'];
