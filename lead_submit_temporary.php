@@ -25,6 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'loan_period' => $_POST['loan_period'] ?? 0,
         'ip_address' => getUserIpAddress(),
         'loan_purpose' => $_POST['loan_purpose'] ?? '',
+        'customer' => [
+            'agreements' => [
+                'terms_of_service' => 'on',
+                'data_proccessing_policy' => 'on',
+            ],
+        ],
     ];
 
     // Redirect to the customer data form
