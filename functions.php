@@ -68,6 +68,8 @@ function forwardLeadData($leadData, $customerUuid, $token) {
     $httpStatusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     if ($result === FALSE || $httpStatusCode >= 400) {
         $errorResponse = curl_error($ch);
+        echo '<pre>'; print_r($leadData); echo '</pre>';
+        var_dump($leadData);
         $response = $result ? json_decode($result, true) : ['curl_error' => $errorResponse];
         curl_close($ch);
         return ['error' => true, 'message' => 'Failed to submit lead data', 'details' => $response];

@@ -164,12 +164,8 @@ $leadData = [
     'loan_period' => $_POST['loan_period'] ?? '',
     'ip_address' => $_POST['ip_address'] ?? '',
     'loan_purpose' => $_POST['loan_purpose'] ?? '',
-    'customer' => [
-        'agreements' => [
-            'terms_of_service' => 'on',
-            'data_proccessing_policy' => 'on',
-        ],
-    ],
+    'terms_of_service' => 'on',
+    'data_proccessing_policy' => 'on',
 ];
 
 // $customerDataTest = [

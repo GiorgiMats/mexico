@@ -45,8 +45,8 @@ $customerData = [
   'debt_amount' => $_POST['debt_amount'] ?? '',
   'car' => $_POST['car'] ?? '',
   'agreements' => [
-      'data_proccessing_policy' => $_POST['policy'] ?? '',
-      'terms_of_service' => $_POST['terms'] ?? '',  
+      'data_proccessing_policy' => true,
+      'terms_of_service' => true,  
   ],
 ];
 // Submit customer data
