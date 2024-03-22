@@ -231,14 +231,6 @@ function validateInput(inptid) {
         } else {
             inputSuccess(inptid);
         }
-    } else if (inptid == 'phone') {
-        if (isPhoneNumberValid(document.querySelector('#phone').value)) {
-            inputSuccess(inptid);
-        } else {
-            console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
-            submitinput = false;
-            inputWarning(inptid);
-        }
     } else if (inptid == 'tax_id_number') {
         if (validateRfc(document.querySelector('#tax_id_number').value).isValid) {
             inputSuccess(inptid);
@@ -267,6 +259,16 @@ function validateInput(inptid) {
             }
         }
     }
+
+    // else if (inptid == 'phone') {
+    //     if (isPhoneNumberValid(document.querySelector('#phone').value)) {
+    //         inputSuccess(inptid);
+    //     } else {
+    //         console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
+    //         submitinput = false;
+    //         inputWarning(inptid);
+    //     }
+    // } 
 }
 
 function validateSelect(selectid) {
