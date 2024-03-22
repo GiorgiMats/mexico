@@ -15,46 +15,16 @@
     <!-- <link rel="stylesheet" href="java.js" /> -->
 
 
-    <!-- Google tag (gtag.js) -->
-    <script type="text/javascript">
-    (function(w, c, t, u) {
-        w._wct = w._wct || {};
-        w._wct = u;
-        var s = c.createElement(t);
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://wct-2.com/wct.js?type=session';
-        var r = c.getElementsByTagName(t)[0];
-        r.parentNode.insertBefore(s, r);
-    }(window, document, 'script', {
-        'uid': 'hwANyg',
-        'page_mutations': true,
-        'proxy': 'https://wct-2.com',
-        'auto_tagging': true
-    }));
-    </script>
-
-    <link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
+   
 
 
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');
-    </script>
-    <!-- End Google Tag Manager -->
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
+<!-- End Google Tag Manager -->
 
     <title>ASobre nosotros</title>
 
@@ -63,10 +33,11 @@
 <body>
 
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <header class="header">
         <div class="header-container">
             <a href="./index.php">
@@ -126,7 +97,7 @@
                     <div class="pages">
                         <p class="pages-p"><a href="./about-us.php">Sobre nosotras</a></p>
                         <p class="pages-p"><a href="./politicas.php">Políticas</a></p>
-                        <p class="pages-p"><a href="./normas.php">Normas</a></p>
+                        <p class="pages-p"><a href="./normas.php">Cookies</a></p>
                         <p class="pages-p"><a href="./acuerdos.php">Acuerdos</a></p>
                     </div>
                 </div>

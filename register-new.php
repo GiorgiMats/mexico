@@ -29,10 +29,25 @@ if (isset($_SESSION['leadData'])) {
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="register-styles-new.css">
-    <title>MX Credito - Take a Credit</title>
+    <title>Mejores Préstamos Personales</title>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!-- Section Loan Girl -->
     <div class="section-loan-girl">
@@ -386,7 +401,7 @@ if (isset($_SESSION['leadData'])) {
                         <div class="accordion">
                             <label class="accordion__title" for="radio_3">
                                 <input id="radio_3" disabled type="radio" name="radio" /><span class="step-p">Paso
-                                    2/3:</span>
+                                    3/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle3">Tipo de empleo</span>
                             </label>
                             <div class="accordion__text">

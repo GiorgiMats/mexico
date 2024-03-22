@@ -15,46 +15,13 @@
     <!-- <link rel="stylesheet" href="java.js" /> -->
 
 
-    <!-- Google tag (gtag.js) -->
-    <script type="text/javascript">
-    (function(w, c, t, u) {
-        w._wct = w._wct || {};
-        w._wct = u;
-        var s = c.createElement(t);
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://wct-2.com/wct.js?type=session';
-        var r = c.getElementsByTagName(t)[0];
-        r.parentNode.insertBefore(s, r);
-    }(window, document, 'script', {
-        'uid': 'hwANyg',
-        'page_mutations': true,
-        'proxy': 'https://wct-2.com',
-        'auto_tagging': true
-    }));
-    </script>
-
-    <link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
-
-
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');
-    </script>
-    <!-- End Google Tag Manager -->
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
+<!-- End Google Tag Manager -->
 
     <title>ASobre nosotros</title>
 
@@ -63,10 +30,11 @@
 <body>
 
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <header class="header">
         <div class="header-container">
             <a href="./index.php">
@@ -92,107 +60,58 @@
     <main>
 
         <div class="container-2">
-            <h1 class="h1-about">TÉRMINOS & CONDICIONES</h1>
+            <h1 class="h1-about">Términos y condiciones</h1>
 
-            <h3 class="credit-h3">INTRODUCCIÓN</h3>
-            <p class="credit-p about-p">Esta página web (en adelante “Web”) es propiedad de (Digital Way LLC, con código
-                de identificación 405259599, con dirección Georgia, Tbilisi, distrito de Vake, avenida Vaja-Pshavela, IV
-                Cuarto (en adelante “Company”).</p>
-            <p class="credit-p about-p">Si usted utiliza nuestros servicios y proporciona su información personal, usted
-                acepta y se compromete a cumplir todas las Condiciones mencionadas adelante. Por favor, lea nuestros
-                Términos y Condiciones.</p>
-            <p class="credit-p about-p">Nos reservamos el derecho a cambiar estos Términos y Condiciones en cualquier
-                momento sin previo aviso. Usted es el único responsable y se compromete a revisar periódicamente los
-                Términos y Сondiciones de esta Web.</p>
-            <p class="credit-p about-p">Todos los servicios de Company están sujetos a las presentes Terminos y
-                Condiciones del uso de la Web.
+           
+            <p class="credit-p about-p">La página web (en adelante “Sitio web”) es propiedad de la compañía Digital Way LLC (N° de registro: 405259599, Georgia, Tbilisi, Vaja-Pshavela Avenue, IV Quarter, Building N11 ).</p>
+            <p class="credit-p about-p">El Sitio web recopila las propuestas financieras de terceros en el campo de la concesión de préstamos rápidos. Digital Way LLC no proporciona servicios financieros en su nombre.
             </p>
-            <p class="credit-p about-p">El portal puede ser utilizado por cualquiera que esté de acuerdo con las
-                disposiciones establecidas en los Términos y Condiciones.</p>
-            <p class="credit-p about-p">El sitio web “credito-mx.com” no es una compañía de préstamos, sino un servicio
-                de información que recopila información de los sitios web de los prestamistas.</p>
-            <p class="credit-p about-p">A los usuarios nunca se les cobrará por usar el portal.</p>
-            <p class="credit-p about-p">Las posibles disputas serán resueltas por el Administrador.</p>
-            <p class="credit-p about-p">Está prohibido copiar y distribuir la información contenida en el sitio web.</p>
-            <p class="credit-p about-p">Todos los comentarios y entradas del foro añadidos por otros usuarios son
-                propiedad del sitio web.</p>
-            <p class="credit-p about-p">Cualquier pregunta dirigida al Administrador debe dirigirse mediante el
-                formulario de contacto situado en la pestaña info@credito-mx.com</p>
+            <p class="credit-p about-p">Proporcionando su información personal en el Sitio web y utilizando nuestros servicios usted acepta y se compromete a cumplir todas las Condiciones mencionadas a continuación. Le rogamos que lea estos Términos y Condiciones. Si usted no está de acuerdo con ellos, por favor, no proporcione su información personal en el Sitio web.
 
-            <h3 class="credit-h3">COOPERACIÓN Y PUBLICIDAD</h3>
-            <p class="credit-p about-p">Las propuestas para cada tipo de cooperación se deben enviar a través del
-                formulario de contacto en la pestaña info@credito-mx.com</p>
-            <p class="credit-p about-p">El Administrador se reserva el derecho de responder sólo a ciertas preguntas</p>
-
-            <h3 class="credit-h3">EL FIN DE NUESTRA WEB</h3>
-            <p class="credit-p about-p">El fin de esta Web es recopilar las ofertas de préstamos online, dar información
-                sobre las ofertas del mercado y elegir la mejor oferta para Usted. El uso de esta Web
-                (www.credito-mx.com) es gratuito. Los proveedores de préstamos pagan a Company por el servicio de envío
-                los solicitudes y datos de clientes.</p>
-            <p class="credit-p about-p">La Web no proporciona préstamos sino recopila y compara las ofertas de terceros.
             </p>
-            <p class="credit-p about-p">La Web muestra los enlaces desde esta Web a sitios web de terceros únicamente
-                con fines informativos. No nos hacemos responsables de su contenido, ya que no comprobamos estos sitios
-                web y ellos no pertenecen a nosotros.</p>
-            <p class="credit-p about-p">Company también recopila todos los datos relativos de usted y los proporciona a
-                los proveedores de préstamos de credito-mx.com via API para encontrar mejor oferta para usted. Company
-                no es capaz de reenviar información crediticia sobre usted y sobre el préstamo que desea recibir, a
-                menos que rellene todas las casillas del formulario de la solicitud y clique el botón.</p>
-
-            <h3 class="credit-h3">CONDICIONES DE USO</h3>
-            <p class="credit-p about-p">Los usuarios de la Web sólo pueden ser personas mayores de 18 años. Los menores
-                de 18 años no pueden usar nuestros servicios y por lo tanto no están autorizados a enviarnos sus datos
-                personales.</p>
-            <p class="credit-p about-p">Usted es el único responsable del uso de la Web. Proporcionando su información
-                personal en esta Web usted acepta que esta información no será confidencial. Sus datos y datos relativos
-                al crédito que desea recibir pueden ser compartidos con las empresas financieras de terceros. La entrega
-                de tal información facilitará a los proveedores de préstamos tomar la decisión adecuada sobre
-                concederlo, y en tal caso, los términos y condiciones.</p>
-
-            <h3 class="credit-h3">LEGISLACIÓN APLICABLE</h3>
-            <p class="credit-p about-p">Los presentes Términos y Condiciones se someterá a las leyes en vigor en los
-                Estados Unidos Mexicanos.</p>
-
-            <h3 class="credit-h3">LIMITACIÓN DE LA RESPONSABILIDAD</h3>
-            <p class="credit-p about-p">La Web puede contener los enlaces de terceros, pero no garantiza ni asume
-                responsabilidad en cuanto a la exactitud y la actualidad del contenido de la información de terceros en
-                la Web y no se responsabiliza de los daños derivados del uso de su contenido. En cualquier momento, sin
-                notificación previa y sin justificación, Company puede dar por terminado la prestación de sus servicios.
+            <p class="credit-p about-p">Todos los productos y servicios de Digital Way LLC están sujetos a las presentes Condiciones de Uso del Sitio web.
             </p>
-            <p class="credit-p about-p">Nosotros no garantizamos que esta Web funcione ininterrumpidamente o esté libre
-                de errores.</p>
-            <p class="credit-p about-p">Company no asume ninguna responsabilidad acerca de las decisiones del usuario,
-                tomadas basándose en la información presentada en la Web. No nos responsabilizamos de cualquier daño que
-                puede causar el uso de la información exhibida en la Web.</p>
-            <p class="credit-p about-p">Company no asume ninguna responsabilidad por las decisiones tomadas por un
-                proveedor de préstamo a la base de la información enviada por credito-mx.com a los proveedores de
-                préstamos.</p>
+           
 
-            <h3 class="credit-h3">PROTECCIÓN DE DATOS</h3>
-            <p class="credit-p about-p">Company se compromete a tratar con la máxima privacidad, seguridad y
-                confidencialidad toda aquella información facilitada libremente por el usuario a través de los
-                formularios existentes en la página web.</p>
-            <p class="credit-p about-p">La base del procesamiento de los datos personales queda previsto en el artículo
-                6 (1) (b) del Reglamento General de la Protección de Datos.</p>
-            <p class="credit-p about-p">El usuario es el único responsable de la veracidad de los datos facilitados a la
-                Web. El usuario se compromete a no introducir datos falsos. En caso de que un usuario introduzca datos
-                falsos o relativos a otra persona sin su consentimiento la Web no se hace responsable del tratamiento de
-                los mismos.</p>
-            <p class="credit-p about-p">Al aceptar las condiciones legales de la Web, usted queda informado y autoriza
-                que los datos completados en los formularios de la Web puedan ser cedidos a empresas que ofrecen
-                micropréstamos y por tanto tratar su datos con la finalidad de poder tramitar el préstamo solicitado por
-                usted.</p>
-            <p class="credit-p about-p">Usted puede retirar en todo momento el consentimiento prestado para el envío de
-                comunicaciones comerciales y/o publicidad.</p>
+            <h3 class="credit-h3">Fines informativos del Sitio web</h3>
+            <p class="credit-p about-p">Este Sitio web está creado sólo con finalidad informativa y no constituye una oferta para utilizar los productos o servicios mencionados en este Sitio web. Digital Way LLC no asume ninguna responsabilidad acerca de las decisiones del usuario, tomadas basándose en la información presentada en este Sitio web. Asimismo, no nos responsabilizamos de cualquier daño que puede causar el uso de la información exhibida en este Sitio web.
+            </p>
+            
 
-            <h3 class="credit-h3">USO DE DATOS PERSONALES PARA CONTACTAR AL USUARIO</h3>
-            <p class="credit-p about-p">El Usuario da autorización para el uso de cualquier número de teléfono de
-                contacto para la recepción de llamadas,envío de correspondencia a la dirección especificada por el
-                mismo, envio de mensajes SMS u otros mensajes a través de las aplicaciones móviles disponibles.</p>
-            <p class="credit-p about-p">La recepción de correos electrónicos a los datos de contacto especificada por el
-                usuario,se hará con el propósito de informar sobre la llegada de nuevos servicios, verificación y
-                actualización de solicitudes presentadas, aceptación de las mismas, verificación de la información
-                recibida.</p>
+            <h3 class="credit-h3">Términos y Condiciones de uso</h3>
+            <p class="credit-p about-p">Usted se compromete a no utilizar ningún material en este Sitio web que puede contener viruses, malware o cualquier componente nocivo y a no modificar de ninguna manera el contenido del Sitio web.
+            </p>
+            <p class="credit-p about-p">Este Sitio web está destinado únicamente a las personas mayores de edad que tengan acceso al mismo desde el territorio nacional de México. En este sentido, no podemos garantizar que este Sitio web y toda la información exhibida están de acuerdo con las leyes locales, regulaciones o restricciones y sean aptos para su uso en otros lugares. Los usuarios que tienen el acceso al Sitio web desde fuera del territorio nacional de México tienen que conocer y cumplir las reglas, regulaciones y restricciones correspondientes.
+            </p>
+            <p class="credit-p about-p">Usted acepta que es el único responsable del uso del Sitio web por parte de cualquier usuario que acceda desde su ordenador, así como del hecho de que usted o dicho usuario cumplan con estos Términos. Usted se compromete a notificar inmediatamente a Digital Way LLC acerca de cualquier uso no autorizado de la dirección de su correo electrónico registrado en nuestra base de datos o de cualquier otra violación de seguridad, incluyendo la de su equipo.
+            </p>
+            <p class="credit-p about-p">Proporcionando su información personal en este Sitio web usted acepta que esta información no será confidencial, lo que nos proporciona una licencia a perpetuidad exclusiva y constante para el uso, publicación, reproducción, modificación, adaptación y exhibición pública, así como su traducción completa o parcial, acorde con los principios básicos de ésta Política de privacidad. Nos reservamos el derecho de eliminar sin previo aviso cualquier información que usted proporcione en este Sitio web.
+            </p>
+
+            <h3 class="credit-h3">Renuncia y limitación de la responsabilidad
+            </h3>
+            <p class="credit-p about-p">Digital Way LLC toma todas las medidas necesarias para garantizar la relevancia del contenido del Sitio web. Este Sitio web puede contener los links de terceros. Digital Way LLC no garantiza ni asume responsabilidad en cuanto a la exactitud, la coherencia, la actualidad y la integridad del contenido de la información de terceros en este Sitio web y no se responsabiliza de los daños derivados del uso de su contenido. Digital Way LLC se reserva el derecho de cancelación de este Sitio web sin previo aviso.
+            </p>
+            <p class="credit-p about-p">La información en este Sitio web tiene únicamente una finalidad informativa y no constituye las recomendaciones de uso de todos los servicios que se ofrecen en el Sitio web. Digital Way LLC no se responsabiliza de cualquier daño y perjuicio directo, accidental, resultante, indirecto o penal que se derive del acceso o uso de cualquier contenido de este Sitio web, incluyendo los viruses, independientemente de la exactitud o integridad de dicho contenido.
+            </p>
+            <p class="credit-p about-p">La información en este Sitio web se proporciona “tal cual” y “según disponibilidad”. Digital Way LLC no garantiza que este Sitio web funcione ininterrumpidamente o esté libre de errores.
+            </p>
+
+            <h3 class="credit-h3">Cambios</h3>
+            <p class="credit-p about-p">Nos reservamos el derecho a cambiar estos Términos y Condiciones en cualquier momento sin previo aviso. Usted es el único responsable y se compromete a revisar periódicamente los Términos y Сondiciones de este Sitio web, así como a consultar la información más reciente. Si usted utiliza el Sitio web después de que los cambios hayan sido realizados, eso significa que está de acuerdo con los nuevos Términos y Condiciones. Se recomienda de vez en cuando imprimir y guardar una copia de los Términos y Condiciones relacionados con nuestros servicios, de los usted se beneficia.
+            </p>
+      
+
+            <h3 class="credit-h3">Sitios web de terceros</h3>
+            <p class="credit-p about-p">Los enlaces desde este Sitio web a sitios web de terceros se muestran únicamente con fines informativos. No nos hacemos responsables de su contenido, ya que no comprobamos estos sitios web. Usted es el único responsable del uso de los enlaces a otras páginas web que se muestren en nuestro Sitio web. Le sugerimos que lea las condiciones de uso de estas páginas.</p>
+     
+
+            <h3 class="credit-h3">Derechos de autor de Digital Way LLC</h3>
+            <p class="credit-p about-p">Los derechos de autor, la información, los materiales y su publicación en este Sitio web son de nuestra propiedad, al menos que se indique lo contrario. Nos reservamos todos los derechos de autor, marcas registradas, patentes y otros derechos de propiedad intelectual relacionados con la información y materiales publicados en el Sitio Web.</p>
+            <p class="credit-p about-p">Se pueden imprimir, copiar, descargar o almacenar temporalmente fragmentos de este Sitio web para su uso personal o para utilizar nuestros productos y servicios. Usted no tiene derecho a realizar ningún cambio.
+            </p>
+            <p class="credit-p about-p">Cualquier otro uso de la información y los materiales de este Sitio web, incluyendo su uso en otras páginas web, como cualquier mención de Digital Way LLC está prohibido sin nuestro previo permiso por escrito. Salvo lo mencionado anteriormente, no se puede utilizar signos, logotipos y marcas comerciales de Digital Way LLC.
+            </p>
         </div>
 
     </main>
@@ -205,7 +124,7 @@
                     <div class="pages">
                         <p class="pages-p"><a href="./about-us.php">Sobre nosotras</a></p>
                         <p class="pages-p"><a href="./politicas.php">Políticas</a></p>
-                        <p class="pages-p"><a href="./normas.php">Normas</a></p>
+                        <p class="pages-p"><a href="./normas.php">Cookies</a></p>
                         <p class="pages-p"><a href="./acuerdos.php">Acuerdos</a></p>
                     </div>
                 </div>
