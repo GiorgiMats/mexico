@@ -11,6 +11,10 @@ body {
     background: #F5F5F5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Loan Girl Section */
 .section-loan-girl {
     position: fixed;
@@ -374,7 +378,7 @@ select {
 .select-items div {
     padding: 10px !important;
     border-radius: 0 !important;
-  }
+}
 
 
 
@@ -502,7 +506,7 @@ input[type=number] {
 }
 
 #last-btn:hover {
- background-color: #108F05;
+    background-color: #108F05;
 }
 
 
@@ -522,6 +526,16 @@ input[type=number] {
 
 .disabled-title {
     color: #1C1F2480 !important;
+}
+
+.error-accordion {
+    color: #E93030 !important;
+    background-color: #F4E1E1 !important;
+}
+
+.filled-accordion {
+    color: #10CF3A !important;
+    background-color: #DEF1E2 !important;
 }
 
 @media only screen and (max-width: 1550px) {

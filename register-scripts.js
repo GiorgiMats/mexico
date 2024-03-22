@@ -1,6 +1,7 @@
 var submitinput = true;
 var currentStep = 1;
 var employedSince = false;
+var header = document.querySelector('#header');
 var patterns = [
     {
         first_name: /^[a-záéèíñóúüç\s-']+$/i,
@@ -78,6 +79,8 @@ function nextStep(n) {
         } else {
             if (validateForm(`stepsdiv${currentStep}`)) {
                 document.querySelector(`#radio_${currentStep}`).checked = false;
+                document.querySelector(`#atitle${currentStep}`).classList.remove('error-accordion');
+                document.querySelector(`#atitle${currentStep}`).classList.add('filled-accordion');
                 // if (steps.length == (currentStep + 1)) {
                 //     document.querySelector('#stepsbutton').classList.add('green-btn');
                 // }
@@ -85,6 +88,10 @@ function nextStep(n) {
                 document.querySelector(`#atitle${currentStep}`).classList.remove('disabled-title');
                 document.querySelector(`#radio_${currentStep}`).removeAttribute('disabled');
                 document.querySelector(`#radio_${currentStep}`).checked = true;
+                header.scrollIntoView();
+            } else {
+                document.querySelector(`#atitle${currentStep}`).classList.add('error-accordion');
+                header.scrollIntoView();
             }
         }
     }
@@ -247,6 +254,14 @@ function validateInput(inptid) {
             submitinput = false;
             inputWarning(inptid);
         }
+    } else if (inptid == 'phone') {
+        if (isPhoneNumberValid(document.querySelector('#phone').value)) {
+            inputSuccess(inptid);
+        } else {
+            console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
+            submitinput = false;
+            inputWarning(inptid);
+        }
     } else {
         if (!patterns[currentStep - 1].hasOwnProperty(`${inptid}`)) {
             inputSuccess(inptid);
@@ -259,16 +274,6 @@ function validateInput(inptid) {
             }
         }
     }
-
-    // else if (inptid == 'phone') {
-    //     if (isPhoneNumberValid(document.querySelector('#phone').value)) {
-    //         inputSuccess(inptid);
-    //     } else {
-    //         console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
-    //         submitinput = false;
-    //         inputWarning(inptid);
-    //     }
-    // } 
 }
 
 function validateSelect(selectid) {
@@ -548,8 +553,82 @@ function isPhoneNumberValid(phoneNumber) {
         "479", "440", "729", "664", "446", "222", "990", "56", "55", "81", "33", "656",
         "614", "618", "999", "221", "442", "449", "663", "612", "624", "844", "686", "667",
         "722", "998", "871", "744", "444", "833", "477", "961", "662", "633", "645", "644",
-        "642", "631", "229", "443", "921", "771", "981", "899", "868"
+        "642", "631", "229", "443", "921", "771", "981", "899", "868",
+        "866", "221", "821", "222", "311", "411", "588", "612", "711", "913",
+        "823", "223", "312", "412", "591", "613", "712", "914",
+        "824", "224", "313", "413", "592", "614", "713", "916",
+        "825", "225", "314", "414", "593", "615", "714", "917",
+        "826", "226", "315", "415", "594", "616", "715", "918",
+        "828", "227", "316", "417", "595", "618", "716", "919",
+        "829", "228", "317", "418", "596", "621", "717", "921",
+        "831", "229", "319", "419", "597", "622", "718", "922",
+        "832", "231", "321", "421", "599", "623", "719", "923",
+        "833", "232", "322", "422", "624", "721", "924",
+        "834", "233", "323", "423", "625", "723", "932",
+        "835", "235", "324", "424", "626", "724", "933",
+        "836", "236", "325", "425", "627", "725", "934",
+        "841", "237", "326", "426", "628", "726", "936",
+        "842", "238", "327", "427", "629", "727", "937",
+        "844", "241", "328", "428", "631", "728", "938",
+        "845", "243", "329", "429", "632", "729", "951",
+        "846", "244", "341", "431", "633", "731", "953",
+        "861", "245", "342", "432", "634", "732", "954",
+        "862", "246", "343", "433", "635", "733", "958",
+        "864", "247", "344", "434", "636", "734", "961",
+        "867", "248", "345", "435", "637", "735", "962",
+        "868", "249", "346", "436", "638", "736", "963",
+        "869", "271", "347", "437", "639", "737", "964",
+        "871", "272", "348", "438", "641", "738", "965",
+        "872", "273", "349", "440", "642", "739", "966",
+        "873", "274", "351", "441", "643", "741", "967",
+        "877", "275", "352", "442", "644", "742", "968",
+        "878", "276", "353", "443", "645", "743", "969",
+        "891", "278", "354", "444", "646", "744", "971",
+        "892", "279", "355", "445", "647", "745", "972",
+        "894", "281", "356", "446", "648", "746", "981",
+        "897", "282", "357", "447", "649", "747", "982",
+        "899", "283", "358", "448", "651", "748", "983",
+        "284", "359", "449", "652", "749", "984",
+        "285", "371", "451", "653", "751", "985",
+        "287", "372", "452", "656", "753", "986",
+        "288", "373", "453", "658", "754", "987",
+        "294", "374", "454", "659", "755", "988",
+        "296", "375", "455", "661", "756", "991",
+        "297", "376", "456", "662", "757", "992",
+        "377", "457", "665", "758", "993",
+        "378", "458", "666", "759", "994",
+        "381", "459", "667", "761", "995",
+        "382", "461", "668", "762", "996",
+        "383", "462", "669", "763", "997",
+        "384", "463", "671", "764", "998",
+        "385", "464", "672", "765", "999",
+        "386", "465", "673", "766",
+        "387", "466", "674", "767",
+        "388", "467", "675", "768",
+        "389", "468", "676", "769",
+        "391", "469", "677", "771",
+        "392", "471", "686", "772",
+        "393", "472", "687", "773",
+        "394", "473", "694", "774",
+        "395", "474", "695", "775",
+        "475", "696", "776",
+        "476", "697", "777",
+        "478", "698", "778",
+        "481", "663", "779",
+        "482", "664", "781",
+        "783",
+        "784",
+        "785",
+        "786",
+        "789",
+        "791",
+        "797",
+        "722",
+        "729",
+        "477",
+        "479"
     ];
+
 
     // Extract the first 3 digits as the prefix from the number without the country code
     const extractedPrefix = numberWithoutCountryCode.slice(0, 3);

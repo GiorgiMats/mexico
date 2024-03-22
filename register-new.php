@@ -101,7 +101,7 @@ if (isset($_SESSION['leadData'])) {
     <div class="main-div">
         <div class="inside-main-div">
             <div class="inside-main-div-div">
-                <header class="header">
+                <header class="header" id="header">
                     <a href="#">
                         <img src="./img/main-logo.svg" alt="MX Credito">
                     </a>
@@ -109,7 +109,7 @@ if (isset($_SESSION['leadData'])) {
                 <form id="customers-form" action="customer_submit.php" method="POST" class="section-register">
                     <div class="accordions">
                         <div class="accordion">
-                            <label class="accordion__title" for="radio_1" onclick="changeCurrentStep(1)">
+                            <label id="atitle1" class="accordion__title" for="radio_1" onclick="changeCurrentStep(1)">
                                 <input id="radio_1" type="radio" name="radio" checked="checked" /><span
                                     class="step-p">Paso 1/3:</span>
                                 <span class="accordion-title-p">Datos personales</span>
@@ -324,7 +324,7 @@ if (isset($_SESSION['leadData'])) {
                             </div>
                         </div>
                         <div class="accordion">
-                            <label class="accordion__title" for="radio_2" onclick="changeCurrentStep(2)">
+                            <label id="atitle2" class="accordion__title" for="radio_2" onclick="changeCurrentStep(2)">
                                 <input id="radio_2" disabled type="radio" name="radio" /><span class="step-p">Paso
                                     2/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle2">Dirección</span>
@@ -410,7 +410,7 @@ if (isset($_SESSION['leadData'])) {
                             </div>
                         </div>
                         <div class="accordion">
-                            <label class="accordion__title" for="radio_3">
+                            <label id="atitle3" class="accordion__title" for="radio_3">
                                 <input id="radio_3" disabled type="radio" name="radio" /><span class="step-p">Paso
                                     3/3:</span>
                                 <span class="accordion-title-p disabled-title" id="atitle3">Tipo de empleo</span>
