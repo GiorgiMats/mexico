@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="pages">
                         <p class="pages-p"><a href="./about-us.php">Sobre nosotras</a></p>
                         <p class="pages-p"><a href="./politicas.php">Políticas</a></p>
-                        <p class="pages-p"><a href="./normas.php">Normas</a></p>
+                        <p class="pages-p"><a href="./normas.php">Cookies</a></p>
                         <p class="pages-p"><a href="./acuerdos.php">Acuerdos</a></p>
                     </div>
                 </div>

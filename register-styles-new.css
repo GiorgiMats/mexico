@@ -535,7 +535,7 @@ input[type=number] {
 
 .filled-accordion {
     color: #10CF3A !important;
-    background-color: #DEF1E2 !important;
+    background-color: rgba(55, 210, 0, 0.2) !important;
 }
 
 @media only screen and (max-width: 1550px) {
