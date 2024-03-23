@@ -3,15 +3,7 @@
 
 <head>
 
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]|| function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0 ; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[ 0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag .js", "ym"); ym(96523240, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/96523240" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "lkjrbl32og");
-</script>
 
 
     
@@ -38,26 +30,6 @@
 
 
 
-    <!-- tagmanager -->
-    <script type="text/javascript">
-    (function(w, c, t, u) {
-        w._wct = w._wct || {};
-        w._wct = u;
-        var s = c.createElement(t);
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://wct-2.com/wct.js?type=session';
-        var r = c.getElementsByTagName(t)[0];
-        r.parentNode.insertBefore(s, r);
-    }(window, document, 'script', {
-        'uid': 'hwANyg',
-        'page_mutations': true,
-        'proxy': 'https://wct-2.com',
-        'auto_tagging': true
-    }));
-    </script>
-
-    <link rel="preload" href="https://wct-2.com/wct.js?type=session" as="script">
 
 
 
