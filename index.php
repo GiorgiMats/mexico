@@ -6,7 +6,7 @@
 
 
 
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,23 +33,34 @@
 
 
 
-      <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WNQSCPC3');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');
+    </script>
+    <!-- End Google Tag Manager -->
 
 
 </head>
 
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
         <div class="header-container">
@@ -234,50 +245,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main>
 
 
-    <div class="container-1 container-circle">
+        <div class="container-1 container-circle">
 
 
-      <div class="how how-2">
+            <div class="how how-2">
 
 
-        <div class="how-box" id="circle-box">
-          <div class="circle">
-            <p class="circle-p">1</p>
-          </div>
-          <div class="circle-info">
-            <p class="how-p1" id="how-changed">Completa el formulario</p>
-            <p class="how-p2" id="how-changed-p">
-            Todo lo que necesitas es Copia de DNI, pasaporte o NIE. Estado de cuenta bancario con ingresos y gastos mensuales
-            </p>
-          </div>
+                <div class="how-box" id="circle-box">
+                    <div class="circle">
+                        <p class="circle-p">1</p>
+                    </div>
+                    <div class="circle-info">
+                        <p class="how-p1" id="how-changed">Completa el formulario</p>
+                        <p class="how-p2" id="how-changed-p">
+                            Todo lo que necesitas es Copia de DNI, pasaporte o NIE. Estado de cuenta bancario con
+                            ingresos y gastos mensuales
+                        </p>
+                    </div>
+                </div>
+                <div class="how-box" id="circle-box">
+                    <div class="circle">
+                        <p class="circle-p">2</p>
+                    </div>
+                    <div class="circle-info">
+                        <p class="how-p1" id="how-changed">Escoge la mejor oferta</p>
+                        <p class="how-p2" id="how-changed-p">
+                            Nuestro servicio seleccionará las mejores opciones de obtención de fondos para tu préstamo ,
+                            enviaremos tu solicitud a las entidades con el mayor porcentaje de aprobación
+                        </p>
+                    </div>
+                </div>
+                <div class="how-box" id="circle-box">
+                    <div class="circle">
+                        <p class="circle-p">3</p>
+                    </div>
+                    <div class="circle-info">
+                        <p class="how-p1" id="how-changed">Recibe tu dinero</p>
+                        <p class="how-p2" id="how-changed-p">
+                            Haznos saber la forma más cómoda para la recepción de tu préstamo, a tu tarjeta bancaria ,
+                            cuenta o en efectivo </p>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
-        <div class="how-box" id="circle-box">
-          <div class="circle">
-            <p class="circle-p">2</p>
-          </div>
-          <div class="circle-info">
-            <p class="how-p1" id="how-changed">Escoge la mejor oferta</p>
-            <p class="how-p2" id="how-changed-p">
-            Nuestro servicio seleccionará las mejores opciones de obtención de fondos para tu préstamo , enviaremos tu solicitud a las entidades con el mayor porcentaje de aprobación
-            </p>
-          </div>
-        </div>
-        <div class="how-box" id="circle-box">
-          <div class="circle">
-            <p class="circle-p">3</p>
-          </div>
-          <div class="circle-info">
-            <p class="how-p1" id="how-changed">Recibe tu dinero</p>
-            <p class="how-p2" id="how-changed-p">
-            Haznos saber la forma más cómoda para la recepción de tu préstamo, a tu tarjeta bancaria , cuenta o en efectivo            </p>
-          </div>
-        </div>
 
-
-
-      </div>
-    </div> 
- 
 
         <div class="container-1">
             <h2 class="h22">Ventajas de usar nuestro servicio</h2>
@@ -322,7 +336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-  
+
         <div class="container-1 container-flex">
             <h2 class="h22">Asistencia para tu préstamo</h2>
 
@@ -331,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p>
             <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
         </div>
-      
+
 
         <div class="container-1">
             <h2 class="h22">¿Por qué nosotros?</h2>
@@ -368,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-     
+
 
         <div class="container-1">
             <h2 class="h22">Reseñas</h2>
@@ -554,13 +568,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
             </div>
             <div class="container-1 container-flex">
-            <h2 class="h22">Asistencia para tu préstamo</h2>
+                <h2 class="h22">Asistencia para tu préstamo</h2>
 
-            <p class="receive-p">
-                ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
-            </p>
-            <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
-        </div>
+                <p class="receive-p">
+                    ¡Servicio de selección personalizado , con un alto porcentaje de aprobación ! Rápido,gratis ,seguro
+                </p>
+                <a href="#"><button class="btn recive-btn">Obtener dinero</button></a>
+            </div>
 
     </main>
 

@@ -89,6 +89,7 @@ function nextStep(n) {
                 document.querySelector(`#radio_${currentStep}`).removeAttribute('disabled');
                 document.querySelector(`#radio_${currentStep}`).checked = true;
                 header.scrollIntoView();
+                window.history.pushState(`Step${currentStep}`, `Step${currentStep}`, `/step${currentStep}`);
             } else {
                 document.querySelector(`#atitle${currentStep}`).classList.add('error-accordion');
                 header.scrollIntoView();
@@ -228,13 +229,11 @@ function inputSuccess(inptid) {
 function validateInput(inptid) {
     let inpt = document.querySelector(`#${inptid}`);
     if (inptid == 'bank_account') {
-        // fffffffffffffffffffffffffffffffffffffffffffffffff
         let accountNumber = document.querySelector('#bank_account').value;
-        let controlDigit = calculateControlDigit(accountNumber);
-        if (!compareLastDigit(accountNumber, controlDigit)) {
+        if (!clabe.validate(accountNumber).ok) {
             submitinput = false;
             inputWarning('bank_account');
-            console.log(accountNumber, controlDigit);
+            console.log(accountNumber);
         } else {
             inputSuccess(inptid);
         }
@@ -256,7 +255,12 @@ function validateInput(inptid) {
         }
     } else if (inptid == 'phone') {
         if (isPhoneNumberValid(document.querySelector('#phone').value)) {
-            inputSuccess(inptid);
+            if (!patterns[currentStep - 1][`${inptid}`].test(inpt.value) || inpt.value == '') {
+                inputWarning(inptid);
+                submitinput = false;
+            } else {
+                inputSuccess(inptid);
+            }
         } else {
             console.log(document.querySelector('#phone').value, isPhoneNumberValid(document.querySelector('#phone').value));
             submitinput = false;
@@ -637,5 +641,3 @@ function isPhoneNumberValid(phoneNumber) {
     // Check if the extracted prefix is in the list of valid prefixes
     return prefixes.includes(extractedPrefix);
 }
-
-

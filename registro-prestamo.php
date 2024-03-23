@@ -9,14 +9,9 @@ if (isset($_SESSION['leadData'])) {
 <html lang="es">
 
 <head>
-
-
-
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=https://cdn.jsdelivr.net/npm/clabe-validator@3.0/dist/clabe.min.js></script>
     <!-- Latest version -->
     <script src="https://cdn.jsdelivr.net/gh/manuelmhtr/validate-rfc@latest/dist/index.js" type="text/javascript">
     </script>
@@ -60,6 +55,7 @@ if (isset($_SESSION['leadData'])) {
 
 <body>
 
+    <div id="content"></div>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
