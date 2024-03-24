@@ -516,6 +516,7 @@ document.getElementById('phone').addEventListener('input', function (event) {
 function changeCurrentStep(n) {
     if (!document.querySelector(`#radio_${n}`).hasAttribute('disabled')) {
         currentStep = n;
+        window.history.pushState(`Step${currentStep}`, `Step${currentStep}`, `/registro-prestamo#${stepNames[currentStep]}`);
     }
 }
 
