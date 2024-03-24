@@ -27,6 +27,12 @@ var patterns = [
         ,
     }
 ];
+var stepNames = [
+    '',
+    'datos-personales',
+    'dirección',
+    'tipo-de-empleo',
+]
 
 // employer: /^.{1,45}$/,
 
@@ -89,7 +95,7 @@ function nextStep(n) {
                 document.querySelector(`#radio_${currentStep}`).removeAttribute('disabled');
                 document.querySelector(`#radio_${currentStep}`).checked = true;
                 header.scrollIntoView();
-                window.history.pushState(`Step${currentStep}`, `Step${currentStep}`, `/step${currentStep}`);
+                window.history.pushState(`Step${currentStep}`, `Step${currentStep}`, `/registro-prestamo#${stepNames[currentStep]}`);
             } else {
                 document.querySelector(`#atitle${currentStep}`).classList.add('error-accordion');
                 header.scrollIntoView();

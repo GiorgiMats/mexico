@@ -30,6 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     // Redirect to the customer data form
-    header('Location: registro-prestamo');
+    header('Location: registro-prestamo#datos-personales');
     exit;
 }
