@@ -125,6 +125,8 @@ function validateSubmit() {
 
     if (submitinput) {
         submitForm();
+        // window.open("https://credito-mx.com/offers");
+        window.location.href = "https://credito-mx.com/offers";
     }
 }
 

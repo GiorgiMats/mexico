@@ -119,7 +119,7 @@
             </div>
             <div class="forms-new">
                 <div class="hero-right">
-                    <form id="regForm" action="lead_submit_temporary.php" method="post">
+                    <form id="regForm" action="lead_submit_temporary.php" method="post" target="_blank">
                         <h1>Aplica ahora</h1>
                         <!-- One "tab" for each step in the form: -->
 
@@ -204,11 +204,11 @@
 
 
                             <div>
-                            <!-- <a href="https://credito-mx.com/offers.php" target="_blank" id="stayOnPageLink"></a> -->
+                                <!-- <a href="https://credito-mx.com/offers.php" target="_blank" id="stayOnPageLink"></a> -->
 
                                 <!-- <button type="submit" id="nextBtn" onclick="nextPrev(1)"> SOLICITA TU PRÉSTAMO
                                 </button> -->
-                            <button type="button" id="nextBtn" onclick="validateSubmit()"> SOLICITA TU PRÉSTAMO
+                                <button type="button" id="nextBtn" onclick="validateSubmit()"> SOLICITA TU PRÉSTAMO
                                 </button>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
 
                 <!-- select -->
 
-        
+
 
 
 
