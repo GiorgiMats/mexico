@@ -204,10 +204,11 @@
 
 
                             <div>
+                            <!-- <a href="https://credito-mx.com/offers.php" target="_blank" id="stayOnPageLink"></a> -->
 
                                 <!-- <button type="submit" id="nextBtn" onclick="nextPrev(1)"> SOLICITA TU PRÉSTAMO
                                 </button> -->
-                                <button type="button" id="nextBtn" onclick="validateSubmit()"> SOLICITA TU PRÉSTAMO
+                            <button type="button" id="nextBtn" onclick="validateSubmit()"> SOLICITA TU PRÉSTAMO
                                 </button>
                             </div>
                         </div>
@@ -224,7 +225,7 @@
 
                 <!-- select -->
 
-
+        
 
 
 

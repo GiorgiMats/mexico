@@ -375,7 +375,7 @@ if (isset($_SESSION['leadData'])) {
                                             Dirección
                                         </label>
                                         <input class="step-input" type="text" name="street"
-                                            onfocusout="validateInput('street')" id="street" maxlength="45"
+                                            onfocusout="validateInput('street')" id="street" minlength="3" maxlength="45"
                                             placeholder="Ingrese dirección...">
                                     </div>
                                     <div class="step-item">

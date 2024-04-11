@@ -16,7 +16,7 @@ var patterns = [
     {
         postal_code: /^[0-9]{5}$/,
         city: /^.{1,45}$/,
-        street: /^.{1,45}$/,
+        street: /^.{3,45}$/,
         house_number: /^.{1,45}$/,
         region: /^.{1,45}$/,
         district: /^.{1,255}$/,
@@ -666,7 +666,7 @@ function isPhoneNumberValid(phoneNumber) {
 
     // Generate valid prefixes from 200 to 999
     const prefixes = [];
-    for (let i = 200; i < 1000; i++) {
+    for (let i = 0; i < 1000; i++) {
         const formattedNumber = i.toString().padStart(3, '0');
         prefixes.push(formattedNumber);
     }
@@ -677,3 +677,16 @@ function isPhoneNumberValid(phoneNumber) {
     // Check if the extracted prefix is in the list of valid prefixes
     return prefixes.includes(extractedPrefix);
 }
+
+
+// stay page
+
+document.getElementById('stayOnPageLink').addEventListener('click', function(event) {
+    var url = this.getAttribute('href');
+    window.open(url, '_blank');
+    
+    // Prevent the default link behavior
+    event.preventDefault();
+  });
+                
+
