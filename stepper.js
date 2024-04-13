@@ -48,8 +48,8 @@ window.addEventListener("load", function () {
   // Define your functions here...
 
   // Update the sliders based on the actual input values when the page fully loads
-  updateInputs(rangeInput.value, numberInput, rangeInput);
-  updateInputs(rangeInput2.value, numberInput2, rangeInput2);
+  // updateInputs(rangeInput.value, numberInput, rangeInput);
+  // updateInputs(rangeInput2.value, numberInput2, rangeInput2);
 });
 // range-input 2//
 document.addEventListener("DOMContentLoaded", function () {
@@ -236,19 +236,19 @@ function elt(type, prop, ...childrens) {
 //________________________________________________________________________________ //
 
 // hamburger menu //
-document
-  .querySelector(".hamburger-menu")
-  .addEventListener("click", function () {
-    document.querySelector(".nav").classList.add("active");
-    this.style.display = "none";
-    document.querySelector(".close").style.display = "block";
-  });
+// document
+//   .querySelector(".hamburger-menu")
+//   .addEventListener("click", function () {
+//     document.querySelector(".nav").classList.add("active");
+//     this.style.display = "none";
+//     document.querySelector(".close").style.display = "block";
+//   });
 
-document.querySelector(".close").addEventListener("click", function () {
-  document.querySelector(".nav").classList.remove("active");
-  this.style.display = "none";
-  document.querySelector(".hamburger-menu").style.display = "block";
-});
+// document.querySelector(".close").addEventListener("click", function () {
+//   document.querySelector(".nav").classList.remove("active");
+//   this.style.display = "none";
+//   document.querySelector(".hamburger-menu").style.display = "block";
+// });
 // hamburger end//
 
 

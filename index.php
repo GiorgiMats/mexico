@@ -87,7 +87,10 @@
     <div class="container-4">
         <div class="container-responsive" id="appear">
             <div class="loans-box">
-                <h1 class="h1-responsive">Solicita tu crédito ahora</h1>
+                <h1 class="h1-responsive">¡Préstamos en Línea¡ Tu primer préstamo Sin Intereses
+                </h1>
+                <h1 class="p-responsive">Hasta $30.000 en un click. Es fácil y rápido - Respuesta en 5 minutos. Sólo llena un formulario.
+                </h1>
             </div>
         </div>
     </div>
@@ -120,14 +123,14 @@
             <div class="forms-new">
                 <div class="hero-right">
                     <form id="regForm" action="lead_submit_temporary.php" method="post" target="_blank">
-                        <h1>Aplica ahora</h1>
+                        <h1>Solicita tu crédito ahora</h1>
                         <!-- One "tab" for each step in the form: -->
 
 
 
                         <div class="tab">
 
-                            <h2 class="credit-h3">¿Cuánto dinero necesitas?</h2>
+                            <!-- <h2 class="credit-h3">¿Cuánto dinero necesitas?</h2> -->
                             <div class="loan-content">
 
                                 <div class="custom-select" id="loan_purpose" onclick="checkSelect('loan_purpose')">
@@ -198,7 +201,7 @@
                             </div>
                             <!-- <input class="range-input-2" type="range" min="1" max="361" value="24" step="30"
                                 placeholder="Dias" name="loan_period" /> -->
-                            <input class="range-input-2" type="range" min="1" max="361" value="24" step="1"
+                            <input class="range-input-2" id="range-input-2" type="range" min="1" max="361" value="24" step="1"
                                 name="loan_period" placeholder="Dias">
 
 
@@ -290,6 +293,233 @@
 
 
 
+            </div>
+        </div>
+
+        <div class="container-1">
+            <div class="links-container">
+            <a class="links-a" href="https://rdr.pdlsd.net/in/offer/3470?aid=106155" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/13-finzmo.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">25 000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">91</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">30</p>
+                                                <p class="bank-p"> días</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="links-a" href="https://rdr.pdlsd.net/in/offer/6319?aid=106155/" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/3-credito-365-mx.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">20 000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">94</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">48</p>
+                                                <p class="bank-p">meses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a class="links-a" href="https://rdr.pdlsd.net/in/offer/1744?aid=106155" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/4-solcredito.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">1000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">98</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">30</p>
+                                                <p class="bank-p"> días</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                    <a class="links-a" href="https://rdr.pdlsd.net/in/offer/3219?aid=106155" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/9-fidea.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">150 000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">86</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">36</p>
+                                                <p class="bank-p"> meses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="links-a" href="https://rdr.pdlsd.net/in/offer/2724?aid=106155" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/6-kreditiweb.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">50 000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">91</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">30</p>
+                                                <p class="bank-p"> días</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="links-a" href="https://rdr.pdlsd.net/in/offer/3288?aid=106155/" target="_blank">
+                        <div class="link-box">
+                            <div class="links-flex">
+                                <div class="bank-div">
+                                    <img src="img/2-askrobin-logo.svg" alt="" class="bank-logo" />
+                                </div>
+                                <div class="bank-info">
+
+                                    <div class="bank-list">
+                                        <div class="bank-value">
+                                            <p class="bank-p">Importe hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">40 000</p>
+                                                <p class="bank-p">$</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">Probabilidad de aprobación</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">92</p>
+                                                <p class="bank-p">%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bank-value">
+                                            <p class="bank-p">a devolver hasta</p>
+                                            <div class="bank-money">
+                                                <p class="bank-p2">36</p>
+                                                <p class="bank-p">meses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link">Obtener dinero</button>
+                            </div>
+                        </div>
+                    </a>
             </div>
         </div>
 

@@ -28,6 +28,14 @@ html {
   display: none;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
 body {
   position: relative;
   background-color: #ffffff;
@@ -1435,4 +1443,8 @@ hr {
 
 #how-changed-p {
   text-align: start !important;
+}
+
+.loan-content {
+  margin-top: 32px;
 }
