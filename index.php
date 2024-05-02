@@ -26,31 +26,19 @@
 
 
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-566HVSSQ');</script>
+<!-- End Google Tag Manager -->
 
 
 
 
 
 
-
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');
-    </script>
-    <!-- End Google Tag Manager -->
 
 
 </head>
@@ -58,9 +46,9 @@
 <body>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-566HVSSQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
         <div class="header-container">
@@ -89,9 +77,8 @@
             <div class="loans-box">
                 <h1 class="h1-responsive">¡Préstamos en Línea¡ Tu primer préstamo Sin Intereses
                 </h1>
-                <h1 class="p-responsive">Hasta $30.000 en un click. Es fácil y rápido - Respuesta en 5 minutos. Sólo
-                    llena un formulario.
-                </h1>
+                <p class="p-responsive">Hasta $30.000 en un click. Más de 20 ofertas de diferentes empresas. Solicita ahora y recibe respuesta en pocos segundos.
+                </p>
             </div>
         </div>
     </div>
@@ -99,32 +86,33 @@
     <div class="hero-section">
         <div class="hero-container">
             <div class="hero-left">
-                <h1 class="h1-left">Solicita tu crédito ahora</h1>
+                <h1 class="h1-left">¡Préstamos en Línea¡ Tu primer préstamo Sin Intereses</h1>
                 <div class="hero-info">
-                    <div class="hero-left-info">
-                        <img src="img/check.svg" alt="checkmark" class="check" />
-                        <p class="hero-left-p">
-                            Hasta $30.000 en un click
-                        </p>
-                    </div>
-                    <div class="hero-left-info">
-                        <img src="img/check.svg" alt="checkmark" class="check" />
-                        <p class="hero-left-p">Más de 30 ofertas de diferentes empresas</p>
-                    </div>
-                    <div class="hero-left-info">
-                        <img src="img/check.svg" alt="checkmark" class="check" />
-                        <p class="hero-left-p">Los mejores préstamos rápidos sin papeleos</p>
-                    </div>
-                    <div class="hero-left-info">
-                        <img src="img/check.svg" alt="checkmark" class="check" />
-                        <p class="hero-left-p">Los primeros clientes pueden obtener un préstamo al 0%</p>
-                    </div>
-                </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">
+            Hasta $30.000 en un click
+            </p>
+          </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Más de 20 ofertas de diferentes empresas</p>
+          </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Los mejores préstamos rápidos sin papeleos</p>
+          </div>
+          <div class="hero-left-info">
+            <img src="img/check.svg" alt="checkmark" class="check" />
+            <p class="hero-left-p">Solicita ahora y recibe respuesta en pocos segundos</p>
+          </div>
+        </div>
             </div>
             <div class="forms-new">
                 <div class="hero-right">
                     <form id="regForm" action="lead_submit_temporary.php" method="post">
-                        <h1>Solicita tu crédito ahora</h1>
+                        <!-- <h1 class="pc-h1" >Aplica ahora</h1> -->
+                        <h1 class="mobile-h1" >Solicita tu crédito ahora</h1>
                         <!-- One "tab" for each step in the form: -->
 
 
@@ -298,6 +286,7 @@
         </div>
 
         <div class="container-1">
+            <h2 class="h22" >Acceso Inmediato a Préstamos Rápidos</h2>
             <div class="links-container">
                 <a class="links-a" href="https://rdr.pdlsd.net/in/offer/3470?aid=106155" target="_blank">
                     <div class="link-box">
@@ -543,7 +532,7 @@
                     <p class="benefits-p2">
                         No queremos que pierdas tu valioso tiempo en largas solicitudes. Por esta razón, solicitar un
                         préstamo
-                        personal en Credito MX es 100% online y muy fácil.
+                        personal en Credezy es 100% online y muy fácil.
                     </p>
                 </div>
                 <div class="benefits-box2-2img"></div>
@@ -633,7 +622,7 @@
                         </p>
 
                         <div class="author">
-                            <img src="img/testmonial-img-3.png" alt="" />
+                           
                             <p class="author-p">Manuel</p>
                         </div>
 
@@ -653,7 +642,7 @@
                         </p>
 
                         <div class="author">
-                            <img src="img/testmonial-img-1.png" alt="" />
+                            
                             <p class="author-p">Margarita</p>
                         </div>
 
@@ -674,7 +663,7 @@
                         </p>
 
                         <div class="author">
-                            <img src="img/testmonial-img-2.png" alt="" />
+                       
                             <p class="author-p">José Luis</p>
                         </div>
                     </div>
@@ -709,11 +698,11 @@
 
                 <div class="content">
                     <p class="faq-p">
-                        credito-mx permite comparar ofertas de bancos y proveedores de préstamos, pero no ofrece
+                    Credezy permite comparar ofertas de bancos y proveedores de préstamos, pero no ofrece
                         préstamos ni
-                        asistencia financiera. Por lo tanto, no se puede llegar a un acuerdo de préstamo con credito-mx,
+                        asistencia financiera. Por lo tanto, no se puede llegar a un acuerdo de préstamo con Credezy,
                         únicamente
-                        con los bancos o los proveedores de préstamos que aparecen en la lista de credito-mx.
+                        con los bancos o los proveedores de préstamos que aparecen en la lista de Credezy.
                     </p>
                 </div>
                 <div class="faq-border"></div>
@@ -727,7 +716,7 @@
                         de los
                         términos y condiciones del acuerdo. Puedes encontrar el préstamo que se adapte mejor a tus
                         necesidades con
-                        la búsqueda y el uso de los filtros en la lista de préstamos de Credito-mx.
+                        la búsqueda y el uso de los filtros en la lista de préstamos de Credezy.
                     </p>
                 </div>
                 <div class="faq-border"></div>
@@ -740,7 +729,7 @@
                         tradicionales bancarios y dependerán de la oferta de préstamo que se hayas elegido. Podrás
                         encontrar la
                         opción que se adapte mejor a tus necesidades al buscar/filtrar la lista de préstamos de
-                        Credito-mx.
+                        Credezy.
                     </p>
                 </div>
                 <div class="faq-border"></div>
@@ -753,7 +742,7 @@
                 <div class="content">
                     <p class="faq-p">
                         Cada uno de los proveedores de préstamos establece los términos y condiciones para cada oferta.
-                        Credito-mx
+                        Credezy
                         no tiene ningún tipo de influencia a la hora de aprobar o rechazar las solicitudes. Si tienes
                         dudas con
                         respecto a tu solicitud, por favor, contacta al proveedor de préstamos directamente.
@@ -827,9 +816,9 @@
                     <p class="footer-p">Información</p>
                     <div class="pages">
                         <p class="pages-p pages-p2">
-                            credito-mx.com - es un servicio online gratuito dedicado a conectarte con las mejores
+                        credezy.com.mx - es un servicio online gratuito dedicado a conectarte con las mejores
                             opciones de préstamo
-                            en el mercado. El servicio credito-mx escoge
+                            en el mercado. El servicio Credezy escoge
                             préstamos para clientes haciendo de intermediario entre los clientes que quieren recibir un
                             préstamo y las
                             instituciones financieras licenciadas. El servicio no se hace responsable de los acuerdos
@@ -837,14 +826,14 @@
                             página actual no cobra por el servicio ni tampoco se hace responsable de las acciones,
                             incumplimientos o
                             tasas de interés de cualquier prestamista. No estás obligado a usar los servicios de
-                            credito-mx ni
+                            Credezy ni
                             contactar o solicitar un préstamo a los prestamistas que aparecen en esta página.
                         </p>
                     </div>
                 </div>
             </div>
             <p class="copyright-p">
-                credito-mx.com ©2024 - todos los derechos registrados.
+            credezy.com.mx ©2024 - todos los derechos registrados.
             </p>
         </div>
 

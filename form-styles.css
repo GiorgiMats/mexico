@@ -8,7 +8,7 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 40px 40px 60px 40px;
   position: relative;
   border-radius: 12px;
 
@@ -94,7 +94,7 @@ input.invalid {
 
 
 #nextBtn {
-  background-color: #00ADEF;
+  background-color: #FF8600;
   color: #FFF;
   padding: 20px;
   font-family: Roboto;
@@ -109,7 +109,7 @@ input.invalid {
 }
 
 #nextBtn:hover {
-  background-color: #009CD7;
+  background-color: #046A90;
 }
 
 #prevBtn {

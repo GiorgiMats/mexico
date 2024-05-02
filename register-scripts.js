@@ -681,12 +681,12 @@ function isPhoneNumberValid(phoneNumber) {
 
 // stay page
 
-document.getElementById('stayOnPageLink').addEventListener('click', function(event) {
-    var url = this.getAttribute('href');
-    window.open(url, '_blank');
+// document.getElementById('stayOnPageLink').addEventListener('click', function(event) {
+//     var url = this.getAttribute('href');
+//     window.open(url, '_blank');
     
-    // Prevent the default link behavior
-    event.preventDefault();
-  });
+//     // Prevent the default link behavior
+//     event.preventDefault();
+//   });
                 
 

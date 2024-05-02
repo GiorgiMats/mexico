@@ -30,6 +30,10 @@ html {
     z-index: -1;
 }
 
+.main-logo {
+    height: 32px !important;
+  }
+
 .loan-girl-text {
     align-self: end;
     display: grid;
@@ -40,6 +44,12 @@ html {
 .loans-menu-nav {
     display: grid;
     grid-gap: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loan-girl-text h1 {
@@ -179,7 +189,7 @@ html {
 }
 
 .accordion-title-p {
-    color: #1C1F24;
+    color: rgba(28, 31, 36, 0.50);
     font-family: 'Roboto';
     font-size: 18px;
     font-style: normal;
@@ -355,12 +365,12 @@ select {
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-color: #D2D2D3 transparent transparent transparent;
+    border-color: #1C1F24 transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #D2D2D3;
+    border-color: transparent transparent #1C1F24;
     top: 14px;
 }
 
@@ -431,7 +441,7 @@ button {
 
 .btn-primary {
     border-radius: 50px;
-    background: #00ADEF;
+    background: #FF8600;
     color: #FFF;
     font-family: 'Roboto';
     font-size: 16px;
@@ -450,7 +460,7 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: #08678B;
+    background-color: #046A90;
 }
 
 .input-checkbox {

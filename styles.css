@@ -78,11 +78,15 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 24px !important;
+}
+
+.mobile-h1 {
+  display: none;
 }
 
 .logo {
-  height: 36px;
+  height: 36px !important;
 }
 
 .nav-focus:link,
@@ -118,7 +122,7 @@ header {
 
 footer {
   padding: 60px 60px 40px 60px;
-  background-color: #00587A;
+  background-color: #2D2E2F;
   margin-top: 80px;
 }
 
@@ -165,8 +169,8 @@ footer {
 
 .hero-right {
   max-width: 552px;
-  min-height: 720px;
-  background: transparent !important;
+  
+  
   align-self: flex-end;
   justify-self: end;
 }
@@ -195,21 +199,21 @@ footer {
   color: #fff;
 
   font-family: Roboto;
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 48px;
   text-align: start;
 }
 
 .hero-left-p {
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
 
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 150%;
   
 }
 
@@ -313,7 +317,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-top: 312px;
+  margin-top: 242px;
 }
 
 .hero-left-new {
@@ -544,11 +548,11 @@ a {
 }
 
 .blue-box {
-  background: rgba(0, 173, 239, 0.60);
+  background: #E9F9FF;
 }
 
 .yellow-box {
-  background: rgba(242, 231, 71, 0.60);
+  background: #E9F9FF;
 }
 
 .links-section-new {
@@ -557,11 +561,11 @@ a {
 
 
 .green-box {
-  background: rgba(0, 166, 144, 0.60);
+  background: #E9F9FF;
 }
 
 .pink-box {
-  background: #FCE5CC;
+  background: #E9F9FF;
   ;
 }
 
@@ -601,7 +605,7 @@ a {
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 32px !important;
   margin-bottom: 32px;
 }
 
@@ -630,10 +634,15 @@ a {
 
 .recive-btn {
   padding: 16px 44px;
-
+  background-color: #FF8600 !important;
   justify-self: center;
   align-self: center;
-  border-radius: 8px;
+  border-radius: 32px;
+  transition: all 0.3s;
+}
+
+.recive-btn:hover {
+  background-color: #046A90 !important;
 }
 
 .container-flex {
@@ -693,7 +702,7 @@ a {
   font-weight: 400;
   line-height: normal;
   max-width: 356px;
-  margin: 0 0 40px 0;
+  
 }
 
 .author-p {
@@ -731,7 +740,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  height: 260px;
+  height: 180px;
   justify-content: space-between;
 
 }
@@ -767,7 +776,7 @@ a {
 }
 
 .pages-p {
-  color: #b4df9d;
+  color: #fff;
 
   font-family: Roboto;
   font-size: 16px;
@@ -835,9 +844,9 @@ a {
 }
 
 .btn-link {
-  padding: 24px 36px;
+  padding: 20px 36px;
   max-height: 67px;
-  border-radius: 8px;
+  border-radius: 32px;
   align-self: flex-end;
   justify-self: end;
   width: 100%;
@@ -1445,6 +1454,3 @@ hr {
   text-align: start !important;
 }
 
-.loan-content {
-  margin-top: 32px;
-}

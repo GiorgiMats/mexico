@@ -30,37 +30,29 @@ if (isset($_SESSION['leadData'])) {
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="register-styles-new.css">
+    <link rel="icon" href="img/web-icon.svg" sizes="16x16">
     <title>Mejores Préstamos Personales</title>
 
-    <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WNQSCPC3');
-    </script>
-    <!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-566HVSSQ');</script>
+<!-- End Google Tag Manager -->
 
 </head>
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-566HVSSQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <div id="content"></div>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNQSCPC3" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  
 
     <!-- Section Loan Girl -->
     <div class="section-loan-girl">
@@ -79,7 +71,7 @@ if (isset($_SESSION['leadData'])) {
                         <path d="M21 6.99997L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.58997L21 6.99997Z"
                             fill="#FFFEA3" />
                     </svg>
-                    <p>Más de 30 ofertas de diferentes empresas</p>
+                    <p>Más de 20 ofertas de diferentes empresas</p>
                 </li>
                 <li class="lmn-item">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +85,7 @@ if (isset($_SESSION['leadData'])) {
                         <path d="M21 6.99997L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.58997L21 6.99997Z"
                             fill="#FFFEA3" />
                     </svg>
-                    <p>Los primeros clientes pueden obtener un préstamo al 0%</p>
+                    <p>Solicita ahora y recibe respuesta en pocos segundos.</p>
                 </li>
             </ul>
         </div>
@@ -104,9 +96,9 @@ if (isset($_SESSION['leadData'])) {
         <div class="inside-main-div">
             <div class="inside-main-div-div">
                 <header class="header" id="header">
-                    <a href="#">
-                        <img src="./img/main-logo.svg" alt="MX Credito">
-                    </a>
+                    
+                        <img src="./img/main-logo.svg" alt="MX Credito" class="main-logo">
+                   
                 </header>
                 <form id="customers-form" action="customer_submit.php" method="POST" class="section-register">
                     <div class="accordions">
